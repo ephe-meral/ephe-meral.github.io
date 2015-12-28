@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seeds from the Apple of Discord</title>
-    <description>Johanna Appel&#39;s notes about the world, science &amp; technology, programming, languages, music, art, learning and absurdities.
+    <description>Johanna Appel&#39;s musings about the world, science &amp; technology, programming, languages, music, art, learning and absurdities.
 </description>
-    <link>https://malumdiscordi.ae/</link>
-    <atom:link href="https://malumdiscordi.ae/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Dec 2015 15:35:25 +0100</pubDate>
-    <lastBuildDate>Mon, 28 Dec 2015 15:35:25 +0100</lastBuildDate>
+    <link>http://malumdiscordi.ae/</link>
+    <atom:link href="http://malumdiscordi.ae/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 28 Dec 2015 15:37:35 +0100</pubDate>
+    <lastBuildDate>Mon, 28 Dec 2015 15:37:35 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -35,8 +35,8 @@
 &lt;p&gt;~ Johanna&lt;/p&gt;
 </description>
         <pubDate>Mon, 28 Dec 2015 14:41:33 +0100</pubDate>
-        <link>https://malumdiscordi.ae/2015/12/28/instruction-leaflet.html</link>
-        <guid isPermaLink="true">https://malumdiscordi.ae/2015/12/28/instruction-leaflet.html</guid>
+        <link>http://malumdiscordi.ae/2015/12/28/instruction-leaflet.html</link>
+        <guid isPermaLink="true">http://malumdiscordi.ae/2015/12/28/instruction-leaflet.html</guid>
         
         
       </item>
