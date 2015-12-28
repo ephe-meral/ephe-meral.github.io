@@ -18,3 +18,6 @@ github_username:  ephe-meral
 
 # Build settings
 markdown: kramdown
+
+#gems:
+#  - octopress-genesis-theme
