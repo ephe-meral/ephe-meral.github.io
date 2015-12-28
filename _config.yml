@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Johanna Appel's musings about the world, science & technology,
   programming, languages, music, art, learning and absurdities.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://malumdiscordi.ae" # the base hostname & protocol for your site
+url: "http://malumdiscordi.ae" # the base hostname & protocol for your site
 twitter_username: ephe_meral
 github_username:  ephe-meral
 
