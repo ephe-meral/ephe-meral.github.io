@@ -7,7 +7,7 @@
 
 # Site settings
 title: Seeds from the Apple of Discord
-email: johanna.appel@mailbox.org
+email: malumdiscordiae@mailbox.org
 description: > # this means to ignore newlines until "baseurl:"
   Johanna Appel's musings about the world, science & technology,
   programming, languages, music, art, learning and absurdities.
@@ -16,8 +16,21 @@ url: "http://malumdiscordi.ae" # the base hostname & protocol for your site
 twitter_username: ephe_meral
 github_username:  ephe-meral
 
+excerpt_separator: <!--more-->
+
 # Build settings
 markdown: kramdown
 
-#gems:
+gems:
+  - octopress-codeblock
+  - octopress-codefence
+  - octopress-image-tag
+  - octopress-quote-tag
+  - octopress-solarized
+  - octopress-social
+  - octopress-linkblog
+  - octopress-filter-tag
+  - octopress-filters
+  - octopress-comment-tag
+  - jekyll-sitemap
 #  - octopress-genesis-theme

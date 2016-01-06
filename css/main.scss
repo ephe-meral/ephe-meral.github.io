@@ -3,7 +3,14 @@
 ---
 @charset "utf-8";
 
+// http://www.dtelepathy.com/blog/inspiration/beautiful-color-palettes-for-your-next-web-project
 
+// vintage romatinc
+$vr-dark-aubergine: #260126;
+$vr-brighter-violet: #59323C;
+$vr-paper: #F9F4E0; //#F2EEB3;
+$vr-pale-brown: #af9b60; //#BFAF80;
+$vr-brown: #8C6954;
 
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -14,11 +21,11 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$text-color:       $vr-brighter-violet; //#111;
+$brand-color:      $vr-pale-brown; //#2a7ae2;
+$background-color: $vr-paper; //#fdfdfd;
 
-$grey-color:       #828282;
+$grey-color:       $vr-brighter-violet; //#828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 

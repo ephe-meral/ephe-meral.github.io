@@ -1,3 +1,9 @@
 _site
-.sass-cache
+
 _deploy.yml
+.deploy
+
+.code-highlighter-cache
+.ink-cache
+.sass-cache
+
