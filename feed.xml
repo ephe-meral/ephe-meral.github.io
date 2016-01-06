@@ -6,21 +6,59 @@
 </description>
     <link>http://malumdiscordi.ae/</link>
     <atom:link href="http://malumdiscordi.ae/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Dec 2015 15:37:35 +0100</pubDate>
-    <lastBuildDate>Mon, 28 Dec 2015 15:37:35 +0100</lastBuildDate>
+    <pubDate>Wed, 06 Jan 2016 18:48:26 +0100</pubDate>
+    <lastBuildDate>Wed, 06 Jan 2016 18:48:26 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>Instruction Leaflet</title>
-        <description>&lt;p&gt;&lt;strong&gt;About this blog, the weather, me and the meaning of life&lt;/strong&gt;&lt;/p&gt;
+        <title>Introducing &#39;to entice so.&#39;</title>
+        <description>&lt;p&gt;Despite the misleading title of this - it could as well be a social engineering guide - I’m going to introduce a free, libre and open-source software project that I’m in charge of.
+&lt;!--more--&gt;
+It’s the first thing of this sort that I’ll write about and also the first real post here. One might actually say that I’ve gone through the lengths of creating this blog just to write about this specific project and related topics. (But I won’t, promised)&lt;/p&gt;
 
-&lt;p&gt;In absence of a better idea of splitting things up, I’ll use this as a general brain and idea dump for everything and nothing.&lt;/p&gt;
+&lt;h3 id=&quot;so-what-are-we-talking-about&quot;&gt;So what are we talking about?&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/entice/entice&quot;&gt;‘to entice so.’&lt;/a&gt; (or just ‘entice’ for short) is a client/server application aiming to provide an MMORPG sandbox of sorts.
+While this fact in itself might not be very interesting, the approach used and the technology involved actually are - at least in my humble opinion.&lt;/p&gt;
+
+&lt;p&gt;I’ll split this topic up into several posts to highlight different aspects of the project, but let me at least give a little overview at this point.&lt;/p&gt;
+
+&lt;p&gt;The code covers both &lt;a href=&quot;https://github.com/entice/client&quot;&gt;client&lt;/a&gt; and &lt;a href=&quot;https://github.com/entice/web&quot;&gt;server&lt;/a&gt; side parts, even though this is not a complete game on its own. Actually, we’re instrumenting an existing &lt;em&gt;*cough* commercial *cough*&lt;/em&gt; client and try to follow the gameplay logic more or less. To be honest it’s not very difficult to figure out which game I’m talking about, but for me personally the whole point of this is less about creating a so-called private server and more about experimenting with MMORPG server designs.&lt;/p&gt;
+
+&lt;h3 id=&quot;project-structure&quot;&gt;Project structure&lt;/h3&gt;
+
+&lt;p&gt;Splitting the project up in this instrumentation part on the client side and the server part with the gameplay logic, we gain an excellent and clean way of working on each independently. I’ll go into more detail about this development model in a follow-up post later. For now, lets just say that it works out perfectly for our little team, since our collaborator’s schedules differ a lot.&lt;/p&gt;
+
+&lt;h3 id=&quot;technology&quot;&gt;Technology&lt;/h3&gt;
+
+&lt;p&gt;Technology-wise, the client part is written in C/C++ and &lt;a href=&quot;https://msdn.microsoft.com/en-us/vstudio/hh341490.aspx&quot;&gt;C#&lt;/a&gt; relying on standard .NET features, whereas the server is written in &lt;a href=&quot;http://elixir-lang.org/&quot;&gt;Elixir&lt;/a&gt; using the &lt;a href=&quot;http://www.phoenixframework.org/&quot;&gt;Phoenix framework&lt;/a&gt;. More about the reasons for the choice of these technology stacks later.&lt;/p&gt;
+
+&lt;p&gt;Also, since I’m most involved with the server side code, I’ll focus on those parts in the upcoming posts. If you want to learn more about the client side software design, you can either check out the code in our project &lt;a href=&quot;https://github.com/entice&quot;&gt;repos&lt;/a&gt;, or get in touch with the main dev of these parts.&lt;/p&gt;
+
+&lt;p&gt;To finish up this rather short intro, be aware that all we’re talking about here is freely accessible to anyone, and improvements and discussion of the code is always welcome. Feel free to join us on &lt;code class=&quot;highlighter-rouge&quot;&gt;#gwlpr&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;irc.rizon.net&lt;/code&gt; IRC net, and create github issues, forks and pull-requests to help improve the project.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Jan 2016 00:34:09 +0100</pubDate>
+        <link>http://malumdiscordi.ae/2016/01/06/introducing-to-entice-so.html</link>
+        <guid isPermaLink="true">http://malumdiscordi.ae/2016/01/06/introducing-to-entice-so.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Instruction Leaflet</title>
+        <description>&lt;p&gt;In absence of a better idea of splitting things up, I’ll use this as a general brain and idea dump for everything and nothing.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;about-this-blog-the-weather-me-and-the-meaning-of-life&quot;&gt;About this blog, the weather, me and the meaning of life&lt;/h3&gt;
 
 &lt;p&gt;So what you can and will find here is stuff that I personally considered interesting, thought provoking, funny, smart or otherwise worthwhile posting - which probably involves techy and nerdy topics, as well as philosophical discussions, general scientific considerations, languages, music, arts, learning and absurdities.&lt;/p&gt;
 
 &lt;p&gt;Some things I definitively plan to write about: Free, Libre and Open-Source Projects, Operating Systems and the Usage of Computers in General, Programming Languages, -Paradigms and -Concepts (and how all that stuff relates to the industry), Sentient Machines and the Future of Humanity, Insights from a Modern (digital &amp;amp; non-digital) Life, and How to Get Along With People…&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;So, who am I?&lt;/strong&gt; (no, this is not the meaning of life part yet, hang tight)&lt;/p&gt;
+&lt;h3 id=&quot;so-who-am-i&quot;&gt;So, who am I?&lt;/h3&gt;
+
+&lt;p&gt;(no, this is not the meaning of life part yet, hang tight)&lt;/p&gt;
 
 &lt;p&gt;I consider myself an all-time student of everything…&lt;/p&gt;
 
@@ -28,7 +66,7 @@
 
 &lt;p&gt;Apart from that, my other aspirations go more into the direction of research and science: Personally, I find it far more rewarding and motivating to get to know and understand the world, compared to earning, managing and spending money - as most of my fellow humans seem to enjoy these days.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Alright, but what about the weather and that meaning of life thingy?&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;alright-but-what-about-the-weather-and-that-meaning-of-life-thingy&quot;&gt;Alright, but what about the weather and that meaning of life thingy?&lt;/h3&gt;
 
 &lt;p&gt;I also like rhetoric questions and weird humor.&lt;/p&gt;
 
