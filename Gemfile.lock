@@ -95,7 +95,7 @@ GEM
       octopress-ink (~> 1.0)
     octopress-tag-helpers (1.0.8)
       jekyll (>= 2.0)
-    rb-fsevent (0.9.6)
+    rb-fsevent (0.9.7)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     redcarpet (3.3.4)
@@ -115,7 +115,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (>= 3.0)
   jekyll-sitemap
-  octopress (>= 3.0)
+  octopress (~> 3.0)
   octopress-codeblock
   octopress-codefence
   octopress-comment-tag

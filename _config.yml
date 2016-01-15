@@ -7,16 +7,33 @@
 
 # Site settings
 title: Seeds from the Apple of Discord
-email: malumdiscordiae@mailbox.org
 description: > # this means to ignore newlines until "baseurl:"
   Johanna Appel's musings about the world, science & technology,
   programming, languages, music, art, learning and absurdities.
+
 baseurl: "" # the subpath of your site, e.g. /blog
+
 url: "http://malumdiscordi.ae" # the base hostname & protocol for your site
+
+email: malumdiscordiae@mailbox.org
 twitter_username: ephe_meral
 github_username:  ephe-meral
+disqus_short_name: malumdiscordiae
 
 excerpt_separator: <!--more-->
+
+exclude:
+- Gemfile
+- Gemfile.lock
+- LICENSE.txt
+- README.md
+
+defaults:
+- scope:
+    path: ""
+    type: "posts"
+  values:
+    comments: true
 
 # Build settings
 markdown: kramdown

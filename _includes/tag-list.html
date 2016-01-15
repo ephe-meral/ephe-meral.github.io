@@ -1,0 +1,1 @@
+{% if include.post.tags != empty %}• tags: {% for tag in include.post.tags %}<a class="tag_list_link" href="/tag/{{ tag }}">{{ tag }}</a>{% if tag != include.post.tags.last %}, {% endif %}{% endfor %}{% endif %}

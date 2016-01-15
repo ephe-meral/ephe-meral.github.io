@@ -2,6 +2,8 @@
 layout: post
 title: "Instruction Leaflet"
 date: 2015-12-28T14:41:33+01:00
+tags:
+- instructions
 ---
 
 In absence of a better idea of splitting things up, I'll use this as a general brain and idea dump for everything and nothing.
@@ -16,7 +18,7 @@ Some things I definitively plan to write about: Free, Libre and Open-Source Proj
 
 ### So, who am I?
 
-(no, this is not the meaning of life part yet, hang tight)
+_(No, this is not the meaning of life part yet, hang tight)_
 
 I consider myself an all-time student of everything...
 

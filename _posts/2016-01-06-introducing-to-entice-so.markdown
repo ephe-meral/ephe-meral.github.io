@@ -2,6 +2,11 @@
 layout: post
 title: "Introducing 'to entice so.'"
 date: 2016-01-06T00:34:09+01:00
+tags:
+- programming
+- elixir
+- mmorpg
+- open_source
 ---
 Despite the misleading title of this - it could as well be a social engineering guide - I'm going to introduce a free, libre and open-source software project that I'm in charge of.
 <!--more-->
@@ -14,7 +19,7 @@ While this fact in itself might not be very interesting, the approach used and t
 
 I'll split this topic up into several posts to highlight different aspects of the project, but let me at least give a little overview at this point.
 
-The code covers both [client](https://github.com/entice/client) and [server](https://github.com/entice/web) side parts, even though this is not a complete game on its own. Actually, we're instrumenting an existing *\*cough\* commercial \*cough\** client and try to follow the gameplay logic more or less. To be honest it's not very difficult to figure out which game I'm talking about, but for me personally the whole point of this is less about creating a so-called private server and more about experimenting with MMORPG server designs.
+The code covers both [client](https://github.com/entice/client) and [server](https://github.com/entice/web) side parts, even though this is not a complete game on its own. Actually, we're instrumenting an existing _\*cough\* commercial \*cough\*_ client and try to follow the gameplay logic more or less. To be honest it's not very difficult to figure out which game I'm talking about, but for me personally the whole point of this is less about creating a so-called private server and more about experimenting with MMORPG server designs.
 
 ### Project structure
 
