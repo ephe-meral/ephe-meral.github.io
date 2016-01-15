@@ -106,7 +106,7 @@ Its my personal opinion that OOP is an unecessary overhead <strong>in most cases
   <p><strong>DISCLAIMER:</strong> Forgive me for <strong>a)</strong> using Java in this post and <strong>b)</strong> for probably making syntactic mistakes. I use it here because it illustrates its own crappyness pretty nicely, and the mistakes might stem from me luckily not using it very often these days.</p>
 </blockquote>
 
-<h3 id="the-idea-of-dependency-injection">The Idea of Dependency Injection</h3>
+<h3 id="the-idea-of-dependency-injection-di">The idea of dependency injection (DI)</h3>
 
 <p>Suppose you have two objects, Frodo and Sam. <em>(For a real setup, suppose you have 5k classes and around 50k objects)</em> Now, suppose object Frodo depends on object Sam for its initialization. <em>(Again, for a real setup, suppose one of those objects depends on 10 others that each depend on 10 others and so forth)</em> The Frodo object carries the heavy burden of the Ring datastructure, so it needs a supporting companion to take care of the provisions for the long march. <em>(And again, for a real setup, add at least one Gollum dependency as well)</em></p>
 
@@ -149,13 +149,13 @@ Let’s illustrate this unusefully trivial example with a bit of good old Java, 
 </div></div><div data-line="14" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="o">&#x7d;</span>
 </div></div><div data-line="15" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="o">&#x7d;</span></div></div></pre></div></figure>
 
-<p>This is what is commonly know as manual ‘constructor based dependency injection’: Instead of letting Frodo create a Sam instance, we have another object that creates a Frodo and ‘injects’ a Sam into it. <em>I just love this metaphor!</em></p>
+<p>This is what is commonly known as manual ‘constructor-based dependency injection’: Instead of letting Frodo create a Sam instance, we have another object that creates a Frodo and ‘injects’ a Sam into it. <em>I just love this metaphor!</em></p>
 
-<p>Generally speaking, you could consider any call to a function and passing of parameters as ‘dependency injection’ - the function depends on its parameters and doesnt know about how they were created and by whom. This leads to the conclusion that actually, all purely functional programming languages ‘use dependency injection’, or, when you put it the other way round, using dependency injection extensively will make your object-oriented program a bit more functional in some sense. <em>Which would be a good thing, IMHO</em></p>
+<p>Generally speaking, you could consider any call to a function and passing of parameters as ‘dependency injection’ - the function depends on its parameters and doesn’t know about how they were created and by whom. This leads to the conclusion that actually, all purely functional programming languages ‘use dependency injection’, or, if you put it the other way round, using dependency injection extensively will make your object-oriented program a bit more functional in some sense. <em>Which is a good thing, IMHO</em></p>
 
-<p>The reason to use this principle or pattern instead of simply creating a Sam inside a Frodo is that the latter is now decoupled from the concrete instance of its companion - it could also be given an instance of a Pippin instead. This makes the Frodo easier to test as you can inject any kind of mocked AbstractHobbit, and it also makes the whole code base easier to maintain, as Frodo doesnt need to be changed when Sam changes. (Though Gandalf might have to change in that case…)</p>
+<p>The reason to use this principle or pattern instead of simply creating a Sam inside a Frodo is that the latter is now decoupled from the concrete instance of its companion - it could also be given an instance of a Pippin instead. This makes the Frodo easier to test as you can inject any kind of mocked AbstractHobbit, and it also makes the whole code base easier to maintain, as Frodo doesn’t need to be changed when Sam changes. (Though Gandalf might have to change in that case…)</p>
 
-<h3 id="the-dependency-injection-frameworks">The Dependency-Injection Frameworks</h3>
+<h3 id="dependency-injection-frameworks">Dependency-injection frameworks</h3>
 
 <p>Alright, so far so good. Now, let’s do the same thing with Sauron and let him initialize a List of 10000 Orcs with different features, armor, weapons and hierarchies…</p>
 
@@ -186,7 +186,7 @@ Let’s illustrate this unusefully trivial example with a bit of good old Java, 
 
 <p>As we see, it takes quite some lines of code to wire up all the Orcs by doing a manual dependency injection here - and don’f forget the Orcs that depend on them, and then the Orcs depend on <em>them</em> and then…</p>
 
-<p>It takes so much code, in fact, that clever people came up with the Idea of abstracting it away by replacing that Sauron object with a somewhat omniscient registry of Orcs and other objects - in the following referred to as Tolkien (or dependency injection framework / DI).</p>
+<p>It takes so much code, in fact, that clever people came up with the Idea of abstracting it away by replacing that Sauron object with a somewhat omniscient registry of Orcs and other objects - in the following referred to as Tolkien (or dependency injection framework).</p>
 
 <p>Each Orc object would then declare a list of stuff it needs, go to Tolkien, hand it that list, and get the actual ‘stuff’ back.</p>
 
@@ -237,20 +237,18 @@ Let’s illustrate this unusefully trivial example with a bit of good old Java, 
 
 <p>What I tried to show, though, is that once you use this or that design pattern or have a more non-standard object dependency hierarchy, you quickly get into the same or worse trouble that you’d get into when injecting the dependencies manually.</p>
 
-<p>Although it looks as if these two methods have the potential to simplify the initialization of complex dependency-trees, they still both introduce extra code that does all this wiring-up of objects.</p>
+<p>Although it looks as if these two approaches have the potential to simplify the initialization of objects in complex dependency-trees, they still both introduce extra code that does all this messy wiring-up.</p>
 
-<p>Why though? What makes code-decoupling and dependency management so hard? Well, lets see…</p>
+<p>Why, though? What makes code-decoupling and dependency management so hard? Well, let’s see…</p>
 
-<h3 id="the-root-of-the-evil">The Root of the Evil</h3>
+<h3 id="the-root-of-the-evil-spansqrt-1span">The root of the evil <span><script type="math/tex">\sqrt{-1}</script></span></h3>
 
 <p>In the Lord of the Rings, that would be Sauron, but in our case it is something else:<br />
 It’s the deficits that come with using abstractions on top of abstractions to handle the complexity imposed by abstractions.</p>
 
-<p>What have we done thus far? No logic. Just boilerplate code and declaring datastructures. The objects we defined could also be stripped from their object-oriented properties of encapsulation and whatnot to only describe the state they are build around.</p>
+<p>What have we done thus far? No logic. Just boilerplate code and declaring datastructures. We can just as well kick out the earlier, unclutter the code and strip it from its object-oriented parts. Revisit the classes and see what fields they have. I’ll throw in a bit of pseudo code here to make it clearer:</p>
 
-<p>Revisit the classes and see what fields they have. I’ll throw in a bit of pseudo code here to unclutter the definitions:</p>
-
-<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">The Lord of the Rings, Debunked</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="s">Hobbit</span><span class="pi">:</span>
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">The Lord of the Rings, Abridged</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="s">Hobbit</span><span class="pi">:</span>
 </div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="s">hungerLevel</span><span class="pi">:</span> <span class="s">Integer</span>
 </div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="s">milesWalked</span><span class="pi">:</span> <span class="s">Integer</span>
 </div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="s">Frodo</span><span class="pi">:</span> <span class="s">Hobbit with</span>
@@ -268,7 +266,7 @@ It’s the deficits that come with using abstractions on top of abstractions to 
 
 <p>For the following we want to consider <code class="highlighter-rouge">Ring</code>, <code class="highlighter-rouge">Food</code>, <code class="highlighter-rouge">Weapon</code> and <code class="highlighter-rouge">Armor</code> to just be more datastructure declarations. Think of them as the ‘stats’ of a weapon or the amount of kalories in the food - it can be as simple as an integer sometimes!</p>
 
-<p>These definitions are all we need for our calculations of the fighting orcs and marching companions who need provisions to stay alive on the way. The rest of the code from the beginning of this post does have no purpose other than filling these fields with data, in an environment where it is (seemingly) hard and complicated to do so. It does not even implement any of the logic of marching and fighting. In fact, we might argue that for our situation it is not even important to know about the relationship of Frodo and Sam, and we might just want to consider them as one unit like so:</p>
+<p>These definitions are all we need for our calculations of the fighting orcs and marching companions who need provisions to stay alive on the way. The rest of the code from the beginning of this post does have no purpose other than filling these fields with data, in an environment where it is (seemingly) hard and complicated to do so. It does not even implement any of the logic of marching and fighting, just the abstract realtionships between objects like Frodo and Sam.<br />Actually, for our scenario, we might argue that it is not even important to know about the relationship of those two, and might just consider them as one unit like so:</p>
 
 <figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">The Baggins/Gamgee Complex</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="s">Companions</span><span class="pi">:</span>
 </div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="s">hungerLevel</span><span class="pi">:</span> <span class="s">Integer</span> <span class="c1"># they hunger together</span>
@@ -276,18 +274,18 @@ It’s the deficits that come with using abstractions on top of abstractions to 
 </div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="s">theRing</span><span class="pi">:</span> <span class="s">Ring</span>        <span class="c1"># ...hm...</span>
 </div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="s">provisions</span><span class="pi">:</span> <span class="s">Food</span>     <span class="c1"># and they share their bread</span></div></div></pre></div></figure>
 
-<p>This might be counter intuitive. But as a developer we know the whole story. We can decide what kind of datastructure still obeys the semantics and makes implementing the business logic as simple as possible. By doing so, we can avoid complex dependencies right from the start, and filling these few fields with initial data is also not very difficult.<br />
-Remember that this initial configuration (especially if we are dealing with something as diverse as the orc-army) is <strong>always</strong> necessary and no tool can make it magically disappear.</p>
+<p>This might be counter intuitive. But as a developer we know the whole story. We can decide what kind of datastructure still obeys the semantics and makes implementing the business logic as simple as possible. By doing so, we can avoid complex dependencies right from the start, and filling these few fields with data initially is also not very difficult.<br />
+Remember that this initial configuration (especially if we are dealing with something as diverse as the orc-army) is <strong>almost always</strong> required and no tool can make it magically disappear.</p>
 
-<p>That’s a good thing! If you know what kind of data is fed into a program when it starts, you have a better chance of understanding the behaviour of it! If that data is split into pieces, mixed with logic and spread all over the code though, constantly changing and producing states that are complex to trace and understand, then you easily end up in an unmaintainable mess of a project. Throwing a DI framework onto that might help in some cases, but why not making it less complex right from the start?</p>
+<p>That’s a good thing! If you know what kind of data is fed into a program when it starts, you have a better chance of understanding the behaviour of it! If that data is split into pieces, mixed with logic and spread all over the object-tree though, constantly changing and producing states that are complex to trace and understand, then you easily end up in an unmaintainable mess of a project. Throwing a DI framework onto that might help in some cases, but why not making it less complex right from the start?</p>
 
 <p><em>Note at this point that you can <strong>always</strong> refactor code to contain <strong>either</strong> logic <strong>or</strong> datastructures, so defining something like the example above is not impossible under real conditions. The only reason why we didn’t do it right from the start is because OOP is all about mixing up data and logic.</em></p>
 
-<p>In a nutshell, if you’re using DI because you think it is crucial for a project to be maintainable in the long run, you’re probably not doing something harmful, but simply something unecessary. That’s not because DI is intrinsically bad, but because the weird principles of OOP force you to use something like that to manage all the dependencies of your objects. In carefully designing the datastructures outside of the context of an object, it might, however, be possible to avoid all that. So why not using a simpler, more data-driven approach instead?</p>
+<p>In a nutshell, if you’re using DI because you think it is crucial for a project to be maintainable in the long run, you’re probably not doing something harmful, but simply something unecessary. That’s not because DI is intrinsically bad, but because the weird principles of OOP force you to use something like that to manage all the dependencies of your objects. In carefully designing the datastructures outside of the context of an object, it might, however, be possible to avoid all that. So why not using a simpler, more data-oriented approach instead?</p>
 
-<p><em>For the OOP &amp; DI lovers: If you find this post offensive, you probably suffer from a phenomenon known as the ‘<a href="https://en.wikipedia.org/wiki/Law_of_the_instrument">golden hammer</a>’. Please take some time and think the arguments through. A classical program is never much more than data-input -&gt; computation -&gt; data-output.</em></p>
+<p><em>For the OOP &amp; DI lovers: If you find this post offensive, you probably suffer from a phenomenon known as the ‘<a href="https://en.wikipedia.org/wiki/Law_of_the_instrument">golden hammer</a>’. Please take some time and think the arguments through. A classical program is never more than data-input -&gt; computation -&gt; data-output.</em></p>
 
-<p>And some famous last words: I’ll give an example of a useful data-driven functional implementation of the situation described above in a follow-up post, promised!</p>
+<p>And some famous last words: I’ll give an example of a useful data-oriented functional implementation of the situation described above in a follow-up post, promised! In the meantime, I recommend reading <a href="http://gamesfromwithin.com/data-oriented-design">Noel’s article</a> about further aspects of data-oriented design, like performance gain - especially for games.</p>
 
 
     <br/><hr/><br/>
@@ -386,6 +384,7 @@ Remember that this initial configuration (especially if we are dealing with some
       <a href="https://github.com/ephe-meral/ephe-meral.github.io">Hosted on GitHub</a>
     </div>
 
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script id="dsq-count-scr" src="//malumdiscordiae.disqus.com/count.js" async></script>
 
   </body>

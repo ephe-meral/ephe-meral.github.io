@@ -6,8 +6,8 @@
 </description>
     <link>http://malumdiscordi.ae/</link>
     <atom:link href="http://malumdiscordi.ae/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 15 Jan 2016 22:24:55 +0100</pubDate>
-    <lastBuildDate>Fri, 15 Jan 2016 22:24:55 +0100</lastBuildDate>
+    <pubDate>Sat, 16 Jan 2016 00:25:44 +0100</pubDate>
+    <lastBuildDate>Sat, 16 Jan 2016 00:25:44 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -29,7 +29,7 @@ Its my personal opinion that OOP is an unecessary overhead &lt;strong&gt;in most
   &lt;p&gt;&lt;strong&gt;DISCLAIMER:&lt;/strong&gt; Forgive me for &lt;strong&gt;a)&lt;/strong&gt; using Java in this post and &lt;strong&gt;b)&lt;/strong&gt; for probably making syntactic mistakes. I use it here because it illustrates its own crappyness pretty nicely, and the mistakes might stem from me luckily not using it very often these days.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;the-idea-of-dependency-injection&quot;&gt;The Idea of Dependency Injection&lt;/h3&gt;
+&lt;h3 id=&quot;the-idea-of-dependency-injection-di&quot;&gt;The idea of dependency injection (DI)&lt;/h3&gt;
 
 &lt;p&gt;Suppose you have two objects, Frodo and Sam. &lt;em&gt;(For a real setup, suppose you have 5k classes and around 50k objects)&lt;/em&gt; Now, suppose object Frodo depends on object Sam for its initialization. &lt;em&gt;(Again, for a real setup, suppose one of those objects depends on 10 others that each depend on 10 others and so forth)&lt;/em&gt; The Frodo object carries the heavy burden of the Ring datastructure, so it needs a supporting companion to take care of the provisions for the long march. &lt;em&gt;(And again, for a real setup, add at least one Gollum dependency as well)&lt;/em&gt;&lt;/p&gt;
 
@@ -72,13 +72,13 @@ Let’s illustrate this unusefully trivial example with a bit of good old Java, 
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;14&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;o&quot;&gt;&amp;#x7d;&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;15&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;#x7d;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 
-&lt;p&gt;This is what is commonly know as manual ‘constructor based dependency injection’: Instead of letting Frodo create a Sam instance, we have another object that creates a Frodo and ‘injects’ a Sam into it. &lt;em&gt;I just love this metaphor!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This is what is commonly known as manual ‘constructor-based dependency injection’: Instead of letting Frodo create a Sam instance, we have another object that creates a Frodo and ‘injects’ a Sam into it. &lt;em&gt;I just love this metaphor!&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Generally speaking, you could consider any call to a function and passing of parameters as ‘dependency injection’ - the function depends on its parameters and doesnt know about how they were created and by whom. This leads to the conclusion that actually, all purely functional programming languages ‘use dependency injection’, or, when you put it the other way round, using dependency injection extensively will make your object-oriented program a bit more functional in some sense. &lt;em&gt;Which would be a good thing, IMHO&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Generally speaking, you could consider any call to a function and passing of parameters as ‘dependency injection’ - the function depends on its parameters and doesn’t know about how they were created and by whom. This leads to the conclusion that actually, all purely functional programming languages ‘use dependency injection’, or, if you put it the other way round, using dependency injection extensively will make your object-oriented program a bit more functional in some sense. &lt;em&gt;Which is a good thing, IMHO&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;The reason to use this principle or pattern instead of simply creating a Sam inside a Frodo is that the latter is now decoupled from the concrete instance of its companion - it could also be given an instance of a Pippin instead. This makes the Frodo easier to test as you can inject any kind of mocked AbstractHobbit, and it also makes the whole code base easier to maintain, as Frodo doesnt need to be changed when Sam changes. (Though Gandalf might have to change in that case…)&lt;/p&gt;
+&lt;p&gt;The reason to use this principle or pattern instead of simply creating a Sam inside a Frodo is that the latter is now decoupled from the concrete instance of its companion - it could also be given an instance of a Pippin instead. This makes the Frodo easier to test as you can inject any kind of mocked AbstractHobbit, and it also makes the whole code base easier to maintain, as Frodo doesn’t need to be changed when Sam changes. (Though Gandalf might have to change in that case…)&lt;/p&gt;
 
-&lt;h3 id=&quot;the-dependency-injection-frameworks&quot;&gt;The Dependency-Injection Frameworks&lt;/h3&gt;
+&lt;h3 id=&quot;dependency-injection-frameworks&quot;&gt;Dependency-injection frameworks&lt;/h3&gt;
 
 &lt;p&gt;Alright, so far so good. Now, let’s do the same thing with Sauron and let him initialize a List of 10000 Orcs with different features, armor, weapons and hierarchies…&lt;/p&gt;
 
@@ -109,7 +109,7 @@ Let’s illustrate this unusefully trivial example with a bit of good old Java, 
 
 &lt;p&gt;As we see, it takes quite some lines of code to wire up all the Orcs by doing a manual dependency injection here - and don’f forget the Orcs that depend on them, and then the Orcs depend on &lt;em&gt;them&lt;/em&gt; and then…&lt;/p&gt;
 
-&lt;p&gt;It takes so much code, in fact, that clever people came up with the Idea of abstracting it away by replacing that Sauron object with a somewhat omniscient registry of Orcs and other objects - in the following referred to as Tolkien (or dependency injection framework / DI).&lt;/p&gt;
+&lt;p&gt;It takes so much code, in fact, that clever people came up with the Idea of abstracting it away by replacing that Sauron object with a somewhat omniscient registry of Orcs and other objects - in the following referred to as Tolkien (or dependency injection framework).&lt;/p&gt;
 
 &lt;p&gt;Each Orc object would then declare a list of stuff it needs, go to Tolkien, hand it that list, and get the actual ‘stuff’ back.&lt;/p&gt;
 
@@ -160,20 +160,18 @@ Let’s illustrate this unusefully trivial example with a bit of good old Java, 
 
 &lt;p&gt;What I tried to show, though, is that once you use this or that design pattern or have a more non-standard object dependency hierarchy, you quickly get into the same or worse trouble that you’d get into when injecting the dependencies manually.&lt;/p&gt;
 
-&lt;p&gt;Although it looks as if these two methods have the potential to simplify the initialization of complex dependency-trees, they still both introduce extra code that does all this wiring-up of objects.&lt;/p&gt;
+&lt;p&gt;Although it looks as if these two approaches have the potential to simplify the initialization of objects in complex dependency-trees, they still both introduce extra code that does all this messy wiring-up.&lt;/p&gt;
 
-&lt;p&gt;Why though? What makes code-decoupling and dependency management so hard? Well, lets see…&lt;/p&gt;
+&lt;p&gt;Why, though? What makes code-decoupling and dependency management so hard? Well, let’s see…&lt;/p&gt;
 
-&lt;h3 id=&quot;the-root-of-the-evil&quot;&gt;The Root of the Evil&lt;/h3&gt;
+&lt;h3 id=&quot;the-root-of-the-evil-spansqrt-1span&quot;&gt;The root of the evil &lt;span&gt;&lt;script type=&quot;math/tex&quot;&gt;\sqrt{-1}&lt;/script&gt;&lt;/span&gt;&lt;/h3&gt;
 
 &lt;p&gt;In the Lord of the Rings, that would be Sauron, but in our case it is something else:&lt;br /&gt;
 It’s the deficits that come with using abstractions on top of abstractions to handle the complexity imposed by abstractions.&lt;/p&gt;
 
-&lt;p&gt;What have we done thus far? No logic. Just boilerplate code and declaring datastructures. The objects we defined could also be stripped from their object-oriented properties of encapsulation and whatnot to only describe the state they are build around.&lt;/p&gt;
+&lt;p&gt;What have we done thus far? No logic. Just boilerplate code and declaring datastructures. We can just as well kick out the earlier, unclutter the code and strip it from its object-oriented parts. Revisit the classes and see what fields they have. I’ll throw in a bit of pseudo code here to make it clearer:&lt;/p&gt;
 
-&lt;p&gt;Revisit the classes and see what fields they have. I’ll throw in a bit of pseudo code here to unclutter the definitions:&lt;/p&gt;
-
-&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;The Lord of the Rings, Debunked&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;s&quot;&gt;Hobbit&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;The Lord of the Rings, Abridged&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;s&quot;&gt;Hobbit&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;s&quot;&gt;hungerLevel&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Integer&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;s&quot;&gt;milesWalked&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Integer&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;s&quot;&gt;Frodo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Hobbit with&lt;/span&gt;
@@ -191,7 +189,7 @@ It’s the deficits that come with using abstractions on top of abstractions to 
 
 &lt;p&gt;For the following we want to consider &lt;code class=&quot;highlighter-rouge&quot;&gt;Ring&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Food&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Weapon&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Armor&lt;/code&gt; to just be more datastructure declarations. Think of them as the ‘stats’ of a weapon or the amount of kalories in the food - it can be as simple as an integer sometimes!&lt;/p&gt;
 
-&lt;p&gt;These definitions are all we need for our calculations of the fighting orcs and marching companions who need provisions to stay alive on the way. The rest of the code from the beginning of this post does have no purpose other than filling these fields with data, in an environment where it is (seemingly) hard and complicated to do so. It does not even implement any of the logic of marching and fighting. In fact, we might argue that for our situation it is not even important to know about the relationship of Frodo and Sam, and we might just want to consider them as one unit like so:&lt;/p&gt;
+&lt;p&gt;These definitions are all we need for our calculations of the fighting orcs and marching companions who need provisions to stay alive on the way. The rest of the code from the beginning of this post does have no purpose other than filling these fields with data, in an environment where it is (seemingly) hard and complicated to do so. It does not even implement any of the logic of marching and fighting, just the abstract realtionships between objects like Frodo and Sam.&lt;br /&gt;Actually, for our scenario, we might argue that it is not even important to know about the relationship of those two, and might just consider them as one unit like so:&lt;/p&gt;
 
 &lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;The Baggins/Gamgee Complex&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;s&quot;&gt;Companions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;s&quot;&gt;hungerLevel&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# they hunger together&lt;/span&gt;
@@ -199,18 +197,18 @@ It’s the deficits that come with using abstractions on top of abstractions to 
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;s&quot;&gt;theRing&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Ring&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# ...hm...&lt;/span&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;  &lt;span class=&quot;s&quot;&gt;provisions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Food&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# and they share their bread&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 
-&lt;p&gt;This might be counter intuitive. But as a developer we know the whole story. We can decide what kind of datastructure still obeys the semantics and makes implementing the business logic as simple as possible. By doing so, we can avoid complex dependencies right from the start, and filling these few fields with initial data is also not very difficult.&lt;br /&gt;
-Remember that this initial configuration (especially if we are dealing with something as diverse as the orc-army) is &lt;strong&gt;always&lt;/strong&gt; necessary and no tool can make it magically disappear.&lt;/p&gt;
+&lt;p&gt;This might be counter intuitive. But as a developer we know the whole story. We can decide what kind of datastructure still obeys the semantics and makes implementing the business logic as simple as possible. By doing so, we can avoid complex dependencies right from the start, and filling these few fields with data initially is also not very difficult.&lt;br /&gt;
+Remember that this initial configuration (especially if we are dealing with something as diverse as the orc-army) is &lt;strong&gt;almost always&lt;/strong&gt; required and no tool can make it magically disappear.&lt;/p&gt;
 
-&lt;p&gt;That’s a good thing! If you know what kind of data is fed into a program when it starts, you have a better chance of understanding the behaviour of it! If that data is split into pieces, mixed with logic and spread all over the code though, constantly changing and producing states that are complex to trace and understand, then you easily end up in an unmaintainable mess of a project. Throwing a DI framework onto that might help in some cases, but why not making it less complex right from the start?&lt;/p&gt;
+&lt;p&gt;That’s a good thing! If you know what kind of data is fed into a program when it starts, you have a better chance of understanding the behaviour of it! If that data is split into pieces, mixed with logic and spread all over the object-tree though, constantly changing and producing states that are complex to trace and understand, then you easily end up in an unmaintainable mess of a project. Throwing a DI framework onto that might help in some cases, but why not making it less complex right from the start?&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note at this point that you can &lt;strong&gt;always&lt;/strong&gt; refactor code to contain &lt;strong&gt;either&lt;/strong&gt; logic &lt;strong&gt;or&lt;/strong&gt; datastructures, so defining something like the example above is not impossible under real conditions. The only reason why we didn’t do it right from the start is because OOP is all about mixing up data and logic.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;In a nutshell, if you’re using DI because you think it is crucial for a project to be maintainable in the long run, you’re probably not doing something harmful, but simply something unecessary. That’s not because DI is intrinsically bad, but because the weird principles of OOP force you to use something like that to manage all the dependencies of your objects. In carefully designing the datastructures outside of the context of an object, it might, however, be possible to avoid all that. So why not using a simpler, more data-driven approach instead?&lt;/p&gt;
+&lt;p&gt;In a nutshell, if you’re using DI because you think it is crucial for a project to be maintainable in the long run, you’re probably not doing something harmful, but simply something unecessary. That’s not because DI is intrinsically bad, but because the weird principles of OOP force you to use something like that to manage all the dependencies of your objects. In carefully designing the datastructures outside of the context of an object, it might, however, be possible to avoid all that. So why not using a simpler, more data-oriented approach instead?&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;For the OOP &amp;amp; DI lovers: If you find this post offensive, you probably suffer from a phenomenon known as the ‘&lt;a href=&quot;https://en.wikipedia.org/wiki/Law_of_the_instrument&quot;&gt;golden hammer&lt;/a&gt;’. Please take some time and think the arguments through. A classical program is never much more than data-input -&amp;gt; computation -&amp;gt; data-output.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;For the OOP &amp;amp; DI lovers: If you find this post offensive, you probably suffer from a phenomenon known as the ‘&lt;a href=&quot;https://en.wikipedia.org/wiki/Law_of_the_instrument&quot;&gt;golden hammer&lt;/a&gt;’. Please take some time and think the arguments through. A classical program is never more than data-input -&amp;gt; computation -&amp;gt; data-output.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;And some famous last words: I’ll give an example of a useful data-driven functional implementation of the situation described above in a follow-up post, promised!&lt;/p&gt;
+&lt;p&gt;And some famous last words: I’ll give an example of a useful data-oriented functional implementation of the situation described above in a follow-up post, promised! In the meantime, I recommend reading &lt;a href=&quot;http://gamesfromwithin.com/data-oriented-design&quot;&gt;Noel’s article&lt;/a&gt; about further aspects of data-oriented design, like performance gain - especially for games.&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Jan 2016 10:56:34 +0100</pubDate>
         <link>http://malumdiscordi.ae/2016/01/15/dependency-injection-considered-harmful-stupid.html</link>
