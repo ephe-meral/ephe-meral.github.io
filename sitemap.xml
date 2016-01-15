@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://malumdiscordi.ae/2016/01/15/dependency-injection-considered-harmful-stupid.html</loc>
+    <lastmod>2016-01-15T10:56:34+01:00</lastmod>
+  </url>
+  <url>
     <loc>http://malumdiscordi.ae/2016/01/06/introducing-to-entice-so.html</loc>
     <lastmod>2016-01-06T00:34:09+01:00</lastmod>
   </url>
@@ -14,10 +18,40 @@
   <url>
     <loc>http://malumdiscordi.ae/</loc>
   </url>
+  <url>
+    <loc>http://malumdiscordi.ae/tag/</loc>
+  </url>
+  <url>
+    <loc>http://malumdiscordi.ae/tag/instructions/</loc>
+  </url>
+  <url>
+    <loc>http://malumdiscordi.ae/tag/programming/</loc>
+  </url>
+  <url>
+    <loc>http://malumdiscordi.ae/tag/elixir/</loc>
+  </url>
+  <url>
+    <loc>http://malumdiscordi.ae/tag/mmorpg/</loc>
+  </url>
+  <url>
+    <loc>http://malumdiscordi.ae/tag/open_source/</loc>
+  </url>
+  <url>
+    <loc>http://malumdiscordi.ae/tag/dependency_injection/</loc>
+  </url>
+  <url>
+    <loc>http://malumdiscordi.ae/tag/java/</loc>
+  </url>
+  <url>
+    <loc>http://malumdiscordi.ae/tag/rant/</loc>
+  </url>
     <url>
       <loc>http://malumdiscordi.ae/2015/12/28/instruction-leaflet.html</loc>
     </url>
     <url>
       <loc>http://malumdiscordi.ae/2016/01/06/introducing-to-entice-so.html</loc>
+    </url>
+    <url>
+      <loc>http://malumdiscordi.ae/2016/01/15/dependency-injection-considered-harmful-stupid.html</loc>
     </url>
 </urlset>
