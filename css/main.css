@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
   color: #af9b60;
-  text-decoration: none; }
+  text-decoration: underline; }
   a:visited {
     color: #817141; }
   a:hover {
@@ -193,7 +193,8 @@ hr {
   line-height: 56px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left; }
+  float: left;
+  text-decoration: none; }
   .site-title, .site-title:visited {
     color: #59323C; }
 
@@ -257,6 +258,9 @@ hr {
 .social-media-list {
   list-style: none;
   margin-left: 0; }
+  .contact-list a,
+  .social-media-list a {
+    text-decoration: none; }
   .contact-list .username,
   .social-media-list .username {
     padding-left: 5px; }
@@ -312,7 +316,8 @@ hr {
 
 .post-link {
   display: block;
-  font-size: 24px; }
+  font-size: 24px;
+  text-decoration: none; }
 
 /**
  * Posts
