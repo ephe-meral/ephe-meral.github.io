@@ -205,7 +205,8 @@ hr {
     display: none; }
   .site-nav .page-link {
     color: #59323C;
-    line-height: 1.5; }
+    line-height: 1.5;
+    text-decoration: none; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
   @media screen and (max-width: 600px) {
