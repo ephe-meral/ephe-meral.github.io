@@ -82,8 +82,9 @@ macro_rules! multiply {
 That way, we still have to give the dimensions explicitly, but thats OK in my opinion. The macro can be invoked with a special syntax:
 
 ```rust title: "Well, It Does the Job"
-let a = [[0.3, 1.2], // ...
-let a = [[7.0, 3.1], // ...
+let a = [[0.3, 1.2], [3.2, 9.5], [6.0, 0.8]];
+let b = [[7.0, 3.1], [4.3, 0.1]];
+
 let result = mul!(a: [3, 2], b: [2, 2])
 ```
 
