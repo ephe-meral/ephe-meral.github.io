@@ -6,13 +6,13 @@
 </description>
     <link>http://malumdiscordi.ae/</link>
     <atom:link href="http://malumdiscordi.ae/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Jan 2016 13:15:41 +0100</pubDate>
-    <lastBuildDate>Fri, 22 Jan 2016 13:15:41 +0100</lastBuildDate>
+    <pubDate>Sun, 31 Jan 2016 17:57:35 +0100</pubDate>
+    <lastBuildDate>Sun, 31 Jan 2016 17:57:35 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>The Rusty Nuts and Bolts</title>
-        <description>&lt;p&gt;Lately I’ve been messing around with the &lt;a href=&quot;https://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt; programming. Here’s to the why, how and what.&lt;/p&gt;
+        <description>&lt;p&gt;Lately I’ve been messing around with the &lt;a href=&quot;https://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt; programming language. Here’s to the why, how and what.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
