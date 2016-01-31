@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'jekyll', '>= 3.0'
 gem 'octopress', '~> 3.0'
 #gem 'octopress-ink'
-gem 'octopress-hooks', github: 'octopress/hooks'
+gem 'octopress-hooks', '2.6.1', github: 'octopress/hooks', ref: '9ec9efc'
 
 group :jekyll_plugins do
   #gem 'octopress-content-for', git: 'https://github.com/jez/content-for.git'

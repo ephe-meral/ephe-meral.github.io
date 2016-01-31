@@ -6,7 +6,7 @@ tags:
 - programming
 - rust
 ---
-Lately I've been messing around with the [Rust](https://www.rust-lang.org/) programming. Here's to the why, how and what.
+Lately I've been messing around with the [Rust](https://www.rust-lang.org/) programming language. Here's to the why, how and what.
 
 <!--more-->
 
