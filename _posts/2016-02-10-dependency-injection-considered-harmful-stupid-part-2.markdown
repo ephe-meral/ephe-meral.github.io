@@ -123,3 +123,5 @@ Journey.time_passes(
 
 
 Alright, this concludes my little rant about dependency injection and object orientation. If you'd like to read more about the design approach used in this article, I'd recommend looking into entity-component-systems, which is covered in great detail and with loads of examples by Adam on [his blog](http://t-machine.org/index.php/category/entity-systems/).
+
+And in case you are wondering what the entity-systems topic has to do with this post: What we created here is the beginning of a component (the datastructure) and two systems operating on that component (the modules for walking and feeding) - a Hobbit entity for example might consist of several such components, usually tied together only by the same entity ID.
