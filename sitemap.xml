@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://malumdiscordi.ae/2016/02/10/dependency-injection-considered-harmful-stupid-part-2.html</loc>
+    <lastmod>2016-02-10T05:56:34+01:00</lastmod>
+  </url>
+  <url>
     <loc>http://malumdiscordi.ae/2016/01/22/the-rusty-nuts-and-bolts.html</loc>
     <lastmod>2016-01-22T00:00:34+01:00</lastmod>
   </url>
@@ -41,6 +45,9 @@
     <loc>http://malumdiscordi.ae/tag/open_source/</loc>
   </url>
   <url>
+    <loc>http://malumdiscordi.ae/tag/entity_systems/</loc>
+  </url>
+  <url>
     <loc>http://malumdiscordi.ae/tag/dependency_injection/</loc>
   </url>
   <url>
@@ -63,5 +70,8 @@
     </url>
     <url>
       <loc>http://malumdiscordi.ae/2016/01/22/the-rusty-nuts-and-bolts.html</loc>
+    </url>
+    <url>
+      <loc>http://malumdiscordi.ae/2016/02/10/dependency-injection-considered-harmful-stupid-part-2.html</loc>
     </url>
 </urlset>

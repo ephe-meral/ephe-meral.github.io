@@ -71,6 +71,8 @@
         
           
         
+          
+        
 
         <a class="page-link" href="/feed.xml">Subscribe</a>
 
@@ -274,7 +276,7 @@ It’s the deficits that come with using abstractions on top of abstractions to 
 </div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="s">hungerLevel</span><span class="pi">:</span> <span class="s">Integer</span> <span class="c1"># they hunger together</span>
 </div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="s">milesWalked</span><span class="pi">:</span> <span class="s">Integer</span> <span class="c1"># they march together</span>
 </div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="s">theRing</span><span class="pi">:</span> <span class="s">Ring</span>        <span class="c1"># ...hm...</span>
-</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="s">provisions</span><span class="pi">:</span> <span class="s">Food</span>     <span class="c1"># and they share their bread</span></div></div></pre></div></figure>
+</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="s">provisions</span><span class="pi">:</span> <span class="s">Food</span>     <span class="c1"># and they share their bread!</span></div></div></pre></div></figure>
 
 <p>This might be counter intuitive. But as a developer we know the whole story. We can decide what kind of datastructure still obeys the semantics and makes implementing the business logic as simple as possible. By doing so, we can avoid complex dependencies right from the start, and filling these few fields with data initially is also not very difficult.<br />
 Remember that this initial configuration (especially if we are dealing with something as diverse as the orc-army) is <strong>almost always</strong> required and no tool can make it magically disappear.</p>
@@ -288,6 +290,9 @@ Remember that this initial configuration (especially if we are dealing with some
 <p><em>For the OOP &amp; DI lovers: If you find this post offensive, you probably suffer from a phenomenon known as the ‘<a href="https://en.wikipedia.org/wiki/Law_of_the_instrument">golden hammer</a>’. Please take some time and think the arguments through. A classical program is never more than data-input -&gt; computation -&gt; data-output.</em></p>
 
 <p>And some famous last words: I’ll give an example of a useful data-oriented functional implementation of the situation described above in a follow-up post, promised! In the meantime, I recommend reading <a href="http://gamesfromwithin.com/data-oriented-design">Noel’s article</a> about further aspects of data-oriented design, like performance gain - especially for games.</p>
+
+<p>UPDATE:<br />
+As promised, here’s the <a href="/2016/02/10/dependency-injection-considered-harmful-stupid-part-2.html">follow-up post</a>.</p>
 
 
     <br/><hr/><br/>
