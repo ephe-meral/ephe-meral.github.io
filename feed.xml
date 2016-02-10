@@ -6,13 +6,13 @@
 </description>
     <link>http://malumdiscordi.ae/</link>
     <atom:link href="http://malumdiscordi.ae/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Feb 2016 16:59:42 +0100</pubDate>
-    <lastBuildDate>Wed, 10 Feb 2016 16:59:42 +0100</lastBuildDate>
+    <pubDate>Wed, 10 Feb 2016 17:05:23 +0100</pubDate>
+    <lastBuildDate>Wed, 10 Feb 2016 17:05:23 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Dependency Injection Considered &lt;del&gt;Harmful&lt;/del&gt; Stupid - Part 2</title>
-        <description>&lt;p&gt;After messing around with dependency injection frameworks in the &lt;a href=&quot;/2016/01/15/dependency-injection-considered-harmful-stupid.html&quot;&gt;first part&lt;/a&gt;, lets see how we can take our LotR example and unclutter it by using data-oriented functional programming in &lt;a href=&quot;http://elixir-lang.org/&quot;&gt;Elixir&lt;/a&gt;!&lt;/p&gt;
+        <description>&lt;p&gt;After messing around with dependency injection frameworks in the &lt;a href=&quot;/2016/01/15/dependency-injection-considered-harmful-stupid.html&quot;&gt;first part&lt;/a&gt;, let’s see how we can take our LotR example and unclutter it by using data-oriented functional programming in &lt;a href=&quot;http://elixir-lang.org/&quot;&gt;Elixir&lt;/a&gt;!&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -118,7 +118,6 @@ This means we just enabled Saurons army to march around, given enough provisions
 &lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 
 &lt;p&gt;Alright, this concludes my little rant about dependency injection and object orientation. If you’d like to read more about the design approach used in this article, I’d recommend looking into entity-component-systems, which is covered in great detail and with loads of examples by Adam on &lt;a href=&quot;http://t-machine.org/index.php/category/entity-systems/&quot;&gt;his blog&lt;/a&gt;.&lt;/p&gt;
-
 </description>
         <pubDate>Wed, 10 Feb 2016 05:56:34 +0100</pubDate>
         <link>http://malumdiscordi.ae/2016/02/10/dependency-injection-considered-harmful-stupid-part-2.html</link>
