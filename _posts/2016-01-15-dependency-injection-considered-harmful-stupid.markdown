@@ -218,7 +218,7 @@ Companions:
   hungerLevel: Integer # they hunger together
   milesWalked: Integer # they march together
   theRing: Ring        # ...hm...
-  provisions: Food     # and they share their bread
+  provisions: Food     # and they share their bread!
 ```
 
 This might be counter intuitive. But as a developer we know the whole story. We can decide what kind of datastructure still obeys the semantics and makes implementing the business logic as simple as possible. By doing so, we can avoid complex dependencies right from the start, and filling these few fields with data initially is also not very difficult.<br/>
@@ -233,3 +233,6 @@ In a nutshell, if you're using DI because you think it is crucial for a project 
 _For the OOP & DI lovers: If you find this post offensive, you probably suffer from a phenomenon known as the '[golden hammer](https://en.wikipedia.org/wiki/Law_of_the_instrument)'. Please take some time and think the arguments through. A classical program is never more than data-input -> computation -> data-output._
 
 And some famous last words: I'll give an example of a useful data-oriented functional implementation of the situation described above in a follow-up post, promised! In the meantime, I recommend reading [Noel's article](http://gamesfromwithin.com/data-oriented-design) about further aspects of data-oriented design, like performance gain - especially for games.
+
+UPDATE:<br/>
+As promised, here's the [follow-up post]({% post_url 2016-02-10-dependency-injection-considered-harmful-stupid-part-2 %}).

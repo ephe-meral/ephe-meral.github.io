@@ -7,6 +7,7 @@ tags:
 - elixir
 - mmorpg
 - open_source
+- entity_systems
 ---
 Despite the misleading title of this - it could as well be a social engineering guide - I'm going to introduce a free, libre and open-source software project that I'm in charge of.
 <!--more-->
