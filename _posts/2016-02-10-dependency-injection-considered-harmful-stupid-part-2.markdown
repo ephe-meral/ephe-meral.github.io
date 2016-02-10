@@ -7,7 +7,7 @@ tags:
 - elixir
 - entity_systems
 ---
-After messing around with dependency injection frameworks in the [first part]({% post_url 2016-01-15-dependency-injection-considered-harmful-stupid %}), lets see how we can take our LotR example and unclutter it by using data-oriented functional programming in [Elixir](http://elixir-lang.org/)!
+After messing around with dependency injection frameworks in the [first part]({% post_url 2016-01-15-dependency-injection-considered-harmful-stupid %}), let's see how we can take our LotR example and unclutter it by using data-oriented functional programming in [Elixir](http://elixir-lang.org/)!
 
 <!--more-->
 
@@ -123,5 +123,3 @@ Journey.time_passes(
 
 
 Alright, this concludes my little rant about dependency injection and object orientation. If you'd like to read more about the design approach used in this article, I'd recommend looking into entity-component-systems, which is covered in great detail and with loads of examples by Adam on [his blog](http://t-machine.org/index.php/category/entity-systems/).
-
-
