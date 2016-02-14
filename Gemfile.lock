@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/jbrains/pullquote-tag.git
+  revision: 230d4b8fd0e090a17a3e8cc5fd2f3d145d62d3f6
+  ref: 230d4b8
+  specs:
+    octopress-pullquote-tag (1.0.1)
+      jekyll
+      rubypants-unicode
+
+GIT
   remote: git://github.com/octopress/hooks.git
   revision: 9ec9efcbe8e2aa4d79d2a35543a29b51f3e6feb2
   ref: 9ec9efc
@@ -125,6 +134,7 @@ DEPENDENCIES
   octopress-hooks (= 2.6.1)!
   octopress-image-tag
   octopress-linkblog
+  octopress-pullquote-tag (= 1.0.1)!
   octopress-quote-tag
   octopress-social
   octopress-solarized

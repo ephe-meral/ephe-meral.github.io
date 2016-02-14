@@ -12,6 +12,7 @@ group :jekyll_plugins do
   gem 'octopress-codefence'
   gem 'octopress-image-tag'
   gem 'octopress-quote-tag'
+  gem 'octopress-pullquote-tag', '1.0.1', github: 'jbrains/pullquote-tag', ref: '230d4b8'
   gem 'octopress-solarized'
   gem 'octopress-social'
   gem 'octopress-linkblog'

@@ -43,6 +43,7 @@ gems:
   - octopress-codefence
   - octopress-image-tag
   - octopress-quote-tag
+  - octopress-pullquote-tag
   - octopress-solarized
   - octopress-social
   - octopress-linkblog
