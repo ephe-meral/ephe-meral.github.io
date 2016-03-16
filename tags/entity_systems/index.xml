@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Entity_systems on Seeds from the Apple of Discord</title>
+    <link>http://malumdiscordi.ae/tags/entity_systems/</link>
+    <description>Recent content in Entity_systems on Seeds from the Apple of Discord</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Feb 2016 05:56:34 +0000</lastBuildDate>
+    <atom:link href="http://malumdiscordi.ae/tags/entity_systems/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Dependency Injection Considered ~~Harmful~~ Stupid - Part 2</title>
+      <link>http://malumdiscordi.ae/posts/2016/02/10/di-considered-stupid-pt2/</link>
+      <pubDate>Wed, 10 Feb 2016 05:56:34 +0000</pubDate>
+      
+      <guid>http://malumdiscordi.ae/posts/2016/02/10/di-considered-stupid-pt2/</guid>
+      <description>&lt;p&gt;After messing around with dependency injection frameworks in the &lt;a href=&#34;http://malumdiscordi.ae/posts/2016/01/15/di-considered-stupid-pt1/&#34;&gt;first part&lt;/a&gt;, let&amp;rsquo;s see how we can take our LotR example and unclutter it by using data-oriented functional programming in &lt;a href=&#34;http://elixir-lang.org/&#34;&gt;Elixir&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Remember Frodo from last time? I already mentioned that Frodo&amp;rsquo;s data can be merged with Sam&amp;rsquo;s because they basically do almost everything together - which means that when we use their data for calculations, we will most likely need both of them for meaningful results.&lt;br/&gt;
+But not only that, no, we also have duplicated data! It&amp;rsquo;s hidden (well, on purpose) in the AbstractHobbit superclass: The two of them have a certain value for hunger and for miles walked. Since they always march together, however, these two values will more or less stay the same - or at least we&amp;rsquo;d have to make sure to keep them in sync, so that Frodo for example doesn&amp;rsquo;t hunger more and walk less while Sam is already at the Mount Doom.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s revisit the data structure from last time:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;The Baggins/Gamgee Complex, Revisited&lt;/div&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;defmodule&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Companions&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;2 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;defstruct&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;(&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;3 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;         &lt;span style=&#34;color: #776e71&#34;&gt;# they hunger together&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;4 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;miles_walked&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;         &lt;span style=&#34;color: #776e71&#34;&gt;# they march together&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;5 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;ring&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt;         &lt;span style=&#34;color: #48b685&#34;&gt;:the_ring&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #776e71&#34;&gt;# ...hm... this should be stored somewhere else&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;6 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt;   &lt;span style=&#34;color: #f99b15&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt;       &lt;span style=&#34;color: #776e71&#34;&gt;# and they share their bread!&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;7 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note that this small elixir snippet tells the compiler to structurally check maps annotated with &lt;code&gt;Companions&lt;/code&gt;. It&amp;rsquo;s not very crucial for our logic later on, since we&amp;rsquo;ll treat input as any kind of map having defined certain keys. However, it illustrates nicely how to define named datastructures in Elixir. They are still a map - but define an additional &lt;code&gt;__struct__&lt;/code&gt; key that holds the atom of the module (&lt;code&gt;Companions&lt;/code&gt; in this case).&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, with object oriented thinking, while designing the methods for marching and eating etc., you would probably come up with some kind of functionality that is shared between the two Hobbit objects and put that in the AbstractHobbit class, and some kind of functionality that is very Frodo or Sam specific and pack that in their respective classes. You would also need to reason about the dependency between Frodo and Sam, and how provisions are distributed between them etc.&lt;br/&gt;
+By reducing the data we work with to a minimum, however, and by arranging it in a very simple datastructure, we can implement this logic in a rather straightforward way without ever having to think of inheritance, encapsulation etc.&lt;/p&gt;
+
+&lt;p&gt;But before we do that, let&amp;rsquo;s make very sure - down to a specification of sorts - that we know exactly what kind of functionality we need. As opposed to thinking in terms of objects and taking their point of view (i.e. what they can do, whom they can interact with, what kind of state they have etc.), we want to think like a computer, that is, in terms of data transformations (what do I have as an input, what do I need to produce as an output).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;we want the Hobbits to reach mount doom by marching (e.g. let&amp;rsquo;s define the goal to be at 100 miles)
+
+&lt;ul&gt;
+&lt;li&gt;marching a mile will increase the hunger level, let&amp;rsquo;s say by 2 units, but&lt;/li&gt;
+&lt;li&gt;marching is only possible if the hunger level does not exceed a certain value, let&amp;rsquo;s say 100&lt;/li&gt;
+&lt;li&gt;if the hobbits are too hungry (see above) they die and cannot complete their mission &lt;em&gt;*BAM BAM BAM!*&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;the hunger level can be decreased by eating provisions, which should be measured in the same units as hunger
+
+&lt;ul&gt;
+&lt;li&gt;comsuming X provisions decreases the hunger by X&lt;/li&gt;
+&lt;li&gt;the hobbits cannot eat all of their provisions at once, let&amp;rsquo;s say the maximum is 2 units&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;in all the above points, common sense applies (i.e. hunger and provisions can not be negative etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In &lt;a href=&#34;http://elixir-lang.org/&#34;&gt;Elixir&lt;/a&gt;, we can more or less take specifications like this and put it into code:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;&amp;#39;Specification-Driven-Programming&amp;#39; ?&lt;/div&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;defmodule&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Walking&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;# the hunger level should not exceed 100, otherwise fail!&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;walk(%{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger})&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;  &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;:error&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;Unable to walk! Dying of hunger - GAME OVER&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;# marching increases the hunger level&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;walk(%{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;miles_walked&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;miles}&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;creature)&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;:ok&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;%{creature&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;      &lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;      &lt;span style=&#34;color: #48b685&#34;&gt;miles_walked&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;miles&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;}}&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;defmodule&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Feeding&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;# common sense and such&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;16 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;feed(%{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions}&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;creature)&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;17 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;or&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;creature&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;18 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;19 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;# consuming provisions decreases the hunger&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;20 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;feed(%{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions}&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;creature)&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;21 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;# we cannot eat more than 2 provisions at a time (if available and needed)&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;22 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;eaten&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;min(hunger)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;min(provisions)&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;23 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;%{creature&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;24 &lt;/span&gt;      &lt;span style=&#34;color: #48b685&#34;&gt;hunger&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;eaten,&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;25 &lt;/span&gt;      &lt;span style=&#34;color: #48b685&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;eaten}&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;26 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;27 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Okay, let&amp;rsquo;s take a step back. So where is Sam? And, more importantly, where are Frodo, Gandalf and the rest?&lt;/p&gt;
+
+&lt;p&gt;Who cares? We now only require datasets that can store hunger and miles values for walking around - it doesn&amp;rsquo;t really matter whether they are associated with a Hobbit-like entity or something like an Orc.&lt;br/&gt;
+This means we just enabled Saurons army to march around, given enough provisions. We also decoupled walking from food consumption - if you&amp;rsquo;re modelling a magical being that feeds on the souls of its enemies, it can still use our walking logic, provided that it can actually hunger.&lt;/p&gt;
+
+&lt;p&gt;In a real application this can be used in many different ways. Consider a Hobbit situation:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;The Journey&lt;/div&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;defmodule&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Journey&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Feeding&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Walking&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes(%&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;Companions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{}&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companions),&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes({&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;:ok&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companions})&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes({&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;:ok&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;Companions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;miles_walked&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;miles}})&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;miles&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;Ring destroyed, all good! - GAME OVER&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes({&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;:ok&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;Companions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{}&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companions)&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;companions&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;    &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;consider_eating&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;    &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;walk&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;    &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;16 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;17 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes({&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;:error&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;reason}),&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;reason&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;18 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;19 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;consider_eating(%&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;Companions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;20 &lt;/span&gt;      &lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger,&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;21 &lt;/span&gt;      &lt;span style=&#34;color: #48b685&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions}&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companions)&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;22 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;(hunger&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;feed(companions)&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;23 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;24 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;consider_eating(companions),&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companions&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;25 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;26 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;27 &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;# start the journey and wait for what happens...&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;28 &lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;Journey&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes(&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;29 &lt;/span&gt;  &lt;span style=&#34;color: #e7e9db&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;Companions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;30 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;31 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;miles_walked&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;32 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;})&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;33 &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;# &amp;quot;Unable to walk! Dying of hunger - GAME OVER&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;34 &lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;35 &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;# ...guess how much provisions we need to provide&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;36 &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;# the Hobbits with to survive the journey...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Alright, this concludes my little rant about dependency injection and object orientation. If you&amp;rsquo;d like to read more about the design approach used in this article, I&amp;rsquo;d recommend looking into entity-component-systems, which is covered in great detail and with loads of examples by Adam on &lt;a href=&#34;http://t-machine.org/index.php/category/entity-systems/&#34;&gt;his blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;And in case you are wondering what the entity-systems topic has to do with this post: What we created here is the beginning of a component (the datastructure) and two systems operating on that component (the modules for walking and feeding) - a Hobbit entity for example might consist of several such components, usually tied together only by the same entity ID.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducing &#39;to entice so.&#39;</title>
+      <link>http://malumdiscordi.ae/posts/2016/01/06/introducing-to-entice-so./</link>
+      <pubDate>Wed, 06 Jan 2016 00:34:09 +0000</pubDate>
+      
+      <guid>http://malumdiscordi.ae/posts/2016/01/06/introducing-to-entice-so./</guid>
+      <description>
+
+&lt;p&gt;Despite the misleading title of this - it could as well be a social engineering guide - I&amp;rsquo;m going to introduce a free, libre and open-source software project that I&amp;rsquo;m in charge of.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s the first thing of this sort that I&amp;rsquo;ll write about and also the first real post here. One might actually say that I&amp;rsquo;ve gone through the lengths of creating this blog just to write about this specific project and related topics. (But I won&amp;rsquo;t, promised)&lt;/p&gt;
+
+&lt;h3 id=&#34;so-what-are-we-talking-about:dcd2377f0c9732c2dd2950dcbd2cf62d&#34;&gt;So what are we talking about?&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/entice/entice&#34;&gt;&amp;lsquo;to entice so.&amp;rsquo;&lt;/a&gt; (or just &amp;lsquo;entice&amp;rsquo; for short) is a client/server application aiming to provide an MMORPG sandbox of sorts.
+While this fact in itself might not be very interesting, the approach used and the technology involved actually are - at least in my humble opinion.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll split this topic up into several posts to highlight different aspects of the project, but let me at least give a little overview at this point.&lt;/p&gt;
+
+&lt;p&gt;The code covers both &lt;a href=&#34;https://github.com/entice/client&#34;&gt;client&lt;/a&gt; and &lt;a href=&#34;https://github.com/entice/web&#34;&gt;server&lt;/a&gt; side parts, even though this is not a complete game on its own. Actually, we&amp;rsquo;re instrumenting an existing &lt;em&gt;*cough* commercial *cough*&lt;/em&gt; client and try to follow the gameplay logic more or less. To be honest it&amp;rsquo;s not very difficult to figure out which game I&amp;rsquo;m talking about, but for me personally the whole point of this is less about creating a so-called private server and more about experimenting with MMORPG server designs.&lt;/p&gt;
+
+&lt;h3 id=&#34;project-structure:dcd2377f0c9732c2dd2950dcbd2cf62d&#34;&gt;Project structure&lt;/h3&gt;
+
+&lt;p&gt;Splitting the project up in this instrumentation part on the client side and the server part with the gameplay logic, we gain an excellent and clean way of working on each independently. I&amp;rsquo;ll go into more detail about this development model in a follow-up post later. For now, lets just say that it works out perfectly for our little team, since our collaborator&amp;rsquo;s schedules differ a lot.&lt;/p&gt;
+
+&lt;h3 id=&#34;technology:dcd2377f0c9732c2dd2950dcbd2cf62d&#34;&gt;Technology&lt;/h3&gt;
+
+&lt;p&gt;Technology-wise, the client part is written in C/C++ and &lt;a href=&#34;https://msdn.microsoft.com/en-us/vstudio/hh341490.aspx&#34;&gt;C#&lt;/a&gt; relying on standard .NET features, whereas the server is written in &lt;a href=&#34;http://elixir-lang.org/&#34;&gt;Elixir&lt;/a&gt; using the &lt;a href=&#34;http://www.phoenixframework.org/&#34;&gt;Phoenix framework&lt;/a&gt;. More about the reasons for the choice of these technology stacks later.&lt;/p&gt;
+
+&lt;p&gt;Also, since I&amp;rsquo;m most involved with the server side code, I&amp;rsquo;ll focus on those parts in the upcoming posts. If you want to learn more about the client side software design, you can either check out the code in our project &lt;a href=&#34;https://github.com/entice&#34;&gt;repos&lt;/a&gt;, or get in touch with the main dev of these parts.&lt;/p&gt;
+
+&lt;p&gt;To finish up this rather short intro, be aware that all we&amp;rsquo;re talking about here is freely accessible to anyone, and improvements and discussion of the code is always welcome. Feel free to join us on &lt;code&gt;#gwlpr&lt;/code&gt; in the &lt;code&gt;irc.rizon.net&lt;/code&gt; IRC net, and create github issues, forks and pull-requests to help improve the project.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

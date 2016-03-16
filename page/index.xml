@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Seeds from the Apple of Discord</title>
+    <link>http://malumdiscordi.ae/page/</link>
+    <description>Recent content in Pages on Seeds from the Apple of Discord</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://malumdiscordi.ae/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About</title>
+      <link>http://malumdiscordi.ae/pages/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://malumdiscordi.ae/pages/about/</guid>
+      <description>&lt;p&gt;Will fill this with more content later. For now see the &lt;a href=&#34;http://malumdiscordi.ae/posts/2015/12/28/instruction-leaflet/&#34;&gt;Instruction Leaflet&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;Why not?&lt;/div&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(num),&lt;/span&gt;                    &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(num,&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;2 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;res,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;_),&lt;/span&gt;              &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;res&lt;/span&gt;
+&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;3 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(n,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;res,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;nxt)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(n&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;nxt,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;res&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;nxt)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

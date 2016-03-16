@@ -1,90 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://malumdiscordi.ae/2016/02/21/considering-holistic-learning.html</loc>
-    <lastmod>2016-02-21T16:46:24+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://malumdiscordi.ae/2016/02/10/dependency-injection-considered-harmful-stupid-part-2.html</loc>
-    <lastmod>2016-02-10T05:56:34+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://malumdiscordi.ae/2016/01/22/the-rusty-nuts-and-bolts.html</loc>
-    <lastmod>2016-01-22T00:00:34+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://malumdiscordi.ae/2016/01/15/dependency-injection-considered-harmful-stupid.html</loc>
-    <lastmod>2016-01-15T10:56:34+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://malumdiscordi.ae/2016/01/06/introducing-to-entice-so.html</loc>
-    <lastmod>2016-01-06T00:34:09+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://malumdiscordi.ae/2015/12/28/instruction-leaflet.html</loc>
-    <lastmod>2015-12-28T14:41:33+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://malumdiscordi.ae/about/</loc>
-  </url>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
   <url>
     <loc>http://malumdiscordi.ae/</loc>
+    <lastmod>2016-02-21T16:46:24+00:00</lastmod>
+    <priority>0</priority>
   </url>
+  
   <url>
-    <loc>http://malumdiscordi.ae/tag/</loc>
+    <loc>http://malumdiscordi.ae/posts/2016/02/21/considering-holistic-learning/</loc>
+    <lastmod>2016-02-21T16:46:24+00:00</lastmod>
   </url>
+  
   <url>
-    <loc>http://malumdiscordi.ae/tag/instructions/</loc>
+    <loc>http://malumdiscordi.ae/posts/2016/02/10/di-considered-stupid-pt2/</loc>
+    <lastmod>2016-02-10T05:56:34+00:00</lastmod>
   </url>
+  
   <url>
-    <loc>http://malumdiscordi.ae/tag/programming/</loc>
+    <loc>http://malumdiscordi.ae/posts/2016/01/22/the-rusty-nuts-and-bolts/</loc>
+    <lastmod>2016-01-22T00:00:34+00:00</lastmod>
   </url>
+  
   <url>
-    <loc>http://malumdiscordi.ae/tag/elixir/</loc>
+    <loc>http://malumdiscordi.ae/posts/2016/01/15/di-considered-stupid-pt1/</loc>
+    <lastmod>2016-01-15T10:56:34+00:00</lastmod>
   </url>
+  
   <url>
-    <loc>http://malumdiscordi.ae/tag/mmorpg/</loc>
+    <loc>http://malumdiscordi.ae/posts/2016/01/06/introducing-to-entice-so./</loc>
+    <lastmod>2016-01-06T00:34:09+00:00</lastmod>
   </url>
+  
   <url>
-    <loc>http://malumdiscordi.ae/tag/open_source/</loc>
+    <loc>http://malumdiscordi.ae/posts/2015/12/28/instruction-leaflet/</loc>
+    <lastmod>2015-12-28T14:41:33+00:00</lastmod>
   </url>
+  
   <url>
-    <loc>http://malumdiscordi.ae/tag/entity_systems/</loc>
+    <loc>http://malumdiscordi.ae/pages/about/</loc>
   </url>
-  <url>
-    <loc>http://malumdiscordi.ae/tag/dependency_injection/</loc>
-  </url>
-  <url>
-    <loc>http://malumdiscordi.ae/tag/java/</loc>
-  </url>
-  <url>
-    <loc>http://malumdiscordi.ae/tag/rant/</loc>
-  </url>
-  <url>
-    <loc>http://malumdiscordi.ae/tag/rust/</loc>
-  </url>
-  <url>
-    <loc>http://malumdiscordi.ae/tag/learning/</loc>
-  </url>
-  <url>
-    <loc>http://malumdiscordi.ae/tag/life/</loc>
-  </url>
-    <url>
-      <loc>http://malumdiscordi.ae/2015/12/28/instruction-leaflet.html</loc>
-    </url>
-    <url>
-      <loc>http://malumdiscordi.ae/2016/01/06/introducing-to-entice-so.html</loc>
-    </url>
-    <url>
-      <loc>http://malumdiscordi.ae/2016/01/15/dependency-injection-considered-harmful-stupid.html</loc>
-    </url>
-    <url>
-      <loc>http://malumdiscordi.ae/2016/01/22/the-rusty-nuts-and-bolts.html</loc>
-    </url>
-    <url>
-      <loc>http://malumdiscordi.ae/2016/02/10/dependency-injection-considered-harmful-stupid-part-2.html</loc>
-    </url>
-    <url>
-      <loc>http://malumdiscordi.ae/2016/02/21/considering-holistic-learning.html</loc>
-    </url>
+  
 </urlset>

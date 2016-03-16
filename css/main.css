@@ -16,10 +16,10 @@ body {
   background-color: #F9F4E0;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
-  -webkit-font-kerning: normal;
-          font-kerning: normal; }
+  font-kerning: normal; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -94,8 +94,7 @@ pre,
 code {
   font-size: 15px;
   border: 1px solid #AB7180;
-  border-radius: 3px;
-  background-color: #eef; }
+  border-radius: 3px; }
 
 code {
   padding: 1px 5px; }
@@ -108,10 +107,31 @@ pre {
     padding-right: 0;
     padding-left: 0; }
 
+.highlight-caption {
+  position: relative;
+  font-size: 0.9em;
+  text-align: center;
+  line-height: 2em;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+  color: #474747;
+  font-weight: normal;
+  margin-bottom: 0px;
+  background-color: #CCC;
+  background-image: linear-gradient(#FFF, #F0F0F0 6%, #E5E5E5 90%, #E5E5E5);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: "Helvetica Neue",Arial,"Lucida Grande","Lucida Sans Unicode",Lucida,sans-serif;
+  border: 1px solid #CBCBCB; }
+
+/* Disable background of line-numbers */
+.highlight > pre > span {
+  background: none !important; }
+
 /**
  * Wrapper
  */
 .wrapper {
+  max-width: -webkit-calc(800px - (30px * 2));
   max-width: calc(800px - (30px * 2));
   margin-right: auto;
   margin-left: auto;
@@ -119,6 +139,7 @@ pre {
   padding-left: 30px; }
   @media screen and (max-width: 800px) {
     .wrapper {
+      max-width: -webkit-calc(800px - (30px));
       max-width: calc(800px - (30px));
       padding-right: 15px;
       padding-left: 15px; } }
@@ -137,13 +158,8 @@ hr {
 /**
  * Icons
  */
-.icon > svg {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  vertical-align: middle; }
-  .icon > svg path {
-    fill: #AB7180; }
+.icon > i {
+  color: #AB7180; }
 
 /**
  * GitHub ribbon
@@ -158,8 +174,13 @@ hr {
   top: 40px;
   /* 45 deg ccw rotation */
   -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   /* shadow */
+  -webkit-box-shadow: 0 0 10px #888;
+  -moz-box-shadow: 0 0 10px #888;
   box-shadow: 0 0 10px #888; }
 
 .ribbon a {
@@ -277,24 +298,30 @@ hr {
   padding-left: 15px; }
 
 .footer-col-1 {
+  width: -webkit-calc(45% - (30px / 2));
   width: calc(45% - (30px / 2)); }
 
 .footer-col-2 {
+  width: -webkit-calc(20% - (30px / 2));
   width: calc(20% - (30px / 2)); }
 
 .footer-col-3 {
+  width: -webkit-calc(35% - (30px / 2));
   width: calc(35% - (30px / 2)); }
 
 @media screen and (max-width: 800px) {
   .footer-col-1 {
+    width: -webkit-calc(100% - (30px / 2));
     width: calc(100% - (30px / 2)); }
 
   .footer-col-2,
   .footer-col-3 {
+    width: -webkit-calc(50% - (30px / 2));
     width: calc(50% - (30px / 2)); } }
 @media screen and (max-width: 600px) {
   .footer-col {
     float: none;
+    width: -webkit-calc(100% - (30px / 2));
     width: calc(100% - (30px / 2)); } }
 /**
  * Page content
@@ -309,16 +336,43 @@ hr {
   margin-left: 0;
   list-style: none; }
   .post-list > li {
+    border-bottom: 1px solid #AB7180;
+    padding-bottom: 30px;
+    margin-bottom: 30px; }
+  .post-list > li:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0px;
     margin-bottom: 30px; }
 
-.post-meta {
+.post-meta p {
   font-size: 14px;
-  color: #AB7180; }
+  color: #AB7180;
+  display: inline; }
 
 .post-link {
   display: block;
   font-size: 24px;
   text-decoration: none; }
+
+/**
+ * Inline taglist
+ */
+.tag-list {
+  display: inline;
+  margin: 0;
+  padding: 0; }
+  .tag-list a {
+    font-size: 14px; }
+  .tag-list > li {
+    display: inline;
+    margin: 0;
+    padding: 0; }
+    .tag-list > li a {
+      font-size: 14px; }
+  .tag-list > li:after {
+    content: ', '; }
+  .tag-list > li:last-of-type:after {
+    content: ''; }
 
 /**
  * Posts
@@ -368,6 +422,9 @@ hr {
   /* Typography (30px line-height equals 25% incremental leading) */
   font-size: 23px;
   line-height: 30px; }
+
+.archive-list {
+  padding-bottom: 1em; }
 
 /**
  * Syntax highlighting styles
@@ -509,3 +566,5 @@ hr {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+/*# sourceMappingURL=main.css.map */

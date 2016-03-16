@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Seeds from the Apple of Discord</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Johanna Appel&#39;s musings about the world, science &amp; technology, programming, languages, music, art, learning and absurdities.
+">
+  <meta name="generator" content="Hugo 0.15" />
+  <link href="" rel="alternate" type="application/rss+xml" title="Seeds from the Apple of Discord" />
+  <link href="http://malumdiscordi.ae/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="wrapper">
+
+    <a class="site-title" href="http://malumdiscordi.ae">Seeds from the Apple of Discord</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon"><i class="fa fa-bars fa-lg"></i></a>
+
+      <div class="trigger">
+        <a class="page-link" href="http://malumdiscordi.ae">Posts</a>
+
+        
+        
+          <a class="page-link" href="http://malumdiscordi.ae/pages/about/">About</a>
+        
+
+        
+        
+          <a class="page-link" href="/tags">Tags</a>
+        
+
+        <a class="page-link" href="http://malumdiscordi.ae/index.xml">Subscribe</a>
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<div class="page-content wrapper">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">Dependency Injection Considered <del>Harmful</del> Stupid - Part 2</h1>
+      <div class="post-meta">
+        <p itemprop="datePublished">Feb 10, 2016</p>
+        
+        
+<p>• tags: </p>
+  <ul class="tag-list">
+    
+      <li><a href="/tags/programming">programming</a></li>
+    
+      <li><a href="/tags/elixir">elixir</a></li>
+    
+      <li><a href="/tags/entity_systems">entity_systems</a></li>
+    
+  </ul>
+
+
+      </div>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+      <p>After messing around with dependency injection frameworks in the <a href="/posts/2016/01/15/di-considered-stupid-pt1/">first part</a>, let&rsquo;s see how we can take our LotR example and unclutter it by using data-oriented functional programming in <a href="http://elixir-lang.org/">Elixir</a>!</p>
+
+<p>Remember Frodo from last time? I already mentioned that Frodo&rsquo;s data can be merged with Sam&rsquo;s because they basically do almost everything together - which means that when we use their data for calculations, we will most likely need both of them for meaningful results.<br/>
+But not only that, no, we also have duplicated data! It&rsquo;s hidden (well, on purpose) in the AbstractHobbit superclass: The two of them have a certain value for hunger and for miles walked. Since they always march together, however, these two values will more or less stay the same - or at least we&rsquo;d have to make sure to keep them in sync, so that Frodo for example doesn&rsquo;t hunger more and walk less while Sam is already at the Mount Doom.</p>
+
+<p>Let&rsquo;s revisit the data structure from last time:</p>
+
+<p><div class="highlight-caption">The Baggins/Gamgee Complex, Revisited</div>
+<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span><span style="color: #815ba4">defmodule</span> <span style="color: #fec418">Companions</span> <span style="color: #815ba4">do</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2 </span>  <span style="color: #815ba4">defstruct</span><span style="color: #e7e9db">(</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3 </span>    <span style="color: #48b685">hunger_level</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">0</span><span style="color: #e7e9db">,</span>         <span style="color: #776e71"># they hunger together</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4 </span>    <span style="color: #48b685">miles_walked</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">0</span><span style="color: #e7e9db">,</span>         <span style="color: #776e71"># they march together</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">5 </span>    <span style="color: #48b685">ring</span><span style="color: #e7e9db">:</span>         <span style="color: #48b685">:the_ring</span><span style="color: #e7e9db">,</span> <span style="color: #776e71"># ...hm... this should be stored somewhere else</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">6 </span>    <span style="color: #48b685">provisions</span><span style="color: #e7e9db">:</span>   <span style="color: #f99b15">100</span><span style="color: #e7e9db">)</span>       <span style="color: #776e71"># and they share their bread!</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">7 </span><span style="color: #815ba4">end</span>
+</pre></div>
+</p>
+
+<p><em>Note that this small elixir snippet tells the compiler to structurally check maps annotated with <code>Companions</code>. It&rsquo;s not very crucial for our logic later on, since we&rsquo;ll treat input as any kind of map having defined certain keys. However, it illustrates nicely how to define named datastructures in Elixir. They are still a map - but define an additional <code>__struct__</code> key that holds the atom of the module (<code>Companions</code> in this case).</em></p>
+
+<p>Now, with object oriented thinking, while designing the methods for marching and eating etc., you would probably come up with some kind of functionality that is shared between the two Hobbit objects and put that in the AbstractHobbit class, and some kind of functionality that is very Frodo or Sam specific and pack that in their respective classes. You would also need to reason about the dependency between Frodo and Sam, and how provisions are distributed between them etc.<br/>
+By reducing the data we work with to a minimum, however, and by arranging it in a very simple datastructure, we can implement this logic in a rather straightforward way without ever having to think of inheritance, encapsulation etc.</p>
+
+<p>But before we do that, let&rsquo;s make very sure - down to a specification of sorts - that we know exactly what kind of functionality we need. As opposed to thinking in terms of objects and taking their point of view (i.e. what they can do, whom they can interact with, what kind of state they have etc.), we want to think like a computer, that is, in terms of data transformations (what do I have as an input, what do I need to produce as an output).</p>
+
+<ul>
+<li>we want the Hobbits to reach mount doom by marching (e.g. let&rsquo;s define the goal to be at 100 miles)
+
+<ul>
+<li>marching a mile will increase the hunger level, let&rsquo;s say by 2 units, but</li>
+<li>marching is only possible if the hunger level does not exceed a certain value, let&rsquo;s say 100</li>
+<li>if the hobbits are too hungry (see above) they die and cannot complete their mission <em>*BAM BAM BAM!*</em></li>
+</ul></li>
+<li>the hunger level can be decreased by eating provisions, which should be measured in the same units as hunger
+
+<ul>
+<li>comsuming X provisions decreases the hunger by X</li>
+<li>the hobbits cannot eat all of their provisions at once, let&rsquo;s say the maximum is 2 units</li>
+</ul></li>
+<li>in all the above points, common sense applies (i.e. hunger and provisions can not be negative etc.)</li>
+</ul>
+
+<p>In <a href="http://elixir-lang.org/">Elixir</a>, we can more or less take specifications like this and put it into code:</p>
+
+<p><div class="highlight-caption">&#39;Specification-Driven-Programming&#39; ?</div>
+<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #815ba4">defmodule</span> <span style="color: #fec418">Walking</span> <span style="color: #815ba4">do</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span>  <span style="color: #776e71"># the hunger level should not exceed 100, otherwise fail!</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>  <span style="color: #815ba4">def</span> <span style="color: #e7e9db">walk(%{</span><span style="color: #48b685">hunger_level</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">hunger})</span> <span style="color: #5bc4bf">when</span> <span style="color: #e7e9db">hunger</span> <span style="color: #5bc4bf">&gt;</span> <span style="color: #f99b15">100</span><span style="color: #e7e9db">,</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span>  <span style="color: #48b685">do</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">{</span><span style="color: #48b685">:error</span><span style="color: #e7e9db">,</span> <span style="color: #48b685">&quot;Unable to walk! Dying of hunger - GAME OVER&quot;</span><span style="color: #e7e9db">}</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>  <span style="color: #776e71"># marching increases the hunger level</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span>  <span style="color: #815ba4">def</span> <span style="color: #e7e9db">walk(%{</span><span style="color: #48b685">hunger_level</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">hunger,</span> <span style="color: #48b685">miles_walked</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">miles}</span> <span style="color: #5bc4bf">=</span> <span style="color: #e7e9db">creature)</span> <span style="color: #815ba4">do</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>    <span style="color: #e7e9db">{</span><span style="color: #48b685">:ok</span><span style="color: #e7e9db">,</span> <span style="color: #e7e9db">%{creature</span> <span style="color: #5bc4bf">|</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span>      <span style="color: #48b685">hunger_level</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">hunger</span> <span style="color: #5bc4bf">+</span> <span style="color: #f99b15">2</span><span style="color: #e7e9db">,</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>      <span style="color: #48b685">miles_walked</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">miles</span> <span style="color: #5bc4bf">+</span> <span style="color: #f99b15">1</span><span style="color: #e7e9db">}}</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span>  <span style="color: #815ba4">end</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span><span style="color: #815ba4">end</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span><span style="color: #815ba4">defmodule</span> <span style="color: #fec418">Feeding</span> <span style="color: #815ba4">do</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span>  <span style="color: #776e71"># common sense and such</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">16 </span>  <span style="color: #815ba4">def</span> <span style="color: #e7e9db">feed(%{</span><span style="color: #48b685">hunger_level</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">hunger,</span> <span style="color: #48b685">provisions</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">provisions}</span> <span style="color: #5bc4bf">=</span> <span style="color: #e7e9db">creature)</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">17 </span>  <span style="color: #5bc4bf">when</span> <span style="color: #e7e9db">hunger</span> <span style="color: #5bc4bf">&lt;=</span> <span style="color: #f99b15">0</span> <span style="color: #5bc4bf">or</span> <span style="color: #e7e9db">provisions</span> <span style="color: #5bc4bf">&lt;=</span> <span style="color: #f99b15">0</span><span style="color: #e7e9db">,</span> <span style="color: #48b685">do</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">creature</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">18 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">19 </span>  <span style="color: #776e71"># consuming provisions decreases the hunger</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">20 </span>  <span style="color: #815ba4">def</span> <span style="color: #e7e9db">feed(%{</span><span style="color: #48b685">hunger_level</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">hunger,</span> <span style="color: #48b685">provisions</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">provisions}</span> <span style="color: #5bc4bf">=</span> <span style="color: #e7e9db">creature)</span> <span style="color: #815ba4">do</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">21 </span>    <span style="color: #776e71"># we cannot eat more than 2 provisions at a time (if available and needed)</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">22 </span>    <span style="color: #e7e9db">eaten</span> <span style="color: #5bc4bf">=</span> <span style="color: #f99b15">2</span> <span style="color: #5bc4bf">|&gt;</span> <span style="color: #e7e9db">min(hunger)</span> <span style="color: #5bc4bf">|&gt;</span> <span style="color: #e7e9db">min(provisions)</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">23 </span>    <span style="color: #e7e9db">%{creature</span> <span style="color: #5bc4bf">|</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">24 </span>      <span style="color: #48b685">hunger</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">hunger</span> <span style="color: #5bc4bf">-</span> <span style="color: #e7e9db">eaten,</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">25 </span>      <span style="color: #48b685">provisions</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">provisions</span> <span style="color: #5bc4bf">-</span> <span style="color: #e7e9db">eaten}</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">26 </span>  <span style="color: #815ba4">end</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">27 </span><span style="color: #815ba4">end</span>
+</pre></div>
+</p>
+
+<p>Okay, let&rsquo;s take a step back. So where is Sam? And, more importantly, where are Frodo, Gandalf and the rest?</p>
+
+<p>Who cares? We now only require datasets that can store hunger and miles values for walking around - it doesn&rsquo;t really matter whether they are associated with a Hobbit-like entity or something like an Orc.<br/>
+This means we just enabled Saurons army to march around, given enough provisions. We also decoupled walking from food consumption - if you&rsquo;re modelling a magical being that feeds on the souls of its enemies, it can still use our walking logic, provided that it can actually hunger.</p>
+
+<p>In a real application this can be used in many different ways. Consider a Hobbit situation:</p>
+
+<p><div class="highlight-caption">The Journey</div>
+<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #815ba4">defmodule</span> <span style="color: #fec418">Journey</span> <span style="color: #815ba4">do</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span>  <span style="color: #5bc4bf">import</span> <span style="color: #fec418">Feeding</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>  <span style="color: #5bc4bf">import</span> <span style="color: #fec418">Walking</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span>  <span style="color: #815ba4">def</span> <span style="color: #e7e9db">time_passes(%</span><span style="color: #fec418">Companions</span><span style="color: #e7e9db">{}</span> <span style="color: #5bc4bf">=</span> <span style="color: #e7e9db">companions),</span> <span style="color: #48b685">do</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">time_passes({</span><span style="color: #48b685">:ok</span><span style="color: #e7e9db">,</span> <span style="color: #e7e9db">companions})</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span>  <span style="color: #815ba4">def</span> <span style="color: #e7e9db">time_passes({</span><span style="color: #48b685">:ok</span><span style="color: #e7e9db">,</span> <span style="color: #e7e9db">%</span><span style="color: #fec418">Companions</span><span style="color: #e7e9db">{</span><span style="color: #48b685">miles_walked</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">miles}})</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>  <span style="color: #5bc4bf">when</span> <span style="color: #e7e9db">miles</span> <span style="color: #5bc4bf">&gt;=</span> <span style="color: #f99b15">100</span><span style="color: #e7e9db">,</span> <span style="color: #48b685">do</span><span style="color: #e7e9db">:</span> <span style="color: #48b685">&quot;Ring destroyed, all good! - GAME OVER&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>  <span style="color: #815ba4">def</span> <span style="color: #e7e9db">time_passes({</span><span style="color: #48b685">:ok</span><span style="color: #e7e9db">,</span> <span style="color: #e7e9db">%</span><span style="color: #fec418">Companions</span><span style="color: #e7e9db">{}</span> <span style="color: #5bc4bf">=</span> <span style="color: #e7e9db">companions)</span> <span style="color: #815ba4">do</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span>    <span style="color: #e7e9db">companions</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span>    <span style="color: #5bc4bf">|&gt;</span> <span style="color: #e7e9db">consider_eating</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span>    <span style="color: #5bc4bf">|&gt;</span> <span style="color: #e7e9db">walk</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span>    <span style="color: #5bc4bf">|&gt;</span> <span style="color: #e7e9db">time_passes</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span>  <span style="color: #815ba4">end</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">16 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">17 </span>  <span style="color: #815ba4">def</span> <span style="color: #e7e9db">time_passes({</span><span style="color: #48b685">:error</span><span style="color: #e7e9db">,</span> <span style="color: #e7e9db">reason}),</span> <span style="color: #48b685">do</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">reason</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">18 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">19 </span>  <span style="color: #815ba4">def</span> <span style="color: #e7e9db">consider_eating(%</span><span style="color: #fec418">Companions</span><span style="color: #e7e9db">{</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">20 </span>      <span style="color: #48b685">hunger_level</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">hunger,</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">21 </span>      <span style="color: #48b685">provisions</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">provisions}</span> <span style="color: #5bc4bf">=</span> <span style="color: #e7e9db">companions)</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">22 </span>  <span style="color: #5bc4bf">when</span> <span style="color: #e7e9db">(hunger</span> <span style="color: #5bc4bf">&gt;</span> <span style="color: #f99b15">10</span><span style="color: #e7e9db">)</span> <span style="color: #5bc4bf">and</span> <span style="color: #e7e9db">provisions</span> <span style="color: #5bc4bf">&gt;</span> <span style="color: #f99b15">0</span><span style="color: #e7e9db">,</span> <span style="color: #48b685">do</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">feed(companions)</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">23 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">24 </span>  <span style="color: #815ba4">def</span> <span style="color: #e7e9db">consider_eating(companions),</span> <span style="color: #48b685">do</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">companions</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">25 </span><span style="color: #815ba4">end</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">26 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">27 </span><span style="color: #776e71"># start the journey and wait for what happens...</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">28 </span><span style="color: #fec418">Journey</span><span style="color: #5bc4bf">.</span><span style="color: #e7e9db">time_passes(</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">29 </span>  <span style="color: #e7e9db">%</span><span style="color: #fec418">Companions</span><span style="color: #e7e9db">{</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">30 </span>    <span style="color: #48b685">hunger_level</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">0</span><span style="color: #e7e9db">,</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">31 </span>    <span style="color: #48b685">miles_walked</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">0</span><span style="color: #e7e9db">,</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">32 </span>    <span style="color: #48b685">provisions</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">100</span><span style="color: #e7e9db">})</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">33 </span><span style="color: #776e71"># &quot;Unable to walk! Dying of hunger - GAME OVER&quot;</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">34 </span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">35 </span><span style="color: #776e71"># ...guess how much provisions we need to provide</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">36 </span><span style="color: #776e71"># the Hobbits with to survive the journey...</span>
+</pre></div>
+</p>
+
+<p>Alright, this concludes my little rant about dependency injection and object orientation. If you&rsquo;d like to read more about the design approach used in this article, I&rsquo;d recommend looking into entity-component-systems, which is covered in great detail and with loads of examples by Adam on <a href="http://t-machine.org/index.php/category/entity-systems/">his blog</a>.</p>
+
+<p>And in case you are wondering what the entity-systems topic has to do with this post: What we created here is the beginning of a component (the datastructure) and two systems operating on that component (the modules for walking and feeding) - a Hobbit entity for example might consist of several such components, usually tied together only by the same entity ID.</p>
+
+
+      <br/><hr/><br/>
+
+      
+        <div>Now you can: Comment below & <a href="https://twitter.com/intent/tweet?url=http%3a%2f%2fmalumdiscordi.ae%2fposts%2f2016%2f02%2f10%2fdi-considered-stupid-pt2%2f&text=Dependency%20Injection%20Considered%20~~Harmful~~%20Stupid%20-%20Part%202&via=ephe_meral" target="_blank">Tweet this</a> or <a href="https://twitter.com/ephe_meral">follow me</a>!</div>
+      
+    </div>
+
+    
+<div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1; 
+    var disqus_config = function () {
+      this.shortname = "malumdiscordiae";
+      this.page.url = "http:\/\/malumdiscordi.ae\/posts\/2016\/02\/10\/di-considered-stupid-pt2\/";  
+      this.page.identifier = "\/posts\/2016\/02\/10\/di-considered-stupid-pt2\/"; 
+    };
+    (function() {  
+      var d = document, s = d.createElement('script');
+      s.src = '//malumdiscordiae.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  </article>
+</div>
+
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seeds from the Apple of Discord</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          
+            <li><p>Johanna Appel&#39;s musings about the world, science &amp; technology, programming, languages, music, art, learning and absurdities.
+</p></li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+            <li>
+              <a class="hide-email" href="#">
+                <span class="icon"><i class="fa fa-envelope"></i></span>
+                <span class="username">mailto</span>
+              </a>
+            </li>
+            <script>
+              $(document).ready(function() {
+                var mail = 'bWFsdW1kaXNjb3JkaWFlQG1haWxib3gub3Jn';
+                var b64 = {_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=b64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=b64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/rn/g,"n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
+                var r = 'mailto:' + b64.decode(mail);
+                $('.hide-email').attr('href',r);
+              });
+            </script>
+          
+          
+            <li>
+              <a href="https://github.com/ephe-meral">
+                <span class="icon"><i class="fa fa-github"></i></span>
+                <span class="username">ephe-meral</span>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://twitter.com/ephe_meral">
+                <span class="icon"><i class="fa fa-twitter"></i></span>
+                <span class="username">ephe_meral</span>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+
+  <div class="ribbon">
+    <a href="https://github.com/ephe-meral/ephe-meral.github.io">Hosted on GitHub</a>
+  </div>
+
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+    <script id="dsq-count-scr" src="//malumdiscordiae.disqus.com/count.js" async></script>
+  
+</body>
+</html>
+
