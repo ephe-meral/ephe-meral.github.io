@@ -1,11 +1,11 @@
 ---
-layout: post
-title: "Considering Holistic Learning"
-date: 2016-02-21T16:46:24+01:00
+title: Considering Holistic Learning
+date: 2016-02-21T16:46:24Z
 tags:
 - learning
 - life
 ---
+
 The process of learning new things is usually thought of as painful by most people (remember school?). However, I'm obsessed with aquiring knowledge.
 
 <!--more-->

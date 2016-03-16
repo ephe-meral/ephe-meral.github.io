@@ -1,13 +1,14 @@
 ---
-layout: post
-title: "Dependency Injection Considered <del>Harmful</del> Stupid - Part 2"
-date: 2016-02-10T05:56:34+01:00
+title: Dependency Injection Considered ~~Harmful~~ Stupid - Part 2
+slug: di-considered-stupid-pt2
+date: 2016-02-10T05:56:34Z
 tags:
 - programming
 - elixir
 - entity_systems
 ---
-After messing around with dependency injection frameworks in the [first part]({% post_url 2016-01-15-dependency-injection-considered-harmful-stupid %}), let's see how we can take our LotR example and unclutter it by using data-oriented functional programming in [Elixir](http://elixir-lang.org/)!
+
+After messing around with dependency injection frameworks in the [first part]({{< relref "2016-01-15-dependency-injection-considered-harmful-stupid.md" >}}), let's see how we can take our LotR example and unclutter it by using data-oriented functional programming in [Elixir](http://elixir-lang.org/)!
 
 <!--more-->
 
@@ -16,7 +17,7 @@ But not only that, no, we also have duplicated data! It's hidden (well, on purpo
 
 Let's revisit the data structure from last time:
 
-```elixir title: "The Baggins/Gamgee Complex, Revisited"
+{{< code-title "The Baggins/Gamgee Complex, Revisited" >}}{{< highlight elixir "linenos=inline" >}}
 defmodule Companions do
   defstruct(
     hunger_level: 0,         # they hunger together
@@ -24,9 +25,9 @@ defmodule Companions do
     ring:         :the_ring, # ...hm... this should be stored somewhere else
     provisions:   100)       # and they share their bread!
 end
-```
+{{< /highlight >}}
 
-_Note that this small elixir snippet tells the compiler to structurally check maps annotated with `Companions`. It's not very crucial for our logic later on, since we'll treat input as any kind of map having defined certain keys. However, it illustrates nicely how to define named datastructures in Elixir. They are still a map - but define an additional `__struct__` key that holds the atom of the module (`Companions` in this case)._
+*Note that this small elixir snippet tells the compiler to structurally check maps annotated with `Companions`. It's not very crucial for our logic later on, since we'll treat input as any kind of map having defined certain keys. However, it illustrates nicely how to define named datastructures in Elixir. They are still a map - but define an additional `__struct__` key that holds the atom of the module (`Companions` in this case).*
 
 Now, with object oriented thinking, while designing the methods for marching and eating etc., you would probably come up with some kind of functionality that is shared between the two Hobbit objects and put that in the AbstractHobbit class, and some kind of functionality that is very Frodo or Sam specific and pack that in their respective classes. You would also need to reason about the dependency between Frodo and Sam, and how provisions are distributed between them etc.<br/>
 By reducing the data we work with to a minimum, however, and by arranging it in a very simple datastructure, we can implement this logic in a rather straightforward way without ever having to think of inheritance, encapsulation etc.
@@ -44,7 +45,7 @@ But before we do that, let's make very sure - down to a specification of sorts -
 
 In [Elixir](http://elixir-lang.org/), we can more or less take specifications like this and put it into code:
 
-```elixir title: "'Specification-Driven-Programming' ?"
+{{< code-title "'Specification-Driven-Programming' ?" >}}{{< highlight elixir "linenos=inline" >}}
 defmodule Walking do
   # the hunger level should not exceed 100, otherwise fail!
   def walk(%{hunger_level: hunger}) when hunger > 100,
@@ -72,7 +73,7 @@ defmodule Feeding do
       provisions: provisions - eaten}
   end
 end
-```
+{{< /highlight >}}
 
 Okay, let's take a step back. So where is Sam? And, more importantly, where are Frodo, Gandalf and the rest?
 
@@ -81,7 +82,7 @@ This means we just enabled Saurons army to march around, given enough provisions
 
 In a real application this can be used in many different ways. Consider a Hobbit situation:
 
-```elixir title: "The Journey"
+{{< code-title "The Journey" >}}{{< highlight elixir "linenos=inline" >}}
 defmodule Journey do
   import Feeding
   import Walking
@@ -118,8 +119,7 @@ Journey.time_passes(
 
 # ...guess how much provisions we need to provide
 # the Hobbits with to survive the journey...
-
-```
+{{< /highlight >}}
 
 
 Alright, this concludes my little rant about dependency injection and object orientation. If you'd like to read more about the design approach used in this article, I'd recommend looking into entity-component-systems, which is covered in great detail and with loads of examples by Adam on [his blog](http://t-machine.org/index.php/category/entity-systems/).

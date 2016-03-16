@@ -1,11 +1,11 @@
 ---
-layout: post
-title: "The Rusty Nuts and Bolts"
-date: 2016-01-22T00:00:34+01:00
+title: The Rusty Nuts and Bolts
+date: 2016-01-22T00:00:34Z
 tags:
 - programming
 - rust
 ---
+
 Lately I've been messing around with the [Rust](https://www.rust-lang.org/) programming language. Here's to the why, how and what.
 
 <!--more-->
@@ -31,7 +31,7 @@ So, on I went with happily implementing some basic matrix operations in Rust for
 
 Consider the following implementation of matrix multiplication independent of the dimension:
 
-```rust title: "(Don't) Try This At Home"
+{{< code-title "(Don't) Try This At Home" >}}{{< highlight rust "linenos=inline" >}}
 fn multiply(mat_a: &[[f32]], mat_b: &[[f32]]) -> &[[f32]] {
     let dim_i = mat_a.len();
     let dim_k = mat_b.len();
@@ -44,29 +44,29 @@ fn multiply(mat_a: &[[f32]], mat_b: &[[f32]]) -> &[[f32]] {
 
     &result
 }
-```
+{{< /highlight >}}
 
-This won't compile. First of all, the function 'borrows' two pointers to matrices and returns another one. Here, Rust can't infer the time  that we need these references to be alive, which is part of the [ownership](https://doc.rust-lang.org/book/ownership.html)/[lifetime](https://doc.rust-lang.org/book/lifetimes.html) semantics. We can fix that by introducing an explicit lifetime variable:
+This won't compile. First of all, the function 'borrows' two pointers to matrices and returns another one. Here, Rust can't infer the time  that we need these references to be alive, which is part of the [ownership](https://doc.rust-lang.org/book/ownership.html) / [lifetime](https://doc.rust-lang.org/book/lifetimes.html) semantics. We can fix that by introducing an explicit lifetime variable:
 
-```rust title: "Fixing the Header"
+{{< code-title "Fixing the Header" >}}{{< highlight rust "linenos=inline" >}}
 fn multiply<'a>(mat_a: &'a [[f32]], mat_b: &'a [[f32]]) -> &'a [[f32]] {
     // ...
-```
+{{< /highlight >}}
 
 Now, another problem is the `&'a [[f32]]` style of declaring a two-dimensional array slice. An array slice is a pointer to a part of a statically sized array. The compiler has some trouble defining a type like that though, so we cannot use `.len()` on the variables later on. For comparison: We could without a problem call `.len()` on an array slice defined like `&'a [f32]`.
 
 But let's ignore that problem for now. I don't really care for arbitrary array slices... What I actually want is to accept an array directly and pattern match on the deconstructed array size. The declaration for an array goes like this: `[T; N]` where `T` is the type of the elements of the array, and `N` is the size. What I'd like to do is something more like this:
 
-```rust title: "If Only..."
+{{< code-title "If Only..." >}}{{< highlight rust "linenos=inline" >}}
 fn multiply<I, J, K>(mat_a: [[f32; K]; I], mat_b: [[f32; J]; K]) -> [[f32; J]; I] {
     // ...
-```
+{{< /highlight >}}
 
 With this approach we could also drop all the `.len()` calls, since theoretically the sizes would all be known at compile time. E.g. the loop's arguments `dim_i` etc. could be filled with `I`, `J` and `K` instead, as if these were variables in a macro that will be replaced when it gets called.
 
 Speaking of which, to implement this with arbitrary array sizes I finally put the precision tools away and took the sledgehammer: [Rust Macros](https://doc.rust-lang.org/book/macros.html). To implement this multiplication I simply insert a sub-scope that does the whole thing for us in-line, roughly like so:
 
-```rust title: "Taking the Sledgehammer"
+{{< code-title "Taking the Sledgehammer" >}}{{< highlight rust "linenos=inline" >}}
 macro_rules! multiply {
     ($mat_a:ident: [$dim_i:expr, $dim_k1:expr], $mat_b:ident: [$dim_k2:expr, $dim_j:expr]) => {{
         assert_eq!($dim_k1, $dim_k2);
@@ -77,16 +77,16 @@ macro_rules! multiply {
         res
     }}
 }
-```
+{{< /highlight >}}
 
 That way, we still have to give the dimensions explicitly, but thats OK in my opinion. The macro can be invoked with a special syntax:
 
-```rust title: "Well, It Does the Job"
+{{< code-title "Well, It Does the Job" >}}{{< highlight rust "linenos=inline" >}}
 let a = [[0.3, 1.2], [3.2, 9.5], [6.0, 0.8]];
 let b = [[7.0, 3.1], [4.3, 0.1]];
 
 let result = mul!(a: [3, 2], b: [2, 2])
-```
+{{< /highlight >}}
 
 As always with macros: Don't use macros - they're like abstractions and we don't use abstractions. Well, only if we must. In this case we do, until Rust implements something like arbitrating over the array size.
 

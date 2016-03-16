@@ -1,0 +1,30 @@
+languageCode: en-us
+baseurl: http://malumdiscordi.ae
+title: Seeds from the Apple of Discord
+
+publishdir: public
+
+theme: kiss
+
+tag: tags
+
+permalinks:
+  post: /posts/:year/:month/:day/:slug/
+  page: /pages/:slug/
+
+pygmentsStyle: paraiso-dark
+
+taxonomies:
+  tag: tags
+
+params:
+  Description: >
+   Johanna Appel's musings about the world, science & technology,
+   programming, languages, music, art, learning and absurdities.
+
+  Email: malumdiscordiae@mailbox.org
+  TwitterUsername: ephe_meral
+  GitHubUsername: ephe-meral
+
+  Comments: true
+  DisqusShortName: malumdiscordiae

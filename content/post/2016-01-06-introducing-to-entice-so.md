@@ -1,7 +1,6 @@
 ---
-layout: post
-title: "Introducing 'to entice so.'"
-date: 2016-01-06T00:34:09+01:00
+title: Introducing 'to entice so.'
+date: 2016-01-06T00:34:09Z
 tags:
 - programming
 - elixir
@@ -9,6 +8,7 @@ tags:
 - open_source
 - entity_systems
 ---
+
 Despite the misleading title of this - it could as well be a social engineering guide - I'm going to introduce a free, libre and open-source software project that I'm in charge of.
 <!--more-->
 It's the first thing of this sort that I'll write about and also the first real post here. One might actually say that I've gone through the lengths of creating this blog just to write about this specific project and related topics. (But I won't, promised)

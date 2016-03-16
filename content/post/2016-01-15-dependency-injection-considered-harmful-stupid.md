@@ -1,13 +1,14 @@
 ---
-layout: post
-title: "Dependency Injection Considered <del>Harmful</del> Stupid"
-date: 2016-01-15T10:56:34+01:00
+title: Dependency Injection Considered ~~Harmful~~ Stupid
+slug: di-considered-stupid-pt1
+date: 2016-01-15T10:56:34Z
 tags:
 - dependency_injection
 - programming
 - java
 - rant
 ---
+
 Ever used a dependency injection framework? Yes? In an object oriented language?
 
 <!--more-->
@@ -30,7 +31,7 @@ Suppose you have two objects, Frodo and Sam. _(For a real setup, suppose you hav
 What we want to focus on, is how Frodo would get introduced to Sam and the Ring.<br/>
 Let's illustrate this unusefully trivial example with a bit of good old Java, and mix in some object-oriented design stuff to make it more obfuscated (and more real...):
 
-```java title: "The Fellowship"
+{{< code-title "The Fellowship" >}}{{< highlight java "linenos=inline" >}}
 public abstract class AbstractHobbit {
   protected Integer hungerLevel = 0;
   protected Integer milesWalked = 0;
@@ -51,13 +52,13 @@ public class Sam extends AbstractHobbit {
   // let's give Sam a purpose too...
   private Food provisions = new LembasBreadLoaf();
 }
-```
+{{< /highlight >}}
 
-_Note that I introduced AbstractHobbit, because keeping the code [DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself) like this is considered a 'good practice' in Java... and because it looks funny._
+*Note that I introduced AbstractHobbit, because keeping the code [DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself) like this is considered a 'good practice' in Java... and because it looks funny.*
 
 Now, in order to wire this up, all you need is an object that knows both Frodo and Sam:
 
-```java title: "The Sorcerer"
+{{< code-title "The Sorcerer" >}}{{< highlight java "linenos=inline" >}}
 public class Gandalf {
   private Hobbit ringBearer;
 
@@ -73,7 +74,7 @@ public class Gandalf {
     this.ringBearer = new Frodo(theRing, sam);
   }
 }
-```
+{{< /highlight >}}
 
 This is what is commonly known as manual 'constructor-based dependency injection': Instead of letting Frodo create a Sam instance, we have another object that creates a Frodo and 'injects' a Sam into it. _I just love this metaphor!_
 
@@ -85,7 +86,7 @@ The reason to use this principle or pattern instead of simply creating a Sam ins
 
 Alright, so far so good. Now, let's do the same thing with Sauron and let him initialize a List of 10000 Orcs with different features, armor, weapons and hierarchies...
 
-```java title: "Sauron and the Orcs"
+{{< code-title "Sauron and the Orcs" >}}{{< highlight java "linenos=inline" >}}
 public class Orc extends Creature {
   private Armor armor;
   private Weapon weapon;
@@ -114,7 +115,7 @@ public class Sauron extends Creature {
     // to include some more sub-hierarchies! Divide et impera, HARR!
   }
 }
-```
+{{< /highlight >}}
 
 As we see, it takes quite some lines of code to wire up all the Orcs by doing a manual dependency injection here - and don'f forget the Orcs that depend on them, and then the Orcs depend on _them_ and then...
 
@@ -132,7 +133,7 @@ Yes, the DI framework can figure out some instance of Armor, Weapon and Boss. Bu
 
 So, necessary configuration doesn't magically go away by using DI frameworks!
 
-```java title: "The Tedium of Tolkien"
+{{< code-title "The Tedium of Tolkien" >}}{{< highlight java "linenos=inline" >}}
 public class TolkienModule extends AbstractModule {
   @Override
   protected void configure() {
@@ -168,7 +169,7 @@ public class TolkienModule extends AbstractModule {
     return orcs;
   }
 }
-```
+{{< /highlight >}}
 
 I can't guarantee that the code above works (it's incomplete anyways). This specific scenario is generally hard to realize with DI frameworks, since their common use case is more the injection of singleton service-like objects.
 
@@ -178,14 +179,14 @@ Although it looks as if these two approaches have the potential to simplify the 
 
 Why, though? What makes code-decoupling and dependency management so hard? Well, let's see...
 
-### The root of the evil <span>$$\sqrt{-1}$$</span>
+### The root of the evil <span>\\(\sqrt{-1}\\)</span>
 
 In the Lord of the Rings, that would be Sauron, but in our case it is something else:<br/>
 It's the deficits that come with using abstractions on top of abstractions to handle the complexity imposed by abstractions.
 
 What have we done thus far? No logic. Just boilerplate code and declaring datastructures. We can just as well kick out the earlier, unclutter the code and strip it from its object-oriented parts. Revisit the classes and see what fields they have. I'll throw in a bit of pseudo code here to make it clearer:
 
-```yaml title: "The Lord of the Rings, Abridged"
+{{< code-title "The Lord of the Rings, Abridged" >}}{{< highlight yaml "linenos=inline" >}}
 Hobbit:
   hungerLevel: Integer
   milesWalked: Integer
@@ -206,20 +207,20 @@ Orc: Creature with
   boss: Creature
 
 # Sauron and Tolkien are left aside as well
-```
+{{< /highlight >}}
 
 For the following we want to consider `Ring`, `Food`, `Weapon` and `Armor` to just be more datastructure declarations. Think of them as the 'stats' of a weapon or the amount of kalories in the food - it can be as simple as an integer sometimes!
 
 
 These definitions are all we need for our calculations of the fighting orcs and marching companions who need provisions to stay alive on the way. The rest of the code from the beginning of this post does have no purpose other than filling these fields with data, in an environment where it is (seemingly) hard and complicated to do so. It does not even implement any of the logic of marching and fighting, just the abstract realtionships between objects like Frodo and Sam.<br/>Actually, for our scenario, we might argue that it is not even important to know about the relationship of those two, and might just consider them as one unit like so:
 
-```yaml title: "The Baggins/Gamgee Complex"
+{{< code-title "The Baggins/Gamgee Complex" >}}{{< highlight yaml "linenos=inline" >}}
 Companions:
   hungerLevel: Integer # they hunger together
   milesWalked: Integer # they march together
   theRing: Ring        # ...hm...
   provisions: Food     # and they share their bread!
-```
+{{< /highlight >}}
 
 This might be counter intuitive. But as a developer we know the whole story. We can decide what kind of datastructure still obeys the semantics and makes implementing the business logic as simple as possible. By doing so, we can avoid complex dependencies right from the start, and filling these few fields with data initially is also not very difficult.<br/>
 Remember that this initial configuration (especially if we are dealing with something as diverse as the orc-army) is **almost always** required and no tool can make it magically disappear.
@@ -230,9 +231,9 @@ _Note at this point that you can **always** refactor code to contain **either** 
 
 In a nutshell, if you're using DI because you think it is crucial for a project to be maintainable in the long run, you're probably not doing something harmful, but simply something unecessary. That's not because DI is intrinsically bad, but because the weird principles of OOP force you to use something like that to manage all the dependencies of your objects. In carefully designing the datastructures outside of the context of an object, it might, however, be possible to avoid all that. So why not using a simpler, more data-oriented approach instead?
 
-_For the OOP & DI lovers: If you find this post offensive, you probably suffer from a phenomenon known as the '[golden hammer](https://en.wikipedia.org/wiki/Law_of_the_instrument)'. Please take some time and think the arguments through. A classical program is never more than data-input -> computation -> data-output._
+*For the OOP & DI lovers: If you find this post offensive, you probably suffer from a phenomenon known as the '[golden hammer](https://en.wikipedia.org/wiki/Law_of_the_instrument)'. Please take some time and think the arguments through. A classical program is never more than data-input -> computation -> data-output.*
 
 And some famous last words: I'll give an example of a useful data-oriented functional implementation of the situation described above in a follow-up post, promised! In the meantime, I recommend reading [Noel's article](http://gamesfromwithin.com/data-oriented-design) about further aspects of data-oriented design, like performance gain - especially for games.
 
 UPDATE:<br/>
-As promised, here's the [follow-up post]({% post_url 2016-02-10-dependency-injection-considered-harmful-stupid-part-2 %}).
+As promised, here's the [follow-up post]({{< relref "2016-02-10-dependency-injection-considered-harmful-stupid-part-2.md" >}}).

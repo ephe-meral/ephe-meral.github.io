@@ -1,7 +1,6 @@
 ---
-layout: post
-title: "Instruction Leaflet"
-date: 2015-12-28T14:41:33+01:00
+title: Instruction Leaflet
+date: 2015-12-28T14:41:33Z
 tags:
 - instructions
 ---
