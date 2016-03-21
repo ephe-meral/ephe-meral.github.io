@@ -9,3 +9,7 @@ deploy: build
 	git add -A; \
 	date | git commit -F-; \
 	git push
+
+clean:
+	cd public; \
+	rm -rf ./*
