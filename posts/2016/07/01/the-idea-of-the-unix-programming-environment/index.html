@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Seeds from the Apple of Discord</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Johanna Appel&#39;s musings about the world, science &amp; technology, programming, languages, music, art, learning and absurdities.
+">
+  <meta name="generator" content="Hugo 0.15" />
+  <link href="" rel="alternate" type="application/rss+xml" title="Seeds from the Apple of Discord" />
+  <link href="http://malumdiscordi.ae/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="wrapper">
+
+    <a class="site-title" href="http://malumdiscordi.ae">Seeds from the Apple of Discord</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon"><i class="fa fa-bars fa-lg"></i></a>
+
+      <div class="trigger">
+        <a class="page-link" href="http://malumdiscordi.ae">Posts</a>
+
+        
+        
+          <a class="page-link" href="http://malumdiscordi.ae/pages/about/">About</a>
+        
+
+        
+        
+          <a class="page-link" href="/tags">Tags</a>
+        
+
+        <a class="page-link" href="http://malumdiscordi.ae/index.xml">Subscribe</a>
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<div class="page-content wrapper">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">The Idea of the Unix Programming Environment</h1>
+      <div class="post-meta">
+        <p itemprop="datePublished">Jul 1, 2016</p>
+        
+        
+<p>• tags: </p>
+  <ul class="tag-list">
+    
+      <li><a href="/tags/unix">unix</a></li>
+    
+      <li><a href="/tags/programming">programming</a></li>
+    
+  </ul>
+
+
+      </div>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+      
+
+<p>Ever heard of the Unix principle? There are several actually, but the most well-known is the concept of &ldquo;do one thing and do it well&rdquo;.</p>
+
+<p>This concept is something that, especially when it comes to programming, a lot of people would agree on. But why is this so seemingly universially true?<br/>
+If you look at the concept from a distance it&rsquo;s almost mathematical: Think of functions. Want a complex wavefunction? Take the parts that you want encoded and combine them. Complexity as it occurs in nature is (and we can say that with more and more confidence) something that arises from the combination of a few, simple constructs.</p>
+
+<p>Human made complexity, however, is usually going in the other direction: Complex systems, common in software engineering, are not composed of simple parts with some kind of higher-level algebra. No, usually, these systems just grew out of the fact that the engineering process required the engineers to add features on top of each other instead of combining existing ones.</p>
+
+<h3 id="an-engineer-s-perspective:d8240bf18787fe6fbbf52ec99785106f">An engineer&rsquo;s perspective</h3>
+
+<p>Let&rsquo;s face it: In software architecture (and I&rsquo;d argue in most other engineering disciplines) what we actually aim for is creating modular designs that are composed of re-usable components taking whatever shape. In reality though, changing requirements, tight deadlines, inexperienced system designers and inappropriate tools lead - very often - to error-prone, hard to maintain and generally unintelligible systems.</p>
+
+<p>How do you recognize a highly reusable component? Make a thought experiment: If you would have to describe what the component does with a few, simple sentences, could you do so without referring to other parts of the system? Is the explanation self-contained and does it include a short, precise description of the interface of the component? You might notice that it&rsquo;s tough to obtain these properties.</p>
+
+<p>Simplicity is <em>hard</em> to achieve and complexity is created <em>easily</em> - simplicity is usually also (intersubjectively) more elegant and aesthetic.</p>
+
+<h3 id="unix-a-k-a-a-good-idea:d8240bf18787fe6fbbf52ec99785106f">Unix (a.k.a. a good idea)</h3>
+
+<p><em>Note that in the following, whenever I am talking about a Unix system, I am actually referring to any kind of descendant from the original Unix or a unixoid system like Linux etc.</em></p>
+
+<p>This elegance of simplicity is easily to be found in a Unix system. Where? In the most basic tools that it ships with. Ever heard of <code>sed</code>? Or of <code>awk</code>, <code>grep</code>, <code>cat</code> and so on and so forth. These tools are well known for their commitment to the idea of doing one thing and doing it well. The question for us as a user of a Unix system is now simply how to make use of them.</p>
+
+<p>The view we often have of our operating system is that it&rsquo;s merely something that provides the basics (which are assumed to already include a GUI and related tools). I have rarely seen people who really appreciate and make use of the whole infrastructure of their operating system and all the functionality that it comes with.</p>
+
+<p>Why would you want to do that? After all, we are living in the 21st century - there are nice GUI IDEs filled with magic and automating away your brain almost entirely. Who on earth would ever want to go back to text-based programs? It seems not only counter-productive in nature, but also really damaging the evolution of graphical solutions.</p>
+
+<p>Well, why then? The answer is almost trivial: Because we as software developers don&rsquo;t produce nice graphics, we create and herd source code in precise and expressive plain-text. (To super progressive model-driven-development people who never actually touch text - of course this doesn&rsquo;t concern you&hellip;)</p>
+
+<p>It might come as a surprise for some, but the tools that are shipped with a Unix system are specialised to work with text (or more generally, byte streams). The whole idea of e.g. <code>sed</code> and <code>awk</code> is to edit text that flows through these programs that act as filters and transformators. You create new tools by essentially placing existing ones in pipelines.</p>
+
+<h3 id="unix-as-a-programming-environment:d8240bf18787fe6fbbf52ec99785106f">Unix as a programming environment</h3>
+
+<p>How does the effort of learning and using these commands pay back? Maybe you don&rsquo;t want to develop your next big web project by pipelining Unix tools - this is understandable, since it might be more efficient and maintainable to use a general purpose programming language instead.</p>
+
+<p>But what I am talking about is not to use these tools to for production-level engineering. No, I am referring to how developers use the operating system to create these software products. We might specialize in a single programming language (which is <em>really</em> beneficial for the enterprise environment) and we learn to use our standard toolset - for example IDEs - up to a point where using anything else becomes a hassle. If you achieve this point, you effectively pushed yourself to be a personified <a href="https://en.wikipedia.org/wiki/Law_of_the_instrument">golden hammer</a>.</p>
+
+<h3 id="text-is-the-developer-s-magic-wand:d8240bf18787fe6fbbf52ec99785106f">Text is the developer&rsquo;s magic wand</h3>
+
+<p>I recently discovered the <a href="http://acme.cat-v.org/">ACME</a> editor (created by - who would have guessed - the Unix creators). Apart from the way you are supposed to interface with it (a 3 button mouse basically) it&rsquo;s main idea is that every piece of text displayed by the editor is potentially executable. It is either interpreted directly as a command, or it is taken as input to a command, or ran through a pattern matching tool to be able to follow links and files etc.<br/>
+The concept basically enables you to make full use of your shell and your tools that come with it, directly in the editor, simply by clicking around.</p>
+
+<p>Take a file-system viewer for example: We already have <code>ls</code> to display the files in the current working directory. To open folders and files, use a tool that can interpret strings as file or folder names, resolve them, and pipe it to another tool that either <code>cd &amp;&amp; ls</code>&rsquo;s or <code>cat</code>&rsquo;s what it gets into a new buffer.<br/>
+These are only basics, but it&rsquo;s more or less the interaction that any GUI file-system viewer would give you, re-implemented using a few simple unix commands.</p>
+
+<p>This idea struck me as being so simple, yet so effective that I&rsquo;m now looking to incorporate it into my own workflow. I dont use ACME, since I&rsquo;m usually working from my laptop and using a mouse would be rather annoying (at least if you only have a touchpad with you), but I&rsquo;m trying to enable my <a href="https://neovim.io/">NeoVim</a> instance to be able to do these kind of things. The cool thing about this is that NeoVim already <strong>is</strong> highly text-based and has a simple way of interfacing with the shell, so that making use of it should not be a big problem.<br/>
+Additionally, the community that has formed around this editor seems to really appreciate the Unix philosophies, and keeps on adding small useful tools as plugins.</p>
+
+<h3 id="summing-up:d8240bf18787fe6fbbf52ec99785106f">Summing up&hellip;</h3>
+
+<p>Rid yourself of unnecessary abstractions and free your brain of all the loose ends it has to herd when working with complexity. And remember that you are what you eat: Overly complex programming languages and tools won&rsquo;t magically enable you to write elegant code. Question your beliefes if you think that the OS has no other purpose than to provide the basic requirements for your full-fledged IDE.<br/>
+<em>And please don&rsquo;t take my words as an advertisement for any specific piece of software.</em></p>
+
+
+      <br/><hr/><br/>
+
+      
+        <div>Now you can: Comment below & <a href="https://twitter.com/intent/tweet?url=http%3a%2f%2fmalumdiscordi.ae%2fposts%2f2016%2f07%2f01%2fthe-idea-of-the-unix-programming-environment%2f&text=The%20Idea%20of%20the%20Unix%20Programming%20Environment&via=ephe_meral" target="_blank">Tweet this</a> or <a href="https://twitter.com/ephe_meral">follow me</a>!</div>
+      
+    </div>
+
+    
+<div id="disqus_thread"></div>
+<script>
+    
+    var disqus_config = function () {
+      this.shortname = "malumdiscordiae";
+      this.page.url = "http:\/\/malumdiscordi.ae\/posts\/2016\/07\/01\/the-idea-of-the-unix-programming-environment\/";  
+      this.page.identifier = "\/posts\/2016\/07\/01\/the-idea-of-the-unix-programming-environment\/"; 
+    };
+    (function() {  
+      var d = document, s = d.createElement('script');
+      s.src = '//malumdiscordiae.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  </article>
+</div>
+
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seeds from the Apple of Discord</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          
+            <li><p>Johanna Appel&#39;s musings about the world, science &amp; technology, programming, languages, music, art, learning and absurdities.
+</p></li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+            <li>
+              <a class="hide-email" href="#">
+                <span class="icon"><i class="fa fa-envelope"></i></span>
+                <span class="username">mailto</span>
+              </a>
+            </li>
+            <script>
+              $(document).ready(function() {
+                var mail = 'bWFsdW1kaXNjb3JkaWFlQG1haWxib3gub3Jn';
+                var b64 = {_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=b64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=b64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/rn/g,"n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
+                var r = 'mailto:' + b64.decode(mail);
+                $('.hide-email').attr('href',r);
+              });
+            </script>
+          
+          
+            <li>
+              <a href="https://github.com/ephe-meral">
+                <span class="icon"><i class="fa fa-github"></i></span>
+                <span class="username">ephe-meral</span>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://twitter.com/ephe_meral">
+                <span class="icon"><i class="fa fa-twitter"></i></span>
+                <span class="username">ephe_meral</span>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+
+  <div class="ribbon">
+    <a href="https://github.com/ephe-meral/ephe-meral.github.io">Hosted on GitHub</a>
+  </div>
+
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+    <script id="dsq-count-scr" src="//malumdiscordiae.disqus.com/count.js" async></script>
+  
+</body>
+</html>
+
