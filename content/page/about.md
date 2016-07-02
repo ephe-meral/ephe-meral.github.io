@@ -1,8 +1,9 @@
 ---
 title: About
 slug: about
-theme: herring-cove
 ---
+
+<h1 class="post-title" itemprop="name headline">About</h1>
 
 Will fill this with more content later. For now see the [Instruction Leaflet]({{< relref "2015-12-28-instruction-leaflet.md" >}})
 
