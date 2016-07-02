@@ -14,7 +14,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://malumdiscordi.ae/pages/about/</guid>
-      <description>&lt;p&gt;Will fill this with more content later. For now see the &lt;a href=&#34;http://malumdiscordi.ae/posts/2015/12/28/instruction-leaflet/&#34;&gt;Instruction Leaflet&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;h1 class=&#34;post-title&#34; itemprop=&#34;name headline&#34;&gt;About&lt;/h1&gt;
+
+&lt;p&gt;Will fill this with more content later. For now see the &lt;a href=&#34;http://malumdiscordi.ae/posts/2015/12/28/instruction-leaflet/&#34;&gt;Instruction Leaflet&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;Why not?&lt;/div&gt;
 &lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(num),&lt;/span&gt;                    &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(num,&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt;
@@ -22,6 +24,54 @@
 &lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;3 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(n,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;res,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;nxt)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(n&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;nxt,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;res&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;nxt)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>http://malumdiscordi.ae/pages/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://malumdiscordi.ae/pages/projects/</guid>
+      <description>
+
+&lt;h1 class=&#34;post-title&#34; itemprop=&#34;name headline&#34;&gt;Projects&lt;/h1&gt;
+
+&lt;p&gt;These are some of the projects I am (or have been) working on. Less official ones and smaller experiments can also be found on &lt;a href=&#34;https://github.com/ephe-meral&#34;&gt;my github page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;entice-https-github-com-entice:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;a href=&#34;https://github.com/entice&#34;&gt;entice&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Full title: &amp;lsquo;to entice so.&amp;rsquo; - this fancy named project aims to create a framework for a distributed simulation of virtual worlds. Its primary use- and show-case is an MMORPG server, where it also delivers the client-side software.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://github.com/entice/entice&#34;&gt;entice/entice&lt;/a&gt; repo has more details.&lt;/p&gt;
+
+&lt;h5 id=&#34;languages-elixir-c-scala-technologies-erlang-otp-phoenix-framework-postresql-net:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;em&gt;Languages: Elixir, C#, Scala - Technologies: Erlang/OTP, Phoenix-Framework, PostreSQL, .NET&lt;/em&gt;&lt;/h5&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ex-sider-https-github-com-ephe-meral-ex-sider:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;a href=&#34;https://github.com/ephe-meral/ex_sider&#34;&gt;ex_sider&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;This project aims to map Redis datastructures onto the usual interfaces found in the Elixir standard library. Since Redis has sets, hashes, lists etc. we can simply take our commonly known language interface for these and exchange the backend with the Redis connection. (In practise there are some incompatibilities, but that is to be expected when you&amp;rsquo;re moving from simple in-mem data to a distributed key-value-store.&lt;/p&gt;
+
+&lt;h5 id=&#34;language-elixir-technologies-redis:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;em&gt;Language: Elixir - Technologies: Redis&lt;/em&gt;&lt;/h5&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kiss-https-github-com-ephe-meral-kiss:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;a href=&#34;https://github.com/ephe-meral/kiss&#34;&gt;kiss&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;A HUGO theme based on Octopress that does the least you need for a simple blog (my own).&lt;/p&gt;
+
+&lt;h5 id=&#34;language-html-css-js-go-technologies-hugo-git-github:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;em&gt;Language: HTML, CSS, JS, GO - Technologies: Hugo, Git/GitHub&lt;/em&gt;&lt;/h5&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mac-https-github-com-ephe-meral-mac:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;a href=&#34;https://github.com/ephe-meral/mac&#34;&gt;mac&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;A do-one-thing-and-do-it-well project: Parses a MAC-address-to-vendor listing and generates a static library that can be used to search for vendors based on given MACs. This is pure elixir and has no other dependency. You can also update the address listing yourself if need be.&lt;/p&gt;
+
+&lt;h5 id=&#34;language-elixir-technologies-wireshark:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;em&gt;Language: Elixir - Technologies: Wireshark&lt;/em&gt;&lt;/h5&gt;
 </description>
     </item>
     
