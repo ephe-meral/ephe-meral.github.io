@@ -93,7 +93,7 @@ By reducing the data we work with to a minimum, however, and by arranging it in 
 &lt;p&gt;Okay, let&amp;rsquo;s take a step back. So where is Sam? And, more importantly, where are Frodo, Gandalf and the rest?&lt;/p&gt;
 
 &lt;p&gt;Who cares? We now only require datasets that can store hunger and miles values for walking around - it doesn&amp;rsquo;t really matter whether they are associated with a Hobbit-like entity or something like an Orc.&lt;br/&gt;
-This means we just enabled Saurons army to march around, given enough provisions. We also decoupled walking from food consumption - if you&amp;rsquo;re modelling a magical being that feeds on the souls of its enemies, it can still use our walking logic, provided that it can actually hunger.&lt;/p&gt;
+This means we just enabled Sauron&amp;rsquo;s army to march around, given enough provisions. We also decoupled walking from food consumption - if you&amp;rsquo;re modelling a magical being that feeds on the souls of its enemies, it can still use our walking logic, provided that it can actually hunger.&lt;/p&gt;
 
 &lt;p&gt;In a real application this can be used in many different ways. Consider a Hobbit situation:&lt;/p&gt;
 

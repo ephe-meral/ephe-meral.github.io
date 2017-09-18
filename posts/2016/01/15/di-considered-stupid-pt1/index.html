@@ -84,7 +84,7 @@
 <p>Ever used a dependency injection framework? Yes? In an object oriented language?</p>
 
 <p>If it hadn&rsquo;t been clear before: I dislike object-oriented programming.
-Its my personal opinion that OOP is an unecessary overhead <strong>in most cases</strong>. Yes, there might be some systems that benefit from it, but most of the time (see its usage in Java for example) it is exactly that: Abstraction with no benefit.</p>
+Its my personal opinion that OOP is an unnecessary overhead <strong>in most cases</strong>. Yes, there might be some systems that benefit from it, but most of the time (see its usage in Java for example) it is exactly that: Abstraction with no benefit.</p>
 
 <p>Now let&rsquo;s make one thing clear. This opinion is not based on the fact that I haven&rsquo;t spent much time with OOP or that I am simply better with other paradigms. I have worked several years with OOP and design patterns and clever hierarchies and composition and encapsulation and whatnot - to what effect? Boilerplate code that protects developers from other developers just so nothing in the brittle mess of a system breaks and brings it to fall.</p>
 
@@ -288,7 +288,7 @@ It&rsquo;s the deficits that come with using abstractions on top of abstractions
 
 <p>For the following we want to consider <code>Ring</code>, <code>Food</code>, <code>Weapon</code> and <code>Armor</code> to just be more datastructure declarations. Think of them as the &lsquo;stats&rsquo; of a weapon or the amount of kalories in the food - it can be as simple as an integer sometimes!</p>
 
-<p>These definitions are all we need for our calculations of the fighting orcs and marching companions who need provisions to stay alive on the way. The rest of the code from the beginning of this post does have no purpose other than filling these fields with data, in an environment where it is (seemingly) hard and complicated to do so. It does not even implement any of the logic of marching and fighting, just the abstract realtionships between objects like Frodo and Sam.<br/>Actually, for our scenario, we might argue that it is not even important to know about the relationship of those two, and might just consider them as one unit like so:</p>
+<p>These definitions are all we need for our calculations of the fighting orcs and marching companions who need provisions to stay alive on the way. The rest of the code from the beginning of this post does have no purpose other than filling these fields with data, in an environment where it is (seemingly) hard and complicated to do so. It does not even implement any of the logic of marching and fighting, just the abstract relationships between objects like Frodo and Sam.<br/>Actually, for our scenario, we might argue that it is not even important to know about the relationship of those two, and might just consider them as one unit like so:</p>
 
 <p><div class="highlight-caption">The Baggins/Gamgee Complex</div>
 <div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span><span style="color: #f99b15">Companions</span><span style="color: #e7e9db">:</span>
@@ -306,7 +306,7 @@ Remember that this initial configuration (especially if we are dealing with some
 
 <p><em>Note at this point that you can <strong>always</strong> refactor code to contain <strong>either</strong> logic <strong>or</strong> datastructures, so defining something like the example above is not impossible under real conditions. The only reason why we didn&rsquo;t do it right from the start is because OOP is all about mixing up data and logic.</em></p>
 
-<p>In a nutshell, if you&rsquo;re using DI because you think it is crucial for a project to be maintainable in the long run, you&rsquo;re probably not doing something harmful, but simply something unecessary. That&rsquo;s not because DI is intrinsically bad, but because the weird principles of OOP force you to use something like that to manage all the dependencies of your objects. In carefully designing the datastructures outside of the context of an object, it might, however, be possible to avoid all that. So why not using a simpler, more data-oriented approach instead?</p>
+<p>In a nutshell, if you&rsquo;re using DI because you think it is crucial for a project to be maintainable in the long run, you&rsquo;re probably not doing something harmful, but simply something unnecessary. That&rsquo;s not because DI is intrinsically bad, but because the weird principles of OOP force you to use something like that to manage all the dependencies of your objects. In carefully designing the datastructures outside of the context of an object, it might, however, be possible to avoid all that. So why not using a simpler, more data-oriented approach instead?</p>
 
 <p><em>For the OOP &amp; DI lovers: If you find this post offensive, you probably suffer from a phenomenon known as the &lsquo;<a href="https://en.wikipedia.org/wiki/Law_of_the_instrument">golden hammer</a>&rsquo;. Please take some time and think the arguments through. A classical program is never more than data-input -&gt; computation -&gt; data-output.</em></p>
 

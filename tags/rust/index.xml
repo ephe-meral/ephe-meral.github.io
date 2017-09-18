@@ -19,7 +19,7 @@
 
 &lt;p&gt;Lately I&amp;rsquo;ve been messing around with the &lt;a href=&#34;https://www.rust-lang.org/&#34;&gt;Rust&lt;/a&gt; programming language. Here&amp;rsquo;s to the why, how and what.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Some context first though:&lt;/strong&gt; I recently decided to refresh and build up my math skills, since the education at my former uni was rather practically oriented and also some time ago already. Additionally, I felt like I&amp;rsquo;m lacking some of the challenges of discovering and understanding new concepts, particularily the more abstract ones.&lt;br/&gt;
+&lt;p&gt;&lt;strong&gt;Some context first though:&lt;/strong&gt; I recently decided to refresh and build up my math skills, since the education at my former uni was rather practically oriented and also some time ago already. Additionally, I felt like I&amp;rsquo;m lacking some of the challenges of discovering and understanding new concepts, particularly the more abstract ones.&lt;br/&gt;
 It&amp;rsquo;s true that as a Scala developer I usually face new language or framework related hurdles on a daily basis, but thats a totally different level. It&amp;rsquo;s not as exciting to fix a bug compared to finally getting the hang of some category theory topic.&lt;/p&gt;
 
 &lt;p&gt;However, just reading and understanding maths books is actually a rather dull activity. The real magic happens when you&amp;rsquo;re able to apply this new knowledge onto some kind of example. Thats why I came up with the idea of simply trying to implement the concepts of my books as a small library - which is also a rather great opportunity to try out a new programming language!&lt;/p&gt;

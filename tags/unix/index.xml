@@ -19,8 +19,8 @@
 
 &lt;p&gt;Ever heard of the Unix principle? There are several actually, but the most well-known is the concept of &amp;ldquo;do one thing and do it well&amp;rdquo;.&lt;/p&gt;
 
-&lt;p&gt;This concept is something that, especially when it comes to programming, a lot of people would agree on. But why is this so seemingly universially true?&lt;br/&gt;
-If you look at the concept from a distance it&amp;rsquo;s almost mathematical: Think of functions. Want a complex wavefunction? Take the parts that you want encoded and combine them. Complexity as it occurs in nature is (and we can say that with more and more confidence) something that arises from the combination of a few, simple constructs.&lt;/p&gt;
+&lt;p&gt;This concept is something that, especially when it comes to programming, a lot of people would agree on. But why is this so seemingly universally true?&lt;br/&gt;
+If you look at the concept from a distance it&amp;rsquo;s almost mathematical: Think of functions. Want a complex wave function? Take the parts that you want encoded and combine them. Complexity as it occurs in nature is (and we can say that with more and more confidence) something that arises from the combination of a few, simple constructs.&lt;/p&gt;
 
 &lt;p&gt;Human made complexity, however, is usually going in the other direction: Complex systems, common in software engineering, are not composed of simple parts with some kind of higher-level algebra. No, usually, these systems just grew out of the fact that the engineering process required the engineers to add features on top of each other instead of combining existing ones.&lt;/p&gt;
 
@@ -50,7 +50,7 @@ If you look at the concept from a distance it&amp;rsquo;s almost mathematical: T
 
 &lt;p&gt;How does the effort of learning and using these commands pay back? Maybe you don&amp;rsquo;t want to develop your next big web project by pipelining Unix tools - this is understandable, since it might be more efficient and maintainable to use a general purpose programming language instead.&lt;/p&gt;
 
-&lt;p&gt;But what I am talking about is not to use these tools to for production-level engineering. No, I am referring to how developers use the operating system to create these software products. We might specialize in a single programming language (which is &lt;em&gt;really&lt;/em&gt; beneficial for the enterprise environment) and we learn to use our standard toolset - for example IDEs - up to a point where using anything else becomes a hassle. If you achieve this point, you effectively pushed yourself to be a personified &lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_the_instrument&#34;&gt;golden hammer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;But what I am talking about is not to use these tools to for production-level engineering. No, I am referring to how developers use the operating system to create these software products. We might specialize in a single programming language (which is &lt;em&gt;really&lt;/em&gt; beneficial for the enterprise environment) and we learn to use our standard tool kit - for example IDEs - up to a point where using anything else becomes a hassle. If you achieve this point, you effectively pushed yourself to be a personified &lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_the_instrument&#34;&gt;golden hammer&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;text-is-the-developer-s-magic-wand:d8240bf18787fe6fbbf52ec99785106f&#34;&gt;Text is the developer&amp;rsquo;s magic wand&lt;/h3&gt;
 
@@ -60,12 +60,12 @@ The concept basically enables you to make full use of your shell and your tools 
 &lt;p&gt;Take a file-system viewer for example: We already have &lt;code&gt;ls&lt;/code&gt; to display the files in the current working directory. To open folders and files, use a tool that can interpret strings as file or folder names, resolve them, and pipe it to another tool that either &lt;code&gt;cd &amp;amp;&amp;amp; ls&lt;/code&gt;&amp;rsquo;s or &lt;code&gt;cat&lt;/code&gt;&amp;rsquo;s what it gets into a new buffer.&lt;br/&gt;
 These are only basics, but it&amp;rsquo;s more or less the interaction that any GUI file-system viewer would give you, re-implemented using a few simple unix commands.&lt;/p&gt;
 
-&lt;p&gt;This idea struck me as being so simple, yet so effective that I&amp;rsquo;m now looking to incorporate it into my own workflow. I dont use ACME, since I&amp;rsquo;m usually working from my laptop and using a mouse would be rather annoying (at least if you only have a touchpad with you), but I&amp;rsquo;m trying to enable my &lt;a href=&#34;https://neovim.io/&#34;&gt;NeoVim&lt;/a&gt; instance to be able to do these kind of things. The cool thing about this is that NeoVim already &lt;strong&gt;is&lt;/strong&gt; highly text-based and has a simple way of interfacing with the shell, so that making use of it should not be a big problem.&lt;br/&gt;
+&lt;p&gt;This idea struck me as being so simple, yet so effective that I&amp;rsquo;m now looking to incorporate it into my own workflow. I don&amp;rsquo;t use ACME, since I&amp;rsquo;m usually working from my laptop and using a mouse would be rather annoying (at least if you only have a touchpad with you), but I&amp;rsquo;m trying to enable my &lt;a href=&#34;https://neovim.io/&#34;&gt;NeoVim&lt;/a&gt; instance to be able to do these kind of things. The cool thing about this is that NeoVim already &lt;strong&gt;is&lt;/strong&gt; highly text-based and has a simple way of interfacing with the shell, so that making use of it should not be a big problem.&lt;br/&gt;
 Additionally, the community that has formed around this editor seems to really appreciate the Unix philosophies, and keeps on adding small useful tools as plugins.&lt;/p&gt;
 
 &lt;h3 id=&#34;summing-up:d8240bf18787fe6fbbf52ec99785106f&#34;&gt;Summing up&amp;hellip;&lt;/h3&gt;
 
-&lt;p&gt;Rid yourself of unnecessary abstractions and free your brain of all the loose ends it has to herd when working with complexity. And remember that you are what you eat: Overly complex programming languages and tools won&amp;rsquo;t magically enable you to write elegant code. Question your beliefes if you think that the OS has no other purpose than to provide the basic requirements for your full-fledged IDE.&lt;br/&gt;
+&lt;p&gt;Rid yourself of unnecessary abstractions and free your brain of all the loose ends it has to herd when working with complexity. And remember that you are what you eat: Overly complex programming languages and tools won&amp;rsquo;t magically enable you to write elegant code. Question your believes if you think that the OS has no other purpose than to provide the basic requirements for your full-fledged IDE.&lt;br/&gt;
 &lt;em&gt;And please don&amp;rsquo;t take my words as an advertisement for any specific piece of software.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
