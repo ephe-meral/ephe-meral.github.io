@@ -10,8 +10,8 @@ Ever heard of the Unix principle? There are several actually, but the most well-
 
 <!--more-->
 
-This concept is something that, especially when it comes to programming, a lot of people would agree on. But why is this so seemingly universially true?<br/>
-If you look at the concept from a distance it's almost mathematical: Think of functions. Want a complex wavefunction? Take the parts that you want encoded and combine them. Complexity as it occurs in nature is (and we can say that with more and more confidence) something that arises from the combination of a few, simple constructs.
+This concept is something that, especially when it comes to programming, a lot of people would agree on. But why is this so seemingly universally true?<br/>
+If you look at the concept from a distance it's almost mathematical: Think of functions. Want a complex wave function? Take the parts that you want encoded and combine them. Complexity as it occurs in nature is (and we can say that with more and more confidence) something that arises from the combination of a few, simple constructs.
 
 Human made complexity, however, is usually going in the other direction: Complex systems, common in software engineering, are not composed of simple parts with some kind of higher-level algebra. No, usually, these systems just grew out of the fact that the engineering process required the engineers to add features on top of each other instead of combining existing ones.
 
@@ -41,7 +41,7 @@ It might come as a surprise for some, but the tools that are shipped with a Unix
 
 How does the effort of learning and using these commands pay back? Maybe you don't want to develop your next big web project by pipelining Unix tools - this is understandable, since it might be more efficient and maintainable to use a general purpose programming language instead.
 
-But what I am talking about is not to use these tools to for production-level engineering. No, I am referring to how developers use the operating system to create these software products. We might specialize in a single programming language (which is _really_ beneficial for the enterprise environment) and we learn to use our standard toolset - for example IDEs - up to a point where using anything else becomes a hassle. If you achieve this point, you effectively pushed yourself to be a personified [golden hammer](https://en.wikipedia.org/wiki/Law_of_the_instrument).
+But what I am talking about is not to use these tools to for production-level engineering. No, I am referring to how developers use the operating system to create these software products. We might specialize in a single programming language (which is _really_ beneficial for the enterprise environment) and we learn to use our standard tool kit - for example IDEs - up to a point where using anything else becomes a hassle. If you achieve this point, you effectively pushed yourself to be a personified [golden hammer](https://en.wikipedia.org/wiki/Law_of_the_instrument).
 
 ### Text is the developer's magic wand
 
@@ -51,10 +51,10 @@ The concept basically enables you to make full use of your shell and your tools 
 Take a file-system viewer for example: We already have `ls` to display the files in the current working directory. To open folders and files, use a tool that can interpret strings as file or folder names, resolve them, and pipe it to another tool that either `cd && ls`'s or `cat`'s what it gets into a new buffer.<br/>
 These are only basics, but it's more or less the interaction that any GUI file-system viewer would give you, re-implemented using a few simple unix commands.
 
-This idea struck me as being so simple, yet so effective that I'm now looking to incorporate it into my own workflow. I dont use ACME, since I'm usually working from my laptop and using a mouse would be rather annoying (at least if you only have a touchpad with you), but I'm trying to enable my [NeoVim](https://neovim.io/) instance to be able to do these kind of things. The cool thing about this is that NeoVim already **is** highly text-based and has a simple way of interfacing with the shell, so that making use of it should not be a big problem.<br/>
+This idea struck me as being so simple, yet so effective that I'm now looking to incorporate it into my own workflow. I don't use ACME, since I'm usually working from my laptop and using a mouse would be rather annoying (at least if you only have a touchpad with you), but I'm trying to enable my [NeoVim](https://neovim.io/) instance to be able to do these kind of things. The cool thing about this is that NeoVim already **is** highly text-based and has a simple way of interfacing with the shell, so that making use of it should not be a big problem.<br/>
 Additionally, the community that has formed around this editor seems to really appreciate the Unix philosophies, and keeps on adding small useful tools as plugins.
 
 ### Summing up...
 
-Rid yourself of unnecessary abstractions and free your brain of all the loose ends it has to herd when working with complexity. And remember that you are what you eat: Overly complex programming languages and tools won't magically enable you to write elegant code. Question your beliefes if you think that the OS has no other purpose than to provide the basic requirements for your full-fledged IDE.<br/>
+Rid yourself of unnecessary abstractions and free your brain of all the loose ends it has to herd when working with complexity. And remember that you are what you eat: Overly complex programming languages and tools won't magically enable you to write elegant code. Question your believes if you think that the OS has no other purpose than to provide the basic requirements for your full-fledged IDE.<br/>
 _And please don't take my words as an advertisement for any specific piece of software._

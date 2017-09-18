@@ -10,7 +10,7 @@ Lately I've been messing around with the [Rust](https://www.rust-lang.org/) prog
 
 <!--more-->
 
-**Some context first though:** I recently decided to refresh and build up my math skills, since the education at my former uni was rather practically oriented and also some time ago already. Additionally, I felt like I'm lacking some of the challenges of discovering and understanding new concepts, particularily the more abstract ones.<br/>
+**Some context first though:** I recently decided to refresh and build up my math skills, since the education at my former uni was rather practically oriented and also some time ago already. Additionally, I felt like I'm lacking some of the challenges of discovering and understanding new concepts, particularly the more abstract ones.<br/>
 It's true that as a Scala developer I usually face new language or framework related hurdles on a daily basis, but thats a totally different level. It's not as exciting to fix a bug compared to finally getting the hang of some category theory topic.
 
 However, just reading and understanding maths books is actually a rather dull activity. The real magic happens when you're able to apply this new knowledge onto some kind of example. Thats why I came up with the idea of simply trying to implement the concepts of my books as a small library - which is also a rather great opportunity to try out a new programming language!
