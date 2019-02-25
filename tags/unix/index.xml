@@ -2,72 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unix on Seeds from the Apple of Discord</title>
-    <link>http://malumdiscordi.ae/tags/unix/</link>
+    <link>/tags/unix/</link>
     <description>Recent content in Unix on Seeds from the Apple of Discord</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Jul 2016 14:55:24 +0100</lastBuildDate>
-    <atom:link href="http://malumdiscordi.ae/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>The Idea of the Unix Programming Environment</title>
-      <link>http://malumdiscordi.ae/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</link>
+      <link>/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</link>
       <pubDate>Fri, 01 Jul 2016 14:55:24 +0100</pubDate>
       
-      <guid>http://malumdiscordi.ae/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</guid>
-      <description>
-
-&lt;p&gt;Ever heard of the Unix principle? There are several actually, but the most well-known is the concept of &amp;ldquo;do one thing and do it well&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;This concept is something that, especially when it comes to programming, a lot of people would agree on. But why is this so seemingly universally true?&lt;br/&gt;
-If you look at the concept from a distance it&amp;rsquo;s almost mathematical: Think of functions. Want a complex wave function? Take the parts that you want encoded and combine them. Complexity as it occurs in nature is (and we can say that with more and more confidence) something that arises from the combination of a few, simple constructs.&lt;/p&gt;
-
-&lt;p&gt;Human made complexity, however, is usually going in the other direction: Complex systems, common in software engineering, are not composed of simple parts with some kind of higher-level algebra. No, usually, these systems just grew out of the fact that the engineering process required the engineers to add features on top of each other instead of combining existing ones.&lt;/p&gt;
-
-&lt;h3 id=&#34;an-engineer-s-perspective:d8240bf18787fe6fbbf52ec99785106f&#34;&gt;An engineer&amp;rsquo;s perspective&lt;/h3&gt;
-
-&lt;p&gt;Let&amp;rsquo;s face it: In software architecture (and I&amp;rsquo;d argue in most other engineering disciplines) what we actually aim for is creating modular designs that are composed of re-usable components taking whatever shape. In reality though, changing requirements, tight deadlines, inexperienced system designers and inappropriate tools lead - very often - to error-prone, hard to maintain and generally unintelligible systems.&lt;/p&gt;
-
-&lt;p&gt;How do you recognize a highly reusable component? Make a thought experiment: If you would have to describe what the component does with a few, simple sentences, could you do so without referring to other parts of the system? Is the explanation self-contained and does it include a short, precise description of the interface of the component? You might notice that it&amp;rsquo;s tough to obtain these properties.&lt;/p&gt;
-
-&lt;p&gt;Simplicity is &lt;em&gt;hard&lt;/em&gt; to achieve and complexity is created &lt;em&gt;easily&lt;/em&gt; - simplicity is usually also (intersubjectively) more elegant and aesthetic.&lt;/p&gt;
-
-&lt;h3 id=&#34;unix-a-k-a-a-good-idea:d8240bf18787fe6fbbf52ec99785106f&#34;&gt;Unix (a.k.a. a good idea)&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;Note that in the following, whenever I am talking about a Unix system, I am actually referring to any kind of descendant from the original Unix or a unixoid system like Linux etc.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This elegance of simplicity is easily to be found in a Unix system. Where? In the most basic tools that it ships with. Ever heard of &lt;code&gt;sed&lt;/code&gt;? Or of &lt;code&gt;awk&lt;/code&gt;, &lt;code&gt;grep&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt; and so on and so forth. These tools are well known for their commitment to the idea of doing one thing and doing it well. The question for us as a user of a Unix system is now simply how to make use of them.&lt;/p&gt;
-
-&lt;p&gt;The view we often have of our operating system is that it&amp;rsquo;s merely something that provides the basics (which are assumed to already include a GUI and related tools). I have rarely seen people who really appreciate and make use of the whole infrastructure of their operating system and all the functionality that it comes with.&lt;/p&gt;
-
-&lt;p&gt;Why would you want to do that? After all, we are living in the 21st century - there are nice GUI IDEs filled with magic and automating away your brain almost entirely. Who on earth would ever want to go back to text-based programs? It seems not only counter-productive in nature, but also really damaging the evolution of graphical solutions.&lt;/p&gt;
-
-&lt;p&gt;Well, why then? The answer is almost trivial: Because we as software developers don&amp;rsquo;t produce nice graphics, we create and herd source code in precise and expressive plain-text. (To super progressive model-driven-development people who never actually touch text - of course this doesn&amp;rsquo;t concern you&amp;hellip;)&lt;/p&gt;
-
-&lt;p&gt;It might come as a surprise for some, but the tools that are shipped with a Unix system are specialised to work with text (or more generally, byte streams). The whole idea of e.g. &lt;code&gt;sed&lt;/code&gt; and &lt;code&gt;awk&lt;/code&gt; is to edit text that flows through these programs that act as filters and transformators. You create new tools by essentially placing existing ones in pipelines.&lt;/p&gt;
-
-&lt;h3 id=&#34;unix-as-a-programming-environment:d8240bf18787fe6fbbf52ec99785106f&#34;&gt;Unix as a programming environment&lt;/h3&gt;
-
-&lt;p&gt;How does the effort of learning and using these commands pay back? Maybe you don&amp;rsquo;t want to develop your next big web project by pipelining Unix tools - this is understandable, since it might be more efficient and maintainable to use a general purpose programming language instead.&lt;/p&gt;
-
-&lt;p&gt;But what I am talking about is not to use these tools to for production-level engineering. No, I am referring to how developers use the operating system to create these software products. We might specialize in a single programming language (which is &lt;em&gt;really&lt;/em&gt; beneficial for the enterprise environment) and we learn to use our standard tool kit - for example IDEs - up to a point where using anything else becomes a hassle. If you achieve this point, you effectively pushed yourself to be a personified &lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_the_instrument&#34;&gt;golden hammer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;text-is-the-developer-s-magic-wand:d8240bf18787fe6fbbf52ec99785106f&#34;&gt;Text is the developer&amp;rsquo;s magic wand&lt;/h3&gt;
-
-&lt;p&gt;I recently discovered the &lt;a href=&#34;http://acme.cat-v.org/&#34;&gt;ACME&lt;/a&gt; editor (created by - who would have guessed - the Unix creators). Apart from the way you are supposed to interface with it (a 3 button mouse basically) it&amp;rsquo;s main idea is that every piece of text displayed by the editor is potentially executable. It is either interpreted directly as a command, or it is taken as input to a command, or ran through a pattern matching tool to be able to follow links and files etc.&lt;br/&gt;
-The concept basically enables you to make full use of your shell and your tools that come with it, directly in the editor, simply by clicking around.&lt;/p&gt;
-
-&lt;p&gt;Take a file-system viewer for example: We already have &lt;code&gt;ls&lt;/code&gt; to display the files in the current working directory. To open folders and files, use a tool that can interpret strings as file or folder names, resolve them, and pipe it to another tool that either &lt;code&gt;cd &amp;amp;&amp;amp; ls&lt;/code&gt;&amp;rsquo;s or &lt;code&gt;cat&lt;/code&gt;&amp;rsquo;s what it gets into a new buffer.&lt;br/&gt;
-These are only basics, but it&amp;rsquo;s more or less the interaction that any GUI file-system viewer would give you, re-implemented using a few simple unix commands.&lt;/p&gt;
-
-&lt;p&gt;This idea struck me as being so simple, yet so effective that I&amp;rsquo;m now looking to incorporate it into my own workflow. I don&amp;rsquo;t use ACME, since I&amp;rsquo;m usually working from my laptop and using a mouse would be rather annoying (at least if you only have a touchpad with you), but I&amp;rsquo;m trying to enable my &lt;a href=&#34;https://neovim.io/&#34;&gt;NeoVim&lt;/a&gt; instance to be able to do these kind of things. The cool thing about this is that NeoVim already &lt;strong&gt;is&lt;/strong&gt; highly text-based and has a simple way of interfacing with the shell, so that making use of it should not be a big problem.&lt;br/&gt;
-Additionally, the community that has formed around this editor seems to really appreciate the Unix philosophies, and keeps on adding small useful tools as plugins.&lt;/p&gt;
-
-&lt;h3 id=&#34;summing-up:d8240bf18787fe6fbbf52ec99785106f&#34;&gt;Summing up&amp;hellip;&lt;/h3&gt;
-
-&lt;p&gt;Rid yourself of unnecessary abstractions and free your brain of all the loose ends it has to herd when working with complexity. And remember that you are what you eat: Overly complex programming languages and tools won&amp;rsquo;t magically enable you to write elegant code. Question your believes if you think that the OS has no other purpose than to provide the basic requirements for your full-fledged IDE.&lt;br/&gt;
-&lt;em&gt;And please don&amp;rsquo;t take my words as an advertisement for any specific piece of software.&lt;/em&gt;&lt;/p&gt;
-</description>
+      <guid>/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</guid>
+      <description>&lt;p&gt;Ever heard of the Unix principle? There are several actually, but the most well-known is the concept of &amp;ldquo;do one thing and do it well&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     
   </channel>

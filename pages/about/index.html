@@ -8,9 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Johanna Appel&#39;s musings about the world, science &amp; technology, programming, languages, music, art, learning and absurdities.
 ">
-  <meta name="generator" content="Hugo 0.15" />
-  <link href="" rel="alternate" type="application/rss+xml" title="Seeds from the Apple of Discord" />
-  <link href="http://malumdiscordi.ae/css/main.css" rel="stylesheet">
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link href="//css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
   <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
@@ -22,19 +21,21 @@
 <header class="site-header">
   <div class="wrapper">
 
-    <a class="site-title" href="http://malumdiscordi.ae">Seeds from the Apple of Discord</a>
+    <a class="site-title" href="/">Seeds from the Apple of Discord</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon"><i class="fa fa-bars fa-lg"></i></a>
 
       <div class="trigger">
-        <a class="page-link" href="http://malumdiscordi.ae">Posts</a>
+        <a class="page-link" href="/">Posts</a>
 
         
         
-          <a class="page-link" href="http://malumdiscordi.ae/pages/about/">About</a>
+          <a class="page-link" href="/pages/about/">About</a>
         
-          <a class="page-link" href="http://malumdiscordi.ae/pages/projects/">Projects</a>
+          <a class="page-link" href="/page/">Pages</a>
+        
+          <a class="page-link" href="/pages/projects/">Projects</a>
         
 
         
@@ -42,7 +43,7 @@
           <a class="page-link" href="/tags">Tags</a>
         
 
-        <a class="page-link" href="http://malumdiscordi.ae/index.xml">Subscribe</a>
+        <a class="page-link" href="/index.xml">Subscribe</a>
 
       </div>
     </nav>
@@ -58,11 +59,9 @@
 <p>Will fill this with more content later. For now see the <a href="/posts/2015/12/28/instruction-leaflet/">Instruction Leaflet</a></p>
 
 <p><div class="highlight-caption">Why not?</div>
-<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span><span style="color: #815ba4">def</span> <span style="color: #e7e9db">fib(num),</span>                    <span style="color: #48b685">do</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">fib(num,</span> <span style="color: #f99b15">0</span><span style="color: #e7e9db">,</span> <span style="color: #f99b15">1</span><span style="color: #e7e9db">)</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2 </span><span style="color: #815ba4">def</span> <span style="color: #e7e9db">fib(</span><span style="color: #f99b15">0</span><span style="color: #e7e9db">,</span> <span style="color: #e7e9db">res,</span> <span style="color: #e7e9db">_),</span>              <span style="color: #48b685">do</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">res</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3 </span><span style="color: #815ba4">def</span> <span style="color: #e7e9db">fib(n,</span> <span style="color: #e7e9db">res,</span> <span style="color: #e7e9db">nxt)</span> <span style="color: #5bc4bf">when</span> <span style="color: #e7e9db">n</span> <span style="color: #5bc4bf">&gt;</span> <span style="color: #f99b15">0</span><span style="color: #e7e9db">,</span> <span style="color: #48b685">do</span><span style="color: #e7e9db">:</span> <span style="color: #e7e9db">fib(n</span><span style="color: #5bc4bf">-</span><span style="color: #f99b15">1</span><span style="color: #e7e9db">,</span> <span style="color: #e7e9db">nxt,</span> <span style="color: #e7e9db">res</span> <span style="color: #5bc4bf">+</span> <span style="color: #e7e9db">nxt)</span>
-</pre></div>
-</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elixir" data-lang="elixir"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">1</span>def fib(num),                    <span style="color:#48b685">do</span>: fib(num, <span style="color:#f99b15">0</span>, <span style="color:#f99b15">1</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">2</span>def fib(<span style="color:#f99b15">0</span>, res, _),              <span style="color:#48b685">do</span>: res
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">3</span>def fib(n, res, nxt) when n <span style="color:#5bc4bf">&gt;</span> <span style="color:#f99b15">0</span>, <span style="color:#48b685">do</span>: fib(n<span style="color:#5bc4bf">-</span><span style="color:#f99b15">1</span>, nxt, res <span style="color:#5bc4bf">+</span> nxt)</code></pre></div></p>
 
 </div>
 

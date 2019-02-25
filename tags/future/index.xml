@@ -2,148 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Future on Seeds from the Apple of Discord</title>
-    <link>http://malumdiscordi.ae/tags/future/</link>
+    <link>/tags/future/</link>
     <description>Recent content in Future on Seeds from the Apple of Discord</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Sep 2017 14:55:24 +0100</lastBuildDate>
-    <atom:link href="http://malumdiscordi.ae/tags/future/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/tags/future/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>The Need for Evolution</title>
-      <link>http://malumdiscordi.ae/posts/2017/09/18/the-need-for-evolution/</link>
+      <link>/posts/2017/09/18/the-need-for-evolution/</link>
       <pubDate>Mon, 18 Sep 2017 14:55:24 +0100</pubDate>
       
-      <guid>http://malumdiscordi.ae/posts/2017/09/18/the-need-for-evolution/</guid>
-      <description>
-
-&lt;p&gt;Over time, machines might become more intelligent than humans. And that is our best-case scenario.&lt;/p&gt;
-
-&lt;p&gt;Lately a lot of people have begun taking this so-called &amp;lsquo;machine intelligence singularity&amp;rsquo; seriously.
-And that is mostly because we&amp;rsquo;re already able to solve many business related problems through automation techniques.
-Which means there is an intrinsic business value in machine intelligence.
-Which in turn means there is active research and a great effort to make smarter algorithms, better learning methods and more general AIs.&lt;/p&gt;
-
-&lt;p&gt;All this might or might not lead us to machines that are more intelligent than humans, and to many people that is a frightening thought.&lt;br/&gt;
-This article lays out some arguments of why this might actually happen, and takes a short look at why it might be - in fact - very beneficial for humanity as a whole.&lt;/p&gt;
-
-&lt;h3 id=&#34;about-the-human-brain:732028da26492f87958f4cd136a244df&#34;&gt;About the Human Brain&lt;/h3&gt;
-
-&lt;p&gt;(Many different) scientific communities are excited about the &lt;a href=&#34;https://www.humanbrainproject.eu/en/&#34;&gt;human brain project&lt;/a&gt;, essentially a detailed simulation of the brain.
-And indeed, our knowledge of the inner workings of this body part is very limited and discovering more about it will certainly have a great impact on future (machine learning) research.&lt;/p&gt;
-
-&lt;p&gt;But there are also voices arguing against this possible progress.
-Paraphrasing Anthony Bell: There might be fundamental structural problems that we will run into while trying to simulate biological brains on entirely different digital hardware. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:732028da26492f87958f4cd136a244df:lev&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:732028da26492f87958f4cd136a244df:lev&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;
-And that seems plausible given the fact that we still don&amp;rsquo;t really know on a continuous top-to-bottom scale how this biological network functions.&lt;/p&gt;
-
-&lt;p&gt;What these arguments usually do not take into consideration though, is that there is no known reason for intelligence to only occur in biological neural nets.
-In fact, we do not even have a standardized definition of intelligence and thus no metric that could be applied to existing &amp;ldquo;smart&amp;rdquo; algorithms in comparison to biological examples.&lt;/p&gt;
-
-&lt;p&gt;My guess here is though, that this kind of limitation does not exist. The probably is just too low. After all, the only form of life we know of is biological, and the form of intelligence that philosophy would usually categorize as such is based on centralized biological neural network, i.e. brains of some sort.&lt;/p&gt;
-
-&lt;p&gt;But what tells us that a brain is needed to exhibit intellect?&lt;/p&gt;
-
-&lt;h3 id=&#34;the-possibilities:732028da26492f87958f4cd136a244df&#34;&gt;The Possibilities&lt;/h3&gt;
-
-&lt;p&gt;Let&amp;rsquo;s assume that we (or a machine) will, at some point in the future, by research or by chance, create a technology capable of reasoning and autonomous problem solving - and maybe most importantly, consciousness.
-And for the sake of referencing, let&amp;rsquo;s call this technology general intelligence, or GI for short.&lt;br/&gt;
-Would we actually want that, and would it do us good?&lt;/p&gt;
-
-&lt;p&gt;To start this argument we should deconstruct the notion of &amp;lsquo;we&amp;rsquo;.
-We as humans are beings capable of reasoning about our environment, and we too experience a consciousness.
-If we separate these facts from the actual physical instantiation in terms of bodies and brains etc. (and of any non-scientific religious notions), we might end up being unable to distinguish between our intelligence and GI.&lt;br/&gt;
-This is what makes the &lt;a href=&#34;https://en.wikipedia.org/wiki/Turing_test&#34;&gt;Turing test&lt;/a&gt; particularly significant: It separates the actual &amp;lsquo;hardware&amp;rsquo; from the observer, who only gets to judge between human intellect and non-human intellect based on a textual dialogue.&lt;/p&gt;
-
-&lt;h4 id=&#34;online-worlds:732028da26492f87958f4cd136a244df&#34;&gt;Online Worlds&lt;/h4&gt;
-
-&lt;p&gt;While this deconstruction is theoretically useful, in reality, most humans are unable to psychologically separate their consciousness from their bodies.
-A digital existence just seems to outlandish to be possible.
-However, through gaming we have already begun to live parts of our lives separated from physical reality in digital worlds.
-This is not a fictional overstatement - see &lt;a href=&#34;https://en.wikipedia.org/wiki/Massively_multiplayer_online_role-playing_game&#34;&gt;MMORPGs&lt;/a&gt; for concrete examples.&lt;/p&gt;
-
-&lt;p&gt;The interaction with these game worlds is currently (2017) limited to keyboard and mouse input (or game controllers) and audio-visual feedback.
-However, by means of human-computer-interaction research, we are able to make these experiences more and more immersive.
-See current virtual-reality technology trends as a reference.&lt;/p&gt;
-
-&lt;p&gt;These worlds do not only contain humans players.
-There is usually also a build-in concept of non-player characters, that are controlled by algorithms.
-While the games strive to make these characters more and more indistinguishable from humans, there is a parallel development in place as well.&lt;/p&gt;
-
-&lt;p&gt;Since there is actual economic value in the in-game currencies - you can exchange them for &amp;lsquo;real-world&amp;rsquo; currencies - there is also economic value in algorithms that gather this kind of in-game money or valuables.
-Algorithms that play the game for you, and automatically harvest in-game resources.
-These are more commonly referred to as bots.&lt;br/&gt;
-Now, bots are bad for the in-game economy since they generally lead to inflation - just like printing money at home would.
-That is why the companies on one hand try hard to distinguish human players from bots (and ban the latter), and bot writers on the other hand try to make their algorithms behave as human-like as possible.
-They go as far as implementing chat features, completely unrelated to the actual gathering of in-game money.&lt;/p&gt;
-
-&lt;h4 id=&#34;the-real-world:732028da26492f87958f4cd136a244df&#34;&gt;The &amp;lsquo;Real World&amp;rsquo;&lt;/h4&gt;
-
-&lt;p&gt;Interestingly, in the online game worlds, these simulated characters are not only common, they are usually a major feature of a game.
-Some worlds simulate their characters in such detail, that you can keep following them around and observe them as they work, trade, walk around, chat with other NPCs, &amp;lsquo;relax&amp;rsquo; at home, sleep and so on.
-If the same thing would happen to you in reality - in terms of machines &amp;lsquo;trying to act human&amp;rsquo;, you would probably find that a rather disturbing notion.&lt;/p&gt;
-
-&lt;p&gt;It is also rather unlikely to happen, since &amp;lsquo;acting like a human&amp;rsquo; has no apparent value to the actual machine.
-My guess here is that the &amp;lsquo;intelligent&amp;rsquo; machines, at first, will have no physical representations at all.
-It will probably be an intellect that is restricted to digital environments.
-And those do not necessarily need to be game worlds.&lt;/p&gt;
-
-&lt;h4 id=&#34;an-actual-use-case-for-intelligence:732028da26492f87958f4cd136a244df&#34;&gt;An Actual Use-Case for Intelligence&lt;/h4&gt;
-
-&lt;p&gt;One of those restricted environments of particular interested is that of a von-Neumann machine.
-Currently, programming such a computer is regarded as an AI-hard task, in the sense that it is very hard to automate.
-A GI system though, among other things, should be able to construct algorithms - not only to extend its own capabilities and intellect, but also to extend its influence on its environment.
-The latter could e.g. be an ability to use a new online API, or to use a new piece of hardware and so on.&lt;/p&gt;
-
-&lt;p&gt;These (admittedly non-human) needs will not drive a development of such a GI at first.
-Actually more likely is the extrinsic factor of tech-businesses in need for cheap but skilled programmers.
-Or, better yet, software capable of turning intangible high-level ideas and concepts into concrete algorithms.&lt;/p&gt;
-
-&lt;p&gt;This is such a pressing need that programming languages tend to get ever more high-level, and underlying optimisation systems ever more sophisticated.
-Yet, we still have to actually write the code.
-Plus, abstractions come at the price of having to grasp them entirely to be able to use them, which is why programmers still benefit from understanding low-level languages and underlying hardware concepts.&lt;/p&gt;
-
-&lt;p&gt;Therefore, these approaches might not converge in a fully automated programming system.
-For that we will need to combine them with machine learning methodologies and specialized program synthesizers.&lt;/p&gt;
-
-&lt;h3 id=&#34;looking-farther-into-the-future:732028da26492f87958f4cd136a244df&#34;&gt;Looking Farther Into the Future&lt;/h3&gt;
-
-&lt;p&gt;The discussed kind of needs are already reasonable right now, in the sense that they are driven by current economic concerns.
-However, looking a few years ahead in time, there might be more criteria to be of interest.&lt;/p&gt;
-
-&lt;p&gt;Human life in general has a well known impact on the most immediate environment: The ecosystem of the earth.
-At the moment we struggle e.g. with climate related catastrophes that might threaten all of our lives, above all other societal aspects.
-And not only do we destroy our own livelihood, we also destroy that of other life-forms on this planet.&lt;/p&gt;
-
-&lt;p&gt;Solutions to these developments usually contain the notion of more sustainable use of natural resources, shifting towards a style of living that has less negative impact and so on.
-However, I argue that a possibility to shift towards a digital existence, ignoring the above mentioned fears of loosing a &amp;lsquo;real&amp;rsquo; physical body, will solve a major part of this problem as well.&lt;/p&gt;
-
-&lt;p&gt;A digital existence can be maintained based on the consumption of electricity, which is known to be providable by sustainable means. Even if we might not yet have developed the right technology to provide it entirely that way.&lt;/p&gt;
-
-&lt;p&gt;There are many, far reaching consequences of such societies, among them the possibility to travel extremely long distances in space.
-If intelligence can be encoded into a convenient digital format, which can be transmitted using electromagnetic waves (i.e. light), travelling at light speed suddenly becomes feasible.&lt;/p&gt;
-
-&lt;h3 id=&#34;the-nutshell:732028da26492f87958f4cd136a244df&#34;&gt;The Nutshell&lt;/h3&gt;
-
-&lt;p&gt;These thoughts are part of a more general and broad argument of why a machine intelligence singularity might happen and why that might be a future to welcome instead of reject.&lt;/p&gt;
-
-&lt;p&gt;However, the crucial point that I wanted to emphasise here is that there are concrete existing needs right now for machines with such capabilities.
-A machine that replaces a human, essentially frees that human to do more interesting work - work that is not as easily automatable.
-An economy driven by the want for more automation can therefor be an accelerator for human freedom, if we strive toward enabling that instead of clinging to old values.&lt;/p&gt;
-
-&lt;p&gt;In my own endeavors I would very much like to speed up the process of enabling such a society with all the known benefits.
-So, since I am a programmer and creating software is a task I understand very well, solving the automated programming issue is probably the best starting point for me to work on right now.&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:732028da26492f87958f4cd136a244df:lev&#34;&gt;Bell, Anthony J.: &amp;ldquo;Levels and loops: The future of artificial intelligence and neuroscience.&amp;rdquo; Philosophical Transactions of the Royal Society of London B: Biological Sciences 354.1392 (1999)
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:732028da26492f87958f4cd136a244df:lev&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <guid>/posts/2017/09/18/the-need-for-evolution/</guid>
+      <description>&lt;p&gt;Over time, machines might become more intelligent than humans. And that is our best-case scenario.&lt;/p&gt;</description>
     </item>
     
   </channel>

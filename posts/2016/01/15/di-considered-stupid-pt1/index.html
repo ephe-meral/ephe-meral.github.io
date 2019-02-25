@@ -8,9 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Johanna Appel&#39;s musings about the world, science &amp; technology, programming, languages, music, art, learning and absurdities.
 ">
-  <meta name="generator" content="Hugo 0.15" />
-  <link href="" rel="alternate" type="application/rss+xml" title="Seeds from the Apple of Discord" />
-  <link href="http://malumdiscordi.ae/css/main.css" rel="stylesheet">
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link href="//css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
   <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
@@ -22,19 +21,21 @@
 <header class="site-header">
   <div class="wrapper">
 
-    <a class="site-title" href="http://malumdiscordi.ae">Seeds from the Apple of Discord</a>
+    <a class="site-title" href="/">Seeds from the Apple of Discord</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon"><i class="fa fa-bars fa-lg"></i></a>
 
       <div class="trigger">
-        <a class="page-link" href="http://malumdiscordi.ae">Posts</a>
+        <a class="page-link" href="/">Posts</a>
 
         
         
-          <a class="page-link" href="http://malumdiscordi.ae/pages/about/">About</a>
+          <a class="page-link" href="/pages/about/">About</a>
         
-          <a class="page-link" href="http://malumdiscordi.ae/pages/projects/">Projects</a>
+          <a class="page-link" href="/page/">Pages</a>
+        
+          <a class="page-link" href="/pages/projects/">Projects</a>
         
 
         
@@ -42,7 +43,7 @@
           <a class="page-link" href="/tags">Tags</a>
         
 
-        <a class="page-link" href="http://malumdiscordi.ae/index.xml">Subscribe</a>
+        <a class="page-link" href="/index.xml">Subscribe</a>
 
       </div>
     </nav>
@@ -79,9 +80,7 @@
     </header>
 
     <div class="post-content" itemprop="articleBody">
-      
-
-<p>Ever used a dependency injection framework? Yes? In an object oriented language?</p>
+      <p>Ever used a dependency injection framework? Yes? In an object oriented language?</p>
 
 <p>If it hadn&rsquo;t been clear before: I dislike object-oriented programming.
 Its my personal opinion that OOP is an unnecessary overhead <strong>in most cases</strong>. Yes, there might be some systems that benefit from it, but most of the time (see its usage in Java for example) it is exactly that: Abstraction with no benefit.</p>
@@ -96,7 +95,7 @@ Its my personal opinion that OOP is an unnecessary overhead <strong>in most case
 <p><strong>DISCLAIMER:</strong> Forgive me for <strong>a)</strong> using Java in this post and <strong>b)</strong> for probably making syntactic mistakes. I use it here because it illustrates its own crappyness pretty nicely, and the mistakes might stem from me luckily not using it very often these days.</p>
 </blockquote>
 
-<h3 id="the-idea-of-dependency-injection-di:bab3991f7983afcffc1227d0860c2df7">The idea of dependency injection (DI)</h3>
+<h3 id="the-idea-of-dependency-injection-di">The idea of dependency injection (DI)</h3>
 
 <p>Suppose you have two objects, Frodo and Sam. <em>(For a real setup, suppose you have 5k classes and around 50k objects)</em> Now, suppose object Frodo depends on object Sam for its initialization. <em>(Again, for a real setup, suppose one of those objects depends on 10 others that each depend on 10 others and so forth)</em> The Frodo object carries the heavy burden of the Ring datastructure, so it needs a supporting companion to take care of the provisions for the long march. <em>(And again, for a real setup, add at least one Gollum dependency as well)</em></p>
 
@@ -104,51 +103,47 @@ Its my personal opinion that OOP is an unnecessary overhead <strong>in most case
 Let&rsquo;s illustrate this unusefully trivial example with a bit of good old Java, and mix in some object-oriented design stuff to make it more obfuscated (and more real&hellip;):</p>
 
 <p><div class="highlight-caption">The Fellowship</div>
-<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #815ba4">public</span> <span style="color: #815ba4">abstract</span> <span style="color: #815ba4">class</span> <span style="color: #fec418">AbstractHobbit</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span>  <span style="color: #815ba4">protected</span> <span style="color: #e7e9db">Integer</span> <span style="color: #e7e9db">hungerLevel</span> <span style="color: #5bc4bf">=</span> <span style="color: #f99b15">0</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>  <span style="color: #815ba4">protected</span> <span style="color: #e7e9db">Integer</span> <span style="color: #e7e9db">milesWalked</span> <span style="color: #5bc4bf">=</span> <span style="color: #f99b15">0</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span>  <span style="color: #776e71">// incomplete at this point. might define provision etc.</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span><span style="color: #5bc4bf">}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span><span style="color: #815ba4">public</span> <span style="color: #815ba4">class</span> <span style="color: #fec418">Frodo</span> <span style="color: #815ba4">extends</span> <span style="color: #e7e9db">AbstractHobbit</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>  <span style="color: #815ba4">private</span> <span style="color: #815ba4">final</span> <span style="color: #e7e9db">Ring</span> <span style="color: #e7e9db">theRing</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span>  <span style="color: #815ba4">private</span> <span style="color: #e7e9db">AbstractHobbit</span> <span style="color: #e7e9db">companion</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span>  <span style="color: #815ba4">public</span> <span style="color: #06b6ef">Frodo</span><span style="color: #5bc4bf">(</span><span style="color: #e7e9db">Ring</span> <span style="color: #e7e9db">theRing</span><span style="color: #5bc4bf">,</span> <span style="color: #e7e9db">AbstractHobbit</span> <span style="color: #e7e9db">companion</span><span style="color: #5bc4bf">)</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span>    <span style="color: #815ba4">this</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">theRing</span> <span style="color: #5bc4bf">=</span> <span style="color: #e7e9db">theRing</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span>    <span style="color: #815ba4">this</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">companion</span> <span style="color: #5bc4bf">=</span> <span style="color: #e7e9db">companion</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span>  <span style="color: #5bc4bf">}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span><span style="color: #5bc4bf">}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">16 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">17 </span><span style="color: #815ba4">public</span> <span style="color: #815ba4">class</span> <span style="color: #fec418">Sam</span> <span style="color: #815ba4">extends</span> <span style="color: #e7e9db">AbstractHobbit</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">18 </span>  <span style="color: #776e71">// let&#39;s give Sam a purpose too...</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">19 </span>  <span style="color: #815ba4">private</span> <span style="color: #e7e9db">Food</span> <span style="color: #e7e9db">provisions</span> <span style="color: #5bc4bf">=</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">LembasBreadLoaf</span><span style="color: #5bc4bf">();</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">20 </span><span style="color: #5bc4bf">}</span>
-</pre></div>
-</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 1</span><span style="color:#815ba4">public</span> <span style="color:#815ba4">abstract</span> <span style="color:#815ba4">class</span> <span style="color:#fec418">AbstractHobbit</span> <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 2</span>  <span style="color:#815ba4">protected</span> Integer hungerLevel <span style="color:#5bc4bf">=</span> 0<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 3</span>  <span style="color:#815ba4">protected</span> Integer milesWalked <span style="color:#5bc4bf">=</span> 0<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 4</span>  <span style="color:#776e71">// incomplete at this point. might define provision etc.
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 5</span><span style="color:#776e71"></span><span style="color:#5bc4bf">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 7</span><span style="color:#815ba4">public</span> <span style="color:#815ba4">class</span> <span style="color:#fec418">Frodo</span> <span style="color:#815ba4">extends</span> AbstractHobbit <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 8</span>  <span style="color:#815ba4">private</span> <span style="color:#815ba4">final</span> Ring theRing<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 9</span>  <span style="color:#815ba4">private</span> AbstractHobbit companion<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">11</span>  <span style="color:#815ba4">public</span> <span style="color:#06b6ef">Frodo</span><span style="color:#5bc4bf">(</span>Ring theRing<span style="color:#5bc4bf">,</span> AbstractHobbit companion<span style="color:#5bc4bf">)</span> <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">12</span>    <span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">theRing</span> <span style="color:#5bc4bf">=</span> theRing<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">13</span>    <span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">companion</span> <span style="color:#5bc4bf">=</span> companion<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">14</span>  <span style="color:#5bc4bf">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">15</span><span style="color:#5bc4bf">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">16</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">17</span><span style="color:#815ba4">public</span> <span style="color:#815ba4">class</span> <span style="color:#fec418">Sam</span> <span style="color:#815ba4">extends</span> AbstractHobbit <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">18</span>  <span style="color:#776e71">// let&#39;s give Sam a purpose too...
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">19</span><span style="color:#776e71"></span>  <span style="color:#815ba4">private</span> Food provisions <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> LembasBreadLoaf<span style="color:#5bc4bf">();</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">20</span><span style="color:#5bc4bf">}</span></code></pre></div></p>
 
 <p><em>Note that I introduced AbstractHobbit, because keeping the code <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a> like this is considered a &lsquo;good practice&rsquo; in Java&hellip; and because it looks funny.</em></p>
 
 <p>Now, in order to wire this up, all you need is an object that knows both Frodo and Sam:</p>
 
 <p><div class="highlight-caption">The Sorcerer</div>
-<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #815ba4">public</span> <span style="color: #815ba4">class</span> <span style="color: #fec418">Gandalf</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span>  <span style="color: #815ba4">private</span> <span style="color: #e7e9db">Hobbit</span> <span style="color: #e7e9db">ringBearer</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span>  <span style="color: #776e71">// for obvious reasons, a Gandalf object is</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span>  <span style="color: #776e71">// a loner and doesn&#39;t have dependencies!</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>  <span style="color: #815ba4">public</span> <span style="color: #06b6ef">Gandalf</span><span style="color: #5bc4bf">()</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span>    <span style="color: #e7e9db">Ring</span> <span style="color: #e7e9db">theRing</span> <span style="color: #5bc4bf">=</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">Ring</span><span style="color: #5bc4bf">();</span> <span style="color: #776e71">// actually stolen from Bilbo, but who cares</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span>    <span style="color: #776e71">// initializing Frodo and Sam *within* a Gandalf</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>    <span style="color: #776e71">// might be a bit semantically weird,</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span>    <span style="color: #776e71">// but we do it for illustrative purposes</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span>    <span style="color: #e7e9db">Sam</span> <span style="color: #e7e9db">sam</span> <span style="color: #5bc4bf">=</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">Sam</span><span style="color: #5bc4bf">();</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span>    <span style="color: #815ba4">this</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">ringBearer</span> <span style="color: #5bc4bf">=</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">Frodo</span><span style="color: #5bc4bf">(</span><span style="color: #e7e9db">theRing</span><span style="color: #5bc4bf">,</span> <span style="color: #e7e9db">sam</span><span style="color: #5bc4bf">);</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span>  <span style="color: #5bc4bf">}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span><span style="color: #5bc4bf">}</span>
-</pre></div>
-</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 1</span><span style="color:#815ba4">public</span> <span style="color:#815ba4">class</span> <span style="color:#fec418">Gandalf</span> <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 2</span>  <span style="color:#815ba4">private</span> Hobbit ringBearer<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 3</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 4</span>  <span style="color:#776e71">// for obvious reasons, a Gandalf object is
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 5</span><span style="color:#776e71"></span>  <span style="color:#776e71">// a loner and doesn&#39;t have dependencies!
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 6</span><span style="color:#776e71"></span>  <span style="color:#815ba4">public</span> <span style="color:#06b6ef">Gandalf</span><span style="color:#5bc4bf">()</span> <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 7</span>    Ring theRing <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> Ring<span style="color:#5bc4bf">();</span> <span style="color:#776e71">// actually stolen from Bilbo, but who cares
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 8</span><span style="color:#776e71"></span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 9</span>    <span style="color:#776e71">// initializing Frodo and Sam *within* a Gandalf
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">10</span><span style="color:#776e71"></span>    <span style="color:#776e71">// might be a bit semantically weird,
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">11</span><span style="color:#776e71"></span>    <span style="color:#776e71">// but we do it for illustrative purposes
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">12</span><span style="color:#776e71"></span>    Sam sam <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> Sam<span style="color:#5bc4bf">();</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">13</span>    <span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">ringBearer</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> Frodo<span style="color:#5bc4bf">(</span>theRing<span style="color:#5bc4bf">,</span> sam<span style="color:#5bc4bf">);</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">14</span>  <span style="color:#5bc4bf">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">15</span><span style="color:#5bc4bf">}</span></code></pre></div></p>
 
 <p>This is what is commonly known as manual &lsquo;constructor-based dependency injection&rsquo;: Instead of letting Frodo create a Sam instance, we have another object that creates a Frodo and &lsquo;injects&rsquo; a Sam into it. <em>I just love this metaphor!</em></p>
 
@@ -156,41 +151,39 @@ Let&rsquo;s illustrate this unusefully trivial example with a bit of good old Ja
 
 <p>The reason to use this principle or pattern instead of simply creating a Sam inside a Frodo is that the latter is now decoupled from the concrete instance of its companion - it could also be given an instance of a Pippin instead. This makes the Frodo easier to test as you can inject any kind of mocked AbstractHobbit, and it also makes the whole code base easier to maintain, as Frodo doesn&rsquo;t need to be changed when Sam changes. (Though Gandalf might have to change in that case&hellip;)</p>
 
-<h3 id="dependency-injection-frameworks:bab3991f7983afcffc1227d0860c2df7">Dependency-injection frameworks</h3>
+<h3 id="dependency-injection-frameworks">Dependency-injection frameworks</h3>
 
 <p>Alright, so far so good. Now, let&rsquo;s do the same thing with Sauron and let him initialize a List of 10000 Orcs with different features, armor, weapons and hierarchies&hellip;</p>
 
 <p><div class="highlight-caption">Sauron and the Orcs</div>
-<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #815ba4">public</span> <span style="color: #815ba4">class</span> <span style="color: #fec418">Orc</span> <span style="color: #815ba4">extends</span> <span style="color: #e7e9db">Creature</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span>  <span style="color: #815ba4">private</span> <span style="color: #e7e9db">Armor</span> <span style="color: #e7e9db">armor</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>  <span style="color: #815ba4">private</span> <span style="color: #e7e9db">Weapon</span> <span style="color: #e7e9db">weapon</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span>  <span style="color: #815ba4">private</span> <span style="color: #e7e9db">Creature</span> <span style="color: #e7e9db">boss</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>  <span style="color: #815ba4">public</span> <span style="color: #06b6ef">Orc</span><span style="color: #5bc4bf">(</span><span style="color: #e7e9db">Armor</span> <span style="color: #e7e9db">armor</span><span style="color: #5bc4bf">,</span> <span style="color: #e7e9db">Weapon</span> <span style="color: #e7e9db">weapon</span><span style="color: #5bc4bf">,</span> <span style="color: #e7e9db">Creature</span> <span style="color: #e7e9db">boss</span><span style="color: #5bc4bf">)</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span>    <span style="color: #815ba4">this</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">armor</span> <span style="color: #5bc4bf">=</span> <span style="color: #e7e9db">armor</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>    <span style="color: #815ba4">this</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">weapon</span> <span style="color: #5bc4bf">=</span> <span style="color: #e7e9db">weapon</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span>    <span style="color: #815ba4">this</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">boss</span> <span style="color: #5bc4bf">=</span> <span style="color: #e7e9db">boss</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>  <span style="color: #5bc4bf">}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span><span style="color: #5bc4bf">}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span><span style="color: #815ba4">public</span> <span style="color: #815ba4">class</span> <span style="color: #fec418">Sauron</span> <span style="color: #815ba4">extends</span> <span style="color: #e7e9db">Creature</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span>  <span style="color: #815ba4">private</span> <span style="color: #e7e9db">Orc</span> <span style="color: #e7e9db">leader</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span>  <span style="color: #815ba4">private</span> <span style="color: #e7e9db">List</span><span style="color: #5bc4bf">&lt;</span><span style="color: #e7e9db">Orc</span><span style="color: #5bc4bf">&gt;</span> <span style="color: #e7e9db">orcs</span> <span style="color: #5bc4bf">=</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">ArrayList</span><span style="color: #5bc4bf">&lt;</span><span style="color: #e7e9db">Orc</span><span style="color: #5bc4bf">&gt;();</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">16 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">17 </span>  <span style="color: #815ba4">public</span> <span style="color: #fec418">void</span> <span style="color: #06b6ef">createOrcs</span><span style="color: #5bc4bf">()</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">18 </span>    <span style="color: #776e71">// the topmost orc in the hierarchy only reports to us!</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">19 </span>    <span style="color: #815ba4">this</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">leader</span> <span style="color: #5bc4bf">=</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">Orc</span><span style="color: #5bc4bf">(</span><span style="color: #815ba4">new</span> <span style="color: #e7e9db">ChainArmor</span><span style="color: #5bc4bf">(),</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">WarHorn</span><span style="color: #5bc4bf">(),</span> <span style="color: #815ba4">this</span><span style="color: #5bc4bf">);</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">20 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">21 </span>    <span style="color: #776e71">// let&#39;s give it some minions to play with...</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">22 </span>    <span style="color: #e7e9db">orcs</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">add</span><span style="color: #5bc4bf">(</span><span style="color: #815ba4">new</span> <span style="color: #e7e9db">Orc</span><span style="color: #5bc4bf">(</span><span style="color: #815ba4">new</span> <span style="color: #e7e9db">LeatherArmor</span><span style="color: #5bc4bf">(),</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">IronAxe</span><span style="color: #5bc4bf">(),</span> <span style="color: #815ba4">this</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">leader</span><span style="color: #5bc4bf">));</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">23 </span>    <span style="color: #e7e9db">orcs</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">add</span><span style="color: #5bc4bf">(</span><span style="color: #815ba4">new</span> <span style="color: #e7e9db">Orc</span><span style="color: #5bc4bf">(</span><span style="color: #815ba4">new</span> <span style="color: #e7e9db">ClothArmor</span><span style="color: #5bc4bf">(),</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">LongBow</span><span style="color: #5bc4bf">(),</span> <span style="color: #815ba4">this</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">leader</span><span style="color: #5bc4bf">));</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">24 </span>    <span style="color: #776e71">// ...</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">25 </span>    <span style="color: #776e71">// TODO: continue till orc 10000, and don&#39;t forget</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">26 </span>    <span style="color: #776e71">// to include some more sub-hierarchies! Divide et impera, HARR!</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">27 </span>  <span style="color: #5bc4bf">}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">28 </span><span style="color: #5bc4bf">}</span>
-</pre></div>
-</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 1</span><span style="color:#815ba4">public</span> <span style="color:#815ba4">class</span> <span style="color:#fec418">Orc</span> <span style="color:#815ba4">extends</span> Creature <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 2</span>  <span style="color:#815ba4">private</span> Armor armor<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 3</span>  <span style="color:#815ba4">private</span> Weapon weapon<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 4</span>  <span style="color:#815ba4">private</span> Creature boss<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 5</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 6</span>  <span style="color:#815ba4">public</span> <span style="color:#06b6ef">Orc</span><span style="color:#5bc4bf">(</span>Armor armor<span style="color:#5bc4bf">,</span> Weapon weapon<span style="color:#5bc4bf">,</span> Creature boss<span style="color:#5bc4bf">)</span> <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 7</span>    <span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">armor</span> <span style="color:#5bc4bf">=</span> armor<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 8</span>    <span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">weapon</span> <span style="color:#5bc4bf">=</span> weapon<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 9</span>    <span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">boss</span> <span style="color:#5bc4bf">=</span> boss<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">10</span>  <span style="color:#5bc4bf">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">11</span><span style="color:#5bc4bf">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">13</span><span style="color:#815ba4">public</span> <span style="color:#815ba4">class</span> <span style="color:#fec418">Sauron</span> <span style="color:#815ba4">extends</span> Creature <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">14</span>  <span style="color:#815ba4">private</span> Orc leader<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">15</span>  <span style="color:#815ba4">private</span> List<span style="color:#5bc4bf">&lt;</span>Orc<span style="color:#5bc4bf">&gt;</span> orcs <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> ArrayList<span style="color:#5bc4bf">&lt;</span>Orc<span style="color:#5bc4bf">&gt;();</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">16</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">17</span>  <span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">createOrcs</span><span style="color:#5bc4bf">()</span> <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">18</span>    <span style="color:#776e71">// the topmost orc in the hierarchy only reports to us!
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">19</span><span style="color:#776e71"></span>    <span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">leader</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> Orc<span style="color:#5bc4bf">(</span><span style="color:#815ba4">new</span> ChainArmor<span style="color:#5bc4bf">(),</span> <span style="color:#815ba4">new</span> WarHorn<span style="color:#5bc4bf">(),</span> <span style="color:#815ba4">this</span><span style="color:#5bc4bf">);</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">20</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">21</span>    <span style="color:#776e71">// let&#39;s give it some minions to play with...
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">22</span><span style="color:#776e71"></span>    orcs<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">add</span><span style="color:#5bc4bf">(</span><span style="color:#815ba4">new</span> Orc<span style="color:#5bc4bf">(</span><span style="color:#815ba4">new</span> LeatherArmor<span style="color:#5bc4bf">(),</span> <span style="color:#815ba4">new</span> IronAxe<span style="color:#5bc4bf">(),</span> <span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">leader</span><span style="color:#5bc4bf">));</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">23</span>    orcs<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">add</span><span style="color:#5bc4bf">(</span><span style="color:#815ba4">new</span> Orc<span style="color:#5bc4bf">(</span><span style="color:#815ba4">new</span> ClothArmor<span style="color:#5bc4bf">(),</span> <span style="color:#815ba4">new</span> LongBow<span style="color:#5bc4bf">(),</span> <span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">leader</span><span style="color:#5bc4bf">));</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">24</span>    <span style="color:#776e71">// ...
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">25</span><span style="color:#776e71"></span>    <span style="color:#776e71">// TODO: continue till orc 10000, and don&#39;t forget
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">26</span><span style="color:#776e71"></span>    <span style="color:#776e71">// to include some more sub-hierarchies! Divide et impera, HARR!
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">27</span><span style="color:#776e71"></span>  <span style="color:#5bc4bf">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">28</span><span style="color:#5bc4bf">}</span></code></pre></div></p>
 
 <p>As we see, it takes quite some lines of code to wire up all the Orcs by doing a manual dependency injection here - and don&rsquo;f forget the Orcs that depend on them, and then the Orcs depend on <em>them</em> and then&hellip;</p>
 
@@ -209,43 +202,41 @@ Let&rsquo;s illustrate this unusefully trivial example with a bit of good old Ja
 <p>So, necessary configuration doesn&rsquo;t magically go away by using DI frameworks!</p>
 
 <p><div class="highlight-caption">The Tedium of Tolkien</div>
-<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #815ba4">public</span> <span style="color: #815ba4">class</span> <span style="color: #fec418">TolkienModule</span> <span style="color: #815ba4">extends</span> <span style="color: #e7e9db">AbstractModule</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span>  <span style="color: #5bc4bf">@Override</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>  <span style="color: #815ba4">protected</span> <span style="color: #fec418">void</span> <span style="color: #06b6ef">configure</span><span style="color: #5bc4bf">()</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span>    <span style="color: #776e71">// this should be filled with bindings from classes</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span>    <span style="color: #776e71">// to more concrete sub-classes, instances, providers etc.</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>    <span style="color: #776e71">// however, we have interdependencies between instances of</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span>    <span style="color: #776e71">// the same class (Orc) which requires some extra work...</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>  <span style="color: #5bc4bf">}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>  <span style="color: #776e71">// this provider method will get the Sauron object injected, how cool!</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span>  <span style="color: #776e71">// (that is, if we bound it to type Creature and annotated it</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span>  <span style="color: #776e71">// with the name &quot;Sauron&quot; in some other DI module)</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span>  <span style="color: #5bc4bf">@Provides</span> <span style="color: #5bc4bf">@Named(</span><span style="color: #48b685">&quot;Boss&quot;</span><span style="color: #5bc4bf">)</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span>  <span style="color: #e7e9db">Creature</span> <span style="color: #06b6ef">createBoss</span><span style="color: #5bc4bf">(@Named(</span><span style="color: #48b685">&quot;Sauron&quot;</span><span style="color: #5bc4bf">)</span> <span style="color: #e7e9db">Creature</span> <span style="color: #e7e9db">sauron</span><span style="color: #5bc4bf">)</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span>    <span style="color: #e7e9db">Orc</span> <span style="color: #e7e9db">boss</span> <span style="color: #5bc4bf">=</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">Orc</span><span style="color: #5bc4bf">(</span><span style="color: #815ba4">new</span> <span style="color: #e7e9db">ChainArmor</span><span style="color: #5bc4bf">(),</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">WarHorn</span><span style="color: #5bc4bf">(),</span> <span style="color: #e7e9db">sauron</span><span style="color: #5bc4bf">);</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">16 </span>    <span style="color: #776e71">// looks like a cyclic dependency to me:</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">17 </span>    <span style="color: #e7e9db">sauron</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">setLeader</span><span style="color: #5bc4bf">(</span><span style="color: #e7e9db">boss</span><span style="color: #5bc4bf">);</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">18 </span>    <span style="color: #815ba4">return</span> <span style="color: #e7e9db">boss</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">19 </span>  <span style="color: #5bc4bf">}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">20 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">21 </span>  <span style="color: #5bc4bf">@Provides</span> <span style="color: #5bc4bf">@Named(</span><span style="color: #48b685">&quot;Soldiers&quot;</span><span style="color: #5bc4bf">)</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">22 </span>  <span style="color: #e7e9db">List</span><span style="color: #5bc4bf">&lt;</span><span style="color: #e7e9db">Orc</span><span style="color: #5bc4bf">&gt;</span> <span style="color: #06b6ef">createSoldiers</span><span style="color: #5bc4bf">(@Named(</span><span style="color: #48b685">&quot;Boss&quot;</span><span style="color: #5bc4bf">)</span> <span style="color: #e7e9db">Creature</span> <span style="color: #e7e9db">boss</span><span style="color: #5bc4bf">)</span> <span style="color: #5bc4bf">{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">23 </span>    <span style="color: #e7e9db">List</span><span style="color: #5bc4bf">&lt;</span><span style="color: #e7e9db">Orc</span><span style="color: #5bc4bf">&gt;</span> <span style="color: #e7e9db">orcs</span> <span style="color: #5bc4bf">=</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">ArrayList</span><span style="color: #5bc4bf">&lt;</span><span style="color: #e7e9db">Orc</span><span style="color: #5bc4bf">&gt;();</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">24 </span>    <span style="color: #e7e9db">orcs</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">add</span><span style="color: #5bc4bf">(</span><span style="color: #815ba4">new</span> <span style="color: #e7e9db">Orc</span><span style="color: #5bc4bf">(</span><span style="color: #815ba4">new</span> <span style="color: #e7e9db">LeatherArmor</span><span style="color: #5bc4bf">(),</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">IronAxe</span><span style="color: #5bc4bf">(),</span> <span style="color: #e7e9db">boss</span><span style="color: #5bc4bf">));</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">25 </span>    <span style="color: #e7e9db">orcs</span><span style="color: #5bc4bf">.</span><span style="color: #06b6ef">add</span><span style="color: #5bc4bf">(</span><span style="color: #815ba4">new</span> <span style="color: #e7e9db">Orc</span><span style="color: #5bc4bf">(</span><span style="color: #815ba4">new</span> <span style="color: #e7e9db">ClothArmor</span><span style="color: #5bc4bf">(),</span> <span style="color: #815ba4">new</span> <span style="color: #e7e9db">LongBow</span><span style="color: #5bc4bf">(),</span> <span style="color: #e7e9db">boss</span><span style="color: #5bc4bf">));</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">26 </span>    <span style="color: #776e71">// ...</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">27 </span>    <span style="color: #776e71">// erm. wait a second. we still declare all that stuff explicitly?</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">28 </span>    <span style="color: #776e71">// also, we only have one level of army hierarchy so far...</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">29 </span>    <span style="color: #776e71">// we could probably somehow make this work with nice tools like</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">30 </span>    <span style="color: #776e71">// Multibindings and AssistedInject and FactoryModuleBuilder</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">31 </span>    <span style="color: #776e71">// but it gives me the chills only thinking about that!</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">32 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">33 </span>    <span style="color: #815ba4">return</span> <span style="color: #e7e9db">orcs</span><span style="color: #5bc4bf">;</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">34 </span>  <span style="color: #5bc4bf">}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">35 </span><span style="color: #5bc4bf">}</span>
-</pre></div>
-</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 1</span><span style="color:#815ba4">public</span> <span style="color:#815ba4">class</span> <span style="color:#fec418">TolkienModule</span> <span style="color:#815ba4">extends</span> AbstractModule <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 2</span>  <span style="color:#5bc4bf">@Override</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 3</span>  <span style="color:#815ba4">protected</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">configure</span><span style="color:#5bc4bf">()</span> <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 4</span>    <span style="color:#776e71">// this should be filled with bindings from classes
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 5</span><span style="color:#776e71"></span>    <span style="color:#776e71">// to more concrete sub-classes, instances, providers etc.
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 6</span><span style="color:#776e71"></span>    <span style="color:#776e71">// however, we have interdependencies between instances of
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 7</span><span style="color:#776e71"></span>    <span style="color:#776e71">// the same class (Orc) which requires some extra work...
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 8</span><span style="color:#776e71"></span>  <span style="color:#5bc4bf">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 9</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">10</span>  <span style="color:#776e71">// this provider method will get the Sauron object injected, how cool!
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">11</span><span style="color:#776e71"></span>  <span style="color:#776e71">// (that is, if we bound it to type Creature and annotated it
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">12</span><span style="color:#776e71"></span>  <span style="color:#776e71">// with the name &#34;Sauron&#34; in some other DI module)
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">13</span><span style="color:#776e71"></span>  <span style="color:#5bc4bf">@Provides</span> <span style="color:#5bc4bf">@Named</span><span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;Boss&#34;</span><span style="color:#5bc4bf">)</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">14</span>  Creature <span style="color:#06b6ef">createBoss</span><span style="color:#5bc4bf">(</span><span style="color:#5bc4bf">@Named</span><span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;Sauron&#34;</span><span style="color:#5bc4bf">)</span> Creature sauron<span style="color:#5bc4bf">)</span> <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">15</span>    Orc boss <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> Orc<span style="color:#5bc4bf">(</span><span style="color:#815ba4">new</span> ChainArmor<span style="color:#5bc4bf">(),</span> <span style="color:#815ba4">new</span> WarHorn<span style="color:#5bc4bf">(),</span> sauron<span style="color:#5bc4bf">);</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">16</span>    <span style="color:#776e71">// looks like a cyclic dependency to me:
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">17</span><span style="color:#776e71"></span>    sauron<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">setLeader</span><span style="color:#5bc4bf">(</span>boss<span style="color:#5bc4bf">);</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">18</span>    <span style="color:#815ba4">return</span> boss<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">19</span>  <span style="color:#5bc4bf">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">20</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">21</span>  <span style="color:#5bc4bf">@Provides</span> <span style="color:#5bc4bf">@Named</span><span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;Soldiers&#34;</span><span style="color:#5bc4bf">)</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">22</span>  List<span style="color:#5bc4bf">&lt;</span>Orc<span style="color:#5bc4bf">&gt;</span> <span style="color:#06b6ef">createSoldiers</span><span style="color:#5bc4bf">(</span><span style="color:#5bc4bf">@Named</span><span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;Boss&#34;</span><span style="color:#5bc4bf">)</span> Creature boss<span style="color:#5bc4bf">)</span> <span style="color:#5bc4bf">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">23</span>    List<span style="color:#5bc4bf">&lt;</span>Orc<span style="color:#5bc4bf">&gt;</span> orcs <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> ArrayList<span style="color:#5bc4bf">&lt;</span>Orc<span style="color:#5bc4bf">&gt;();</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">24</span>    orcs<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">add</span><span style="color:#5bc4bf">(</span><span style="color:#815ba4">new</span> Orc<span style="color:#5bc4bf">(</span><span style="color:#815ba4">new</span> LeatherArmor<span style="color:#5bc4bf">(),</span> <span style="color:#815ba4">new</span> IronAxe<span style="color:#5bc4bf">(),</span> boss<span style="color:#5bc4bf">));</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">25</span>    orcs<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">add</span><span style="color:#5bc4bf">(</span><span style="color:#815ba4">new</span> Orc<span style="color:#5bc4bf">(</span><span style="color:#815ba4">new</span> ClothArmor<span style="color:#5bc4bf">(),</span> <span style="color:#815ba4">new</span> LongBow<span style="color:#5bc4bf">(),</span> boss<span style="color:#5bc4bf">));</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">26</span>    <span style="color:#776e71">// ...
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">27</span><span style="color:#776e71"></span>    <span style="color:#776e71">// erm. wait a second. we still declare all that stuff explicitly?
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">28</span><span style="color:#776e71"></span>    <span style="color:#776e71">// also, we only have one level of army hierarchy so far...
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">29</span><span style="color:#776e71"></span>    <span style="color:#776e71">// we could probably somehow make this work with nice tools like
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">30</span><span style="color:#776e71"></span>    <span style="color:#776e71">// Multibindings and AssistedInject and FactoryModuleBuilder
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">31</span><span style="color:#776e71"></span>    <span style="color:#776e71">// but it gives me the chills only thinking about that!
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">32</span><span style="color:#776e71"></span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">33</span>    <span style="color:#815ba4">return</span> orcs<span style="color:#5bc4bf">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">34</span>  <span style="color:#5bc4bf">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">35</span><span style="color:#5bc4bf">}</span></code></pre></div></p>
 
 <p>I can&rsquo;t guarantee that the code above works (it&rsquo;s incomplete anyways). This specific scenario is generally hard to realize with DI frameworks, since their common use case is more the injection of singleton service-like objects.</p>
 
@@ -255,7 +246,7 @@ Let&rsquo;s illustrate this unusefully trivial example with a bit of good old Ja
 
 <p>Why, though? What makes code-decoupling and dependency management so hard? Well, let&rsquo;s see&hellip;</p>
 
-<h3 id="the-root-of-the-evil-span-sqrt-1-span:bab3991f7983afcffc1227d0860c2df7">The root of the evil <span>\(\sqrt{-1}\)</span></h3>
+<h3 id="the-root-of-the-evil-span-sqrt-1-span">The root of the evil <span>\(\sqrt{-1}\)</span></h3>
 
 <p>In the Lord of the Rings, that would be Sauron, but in our case it is something else:<br/>
 It&rsquo;s the deficits that come with using abstractions on top of abstractions to handle the complexity imposed by abstractions.</p>
@@ -263,41 +254,37 @@ It&rsquo;s the deficits that come with using abstractions on top of abstractions
 <p>What have we done thus far? No logic. Just boilerplate code and declaring datastructures. We can just as well kick out the earlier, unclutter the code and strip it from its object-oriented parts. Revisit the classes and see what fields they have. I&rsquo;ll throw in a bit of pseudo code here to make it clearer:</p>
 
 <p><div class="highlight-caption">The Lord of the Rings, Abridged</div>
-<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #f99b15">Hobbit</span><span style="color: #e7e9db">:</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span>  <span style="color: #f99b15">hungerLevel</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Integer</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span>  <span style="color: #f99b15">milesWalked</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Integer</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span><span style="color: #f99b15">Frodo</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Hobbit with</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>  <span style="color: #f99b15">theRing</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Ring</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span>  <span style="color: #f99b15">companion</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Hobbit</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span><span style="color: #f99b15">Sam</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Hobbit with</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>  <span style="color: #f99b15">provisions</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Food</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span><span style="color: #776e71"># Gandalf is just needed for DI in our example,</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">13 </span><span style="color: #776e71"># so we leave that out here - it doesnt contain any logic</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">14 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">15 </span><span style="color: #f99b15">Orc</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Creature with</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">16 </span>  <span style="color: #f99b15">armor</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Armor</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">17 </span>  <span style="color: #f99b15">weapon</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Weapon</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">18 </span>  <span style="color: #f99b15">boss</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Creature</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">19 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">20 </span><span style="color: #776e71"># Sauron and Tolkien are left aside as well</span>
-</pre></div>
-</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 1</span>Hobbit:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 2</span>  hungerLevel: Integer
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 3</span>  milesWalked: Integer
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 4</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 5</span>Frodo: Hobbit with
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 6</span>  theRing: Ring
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 7</span>  companion: Hobbit
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 8</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 9</span>Sam: Hobbit with
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">10</span>  provisions: Food
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">12</span><span style="color:#776e71"># Gandalf is just needed for DI in our example,</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">13</span><span style="color:#776e71"># so we leave that out here - it doesnt contain any logic</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">14</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">15</span>Orc: Creature with
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">16</span>  armor: Armor
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">17</span>  weapon: Weapon
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">18</span>  boss: Creature
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">19</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">20</span><span style="color:#776e71"># Sauron and Tolkien are left aside as well</span></code></pre></div></p>
 
 <p>For the following we want to consider <code>Ring</code>, <code>Food</code>, <code>Weapon</code> and <code>Armor</code> to just be more datastructure declarations. Think of them as the &lsquo;stats&rsquo; of a weapon or the amount of kalories in the food - it can be as simple as an integer sometimes!</p>
 
 <p>These definitions are all we need for our calculations of the fighting orcs and marching companions who need provisions to stay alive on the way. The rest of the code from the beginning of this post does have no purpose other than filling these fields with data, in an environment where it is (seemingly) hard and complicated to do so. It does not even implement any of the logic of marching and fighting, just the abstract relationships between objects like Frodo and Sam.<br/>Actually, for our scenario, we might argue that it is not even important to know about the relationship of those two, and might just consider them as one unit like so:</p>
 
 <p><div class="highlight-caption">The Baggins/Gamgee Complex</div>
-<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span><span style="color: #f99b15">Companions</span><span style="color: #e7e9db">:</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2 </span>  <span style="color: #f99b15">hungerLevel</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Integer</span> <span style="color: #776e71"># they hunger together</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3 </span>  <span style="color: #f99b15">milesWalked</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Integer</span> <span style="color: #776e71"># they march together</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4 </span>  <span style="color: #f99b15">theRing</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Ring</span>        <span style="color: #776e71"># ...hm...</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">5 </span>  <span style="color: #f99b15">provisions</span><span style="color: #e7e9db">:</span> <span style="color: #f99b15">Food</span>     <span style="color: #776e71"># and they share their bread!</span>
-</pre></div>
-</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">1</span>Companions:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">2</span>  hungerLevel: Integer <span style="color:#776e71"># they hunger together</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">3</span>  milesWalked: Integer <span style="color:#776e71"># they march together</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">4</span>  theRing: Ring        <span style="color:#776e71"># ...hm...</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">5</span>  provisions: Food     <span style="color:#776e71"># and they share their bread!</span></code></pre></div></p>
 
 <p>This might be counter intuitive. But as a developer we know the whole story. We can decide what kind of datastructure still obeys the semantics and makes implementing the business logic as simple as possible. By doing so, we can avoid complex dependencies right from the start, and filling these few fields with data initially is also not very difficult.<br/>
 Remember that this initial configuration (especially if we are dealing with something as diverse as the orc-army) is <strong>almost always</strong> required and no tool can make it magically disappear.</p>
@@ -315,11 +302,8 @@ Remember that this initial configuration (especially if we are dealing with some
 <p>UPDATE:<br/>
 As promised, here&rsquo;s the <a href="/posts/2016/02/10/di-considered-stupid-pt2/">follow-up post</a>.</p>
 
-
       <br/><hr/><br/>
 
-      
-        <div>Now you can: Comment below & <a href="https://twitter.com/intent/tweet?url=http%3a%2f%2fmalumdiscordi.ae%2fposts%2f2016%2f01%2f15%2fdi-considered-stupid-pt1%2f&text=Dependency%20Injection%20Considered%20~~Harmful~~%20Stupid&via=ephe_meral" target="_blank">Tweet this</a> or <a href="https://twitter.com/ephe_meral">follow me</a>!</div>
       
     </div>
 
@@ -329,7 +313,7 @@ As promised, here&rsquo;s the <a href="/posts/2016/02/10/di-considered-stupid-pt
     
     var disqus_config = function () {
       this.shortname = "malumdiscordiae";
-      this.page.url = "http:\/\/malumdiscordi.ae\/posts\/2016\/01\/15\/di-considered-stupid-pt1\/";  
+      this.page.url = "\/posts\/2016\/01\/15\/di-considered-stupid-pt1\/";  
       this.page.identifier = "\/posts\/2016\/01\/15\/di-considered-stupid-pt1\/"; 
     };
     (function() {  

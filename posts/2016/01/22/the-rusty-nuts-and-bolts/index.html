@@ -8,9 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Johanna Appel&#39;s musings about the world, science &amp; technology, programming, languages, music, art, learning and absurdities.
 ">
-  <meta name="generator" content="Hugo 0.15" />
-  <link href="" rel="alternate" type="application/rss+xml" title="Seeds from the Apple of Discord" />
-  <link href="http://malumdiscordi.ae/css/main.css" rel="stylesheet">
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link href="//css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
   <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
@@ -22,19 +21,21 @@
 <header class="site-header">
   <div class="wrapper">
 
-    <a class="site-title" href="http://malumdiscordi.ae">Seeds from the Apple of Discord</a>
+    <a class="site-title" href="/">Seeds from the Apple of Discord</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon"><i class="fa fa-bars fa-lg"></i></a>
 
       <div class="trigger">
-        <a class="page-link" href="http://malumdiscordi.ae">Posts</a>
+        <a class="page-link" href="/">Posts</a>
 
         
         
-          <a class="page-link" href="http://malumdiscordi.ae/pages/about/">About</a>
+          <a class="page-link" href="/pages/about/">About</a>
         
-          <a class="page-link" href="http://malumdiscordi.ae/pages/projects/">Projects</a>
+          <a class="page-link" href="/page/">Pages</a>
+        
+          <a class="page-link" href="/pages/projects/">Projects</a>
         
 
         
@@ -42,7 +43,7 @@
           <a class="page-link" href="/tags">Tags</a>
         
 
-        <a class="page-link" href="http://malumdiscordi.ae/index.xml">Subscribe</a>
+        <a class="page-link" href="/index.xml">Subscribe</a>
 
       </div>
     </nav>
@@ -75,16 +76,14 @@
     </header>
 
     <div class="post-content" itemprop="articleBody">
-      
-
-<p>Lately I&rsquo;ve been messing around with the <a href="https://www.rust-lang.org/">Rust</a> programming language. Here&rsquo;s to the why, how and what.</p>
+      <p>Lately I&rsquo;ve been messing around with the <a href="https://www.rust-lang.org/">Rust</a> programming language. Here&rsquo;s to the why, how and what.</p>
 
 <p><strong>Some context first though:</strong> I recently decided to refresh and build up my math skills, since the education at my former uni was rather practically oriented and also some time ago already. Additionally, I felt like I&rsquo;m lacking some of the challenges of discovering and understanding new concepts, particularly the more abstract ones.<br/>
 It&rsquo;s true that as a Scala developer I usually face new language or framework related hurdles on a daily basis, but thats a totally different level. It&rsquo;s not as exciting to fix a bug compared to finally getting the hang of some category theory topic.</p>
 
 <p>However, just reading and understanding maths books is actually a rather dull activity. The real magic happens when you&rsquo;re able to apply this new knowledge onto some kind of example. Thats why I came up with the idea of simply trying to implement the concepts of my books as a small library - which is also a rather great opportunity to try out a new programming language!</p>
 
-<h3 id="the-use-case-for-rust:2460511c958b5af270a9f1e77d2dc1da">The use case for Rust</h3>
+<h3 id="the-use-case-for-rust">The use case for Rust</h3>
 
 <p>Rust claims to be a both system-level and memory-safe language. This means that you should have the ability to take full control of your hardware (you can even write operating systems) while still maintaining some principles that keep you from shooting yourself in the leg with memory related issues.</p>
 
@@ -94,87 +93,79 @@ The difference is that Rust doesn&rsquo;t rely on garbage collection. The langua
 <p>Now, <em>usually</em> I&rsquo;m very comfortable with garbage-collected languages. However, I <em>do</em> know about the additional overhead and non-determinism caused by the GC. Systems like the latter are also one of the main reasons why software that needs to be of really high-performance is not written in e.g. Java. Wouldn&rsquo;t it be great, then, to have a language that <em>enforces</em> the same level of safety that a managed language has, but doesn&rsquo;t come with the additional overhead of it at runtime?<br/>
 All of this, by the way, is combined with an extensive type system and many features you&rsquo;d find in functional programming languages.</p>
 
-<h3 id="my-use-case:2460511c958b5af270a9f1e77d2dc1da">My use case</h3>
+<h3 id="my-use-case">My use case</h3>
 
 <p>So, on I went with happily implementing some basic matrix operations in Rust for my <a href="https://github.com/ephe-meral/halcyon">brand new library</a> (or &lsquo;crate&rsquo; in Rust parlance). And, immediately I got stuck fighting with the compiler&hellip; partly because I was not obeying Rusts rules, and partly because I apparently hit a current language limit.</p>
 
 <p>Consider the following implementation of matrix multiplication independent of the dimension:</p>
 
 <p><div class="highlight-caption">(Don&#39;t) Try This At Home</div>
-<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #815ba4">fn</span><span style="color: #e7e9db"> multiply(mat_a</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db"> </span><span style="color: #5bc4bf">&amp;</span><span style="color: #e7e9db">[[</span><span style="color: #fec418">f32</span><span style="color: #e7e9db">]], mat_b</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db"> </span><span style="color: #5bc4bf">&amp;</span><span style="color: #e7e9db">[[</span><span style="color: #fec418">f32</span><span style="color: #e7e9db">]]) </span><span style="color: #5bc4bf">-&gt;</span><span style="color: #e7e9db"> </span><span style="color: #5bc4bf">&amp;</span><span style="color: #e7e9db">[[</span><span style="color: #fec418">f32</span><span style="color: #e7e9db">]] {</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span><span style="color: #e7e9db">    </span><span style="color: #815ba4">let</span><span style="color: #e7e9db"> dim_i </span><span style="color: #5bc4bf">=</span><span style="color: #e7e9db"> mat_a.len();</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span><span style="color: #e7e9db">    </span><span style="color: #815ba4">let</span><span style="color: #e7e9db"> dim_k </span><span style="color: #5bc4bf">=</span><span style="color: #e7e9db"> mat_b.len();</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span><span style="color: #e7e9db">    </span><span style="color: #815ba4">let</span><span style="color: #e7e9db"> dim_j </span><span style="color: #5bc4bf">=</span><span style="color: #e7e9db"> mat_b[</span><span style="color: #f99b15">0</span><span style="color: #e7e9db">].len();</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span><span style="color: #e7e9db">    </span><span style="color: #815ba4">let</span><span style="color: #e7e9db"> </span><span style="color: #815ba4">mut</span><span style="color: #e7e9db"> result </span><span style="color: #5bc4bf">=</span><span style="color: #e7e9db"> [[</span><span style="color: #f99b15">0.0</span><span style="color: #e7e9db">; dim_j]; dim_i]; </span><span style="color: #776e71">// nope. array sizes need to be const</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span><span style="color: #e7e9db">    </span><span style="color: #815ba4">for</span><span style="color: #e7e9db"> i </span><span style="color: #815ba4">in</span><span style="color: #e7e9db"> </span><span style="color: #f99b15">0</span><span style="color: #e7e9db">..dim_i { </span><span style="color: #815ba4">for</span><span style="color: #e7e9db"> j </span><span style="color: #815ba4">in</span><span style="color: #e7e9db"> </span><span style="color: #f99b15">0</span><span style="color: #e7e9db">..dim_j { </span><span style="color: #815ba4">for</span><span style="color: #e7e9db"> k </span><span style="color: #815ba4">in</span><span style="color: #e7e9db"> </span><span style="color: #f99b15">0</span><span style="color: #e7e9db">..dim_k {</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span><span style="color: #e7e9db">        result[i][j] </span><span style="color: #5bc4bf">+=</span><span style="color: #e7e9db"> mat_a[i][k] </span><span style="color: #5bc4bf">*</span><span style="color: #e7e9db"> mat_b[k][j];</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span><span style="color: #e7e9db">    }}}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">11 </span><span style="color: #e7e9db">    </span><span style="color: #5bc4bf">&amp;</span><span style="color: #e7e9db">result</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">12 </span><span style="color: #e7e9db">}</span>
-</pre></div>
-</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 1</span><span style="color:#815ba4">fn</span> <span style="color:#06b6ef">multiply</span>(mat_a: <span style="color:#815ba4">&amp;</span>[[<span style="color:#fec418">f32</span>]], mat_b: <span style="color:#815ba4">&amp;</span>[[<span style="color:#fec418">f32</span>]]) -&gt; <span style="color:#815ba4">&amp;</span>[[<span style="color:#fec418">f32</span>]] {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 2</span>    <span style="color:#815ba4">let</span> dim_i <span style="color:#5bc4bf">=</span> mat_a.len();
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 3</span>    <span style="color:#815ba4">let</span> dim_k <span style="color:#5bc4bf">=</span> mat_b.len();
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 4</span>    <span style="color:#815ba4">let</span> dim_j <span style="color:#5bc4bf">=</span> mat_b[<span style="color:#f99b15">0</span>].len();
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 5</span>    <span style="color:#815ba4">let</span> <span style="color:#815ba4">mut</span> result <span style="color:#5bc4bf">=</span> [[<span style="color:#f99b15">0.0</span>; dim_j]; dim_i]; <span style="color:#776e71">// nope. array sizes need to be const
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 6</span><span style="color:#776e71"></span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 7</span>    <span style="color:#815ba4">for</span> i <span style="color:#815ba4">in</span> <span style="color:#f99b15">0</span>..dim_i { <span style="color:#815ba4">for</span> j <span style="color:#815ba4">in</span> <span style="color:#f99b15">0</span>..dim_j { <span style="color:#815ba4">for</span> k <span style="color:#815ba4">in</span> <span style="color:#f99b15">0</span>..dim_k {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 8</span>        result[i][j] <span style="color:#5bc4bf">+=</span> mat_a[i][k] <span style="color:#5bc4bf">*</span> mat_b[k][j];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 9</span>    }}}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">11</span>    <span style="color:#5bc4bf">&amp;</span>result
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">12</span>}
+</code></pre></div></p>
 
 <p>This won&rsquo;t compile. First of all, the function &lsquo;borrows&rsquo; two pointers to matrices and returns another one. Here, Rust can&rsquo;t infer the time  that we need these references to be alive, which is part of the <a href="https://doc.rust-lang.org/book/ownership.html">ownership</a> / <a href="https://doc.rust-lang.org/book/lifetimes.html">lifetime</a> semantics. We can fix that by introducing an explicit lifetime variable:</p>
 
 <p><div class="highlight-caption">Fixing the Header</div>
-<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span><span style="color: #815ba4">fn</span><span style="color: #e7e9db"> multiply</span><span style="color: #5bc4bf">&lt;</span><span style="color: #06b6ef">&#39;a</span><span style="color: #5bc4bf">&gt;</span><span style="color: #e7e9db">(mat_a</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db"> </span><span style="color: #5bc4bf">&amp;</span><span style="color: #06b6ef">&#39;a</span><span style="color: #e7e9db"> [[</span><span style="color: #fec418">f32</span><span style="color: #e7e9db">]], mat_b</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db"> </span><span style="color: #5bc4bf">&amp;</span><span style="color: #06b6ef">&#39;a</span><span style="color: #e7e9db"> [[</span><span style="color: #fec418">f32</span><span style="color: #e7e9db">]]) </span><span style="color: #5bc4bf">-&gt;</span><span style="color: #e7e9db"> </span><span style="color: #5bc4bf">&amp;</span><span style="color: #06b6ef">&#39;a</span><span style="color: #e7e9db"> [[</span><span style="color: #fec418">f32</span><span style="color: #e7e9db">]] {</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2 </span><span style="color: #e7e9db">    </span><span style="color: #776e71">// ...</span>
-</pre></div>
-</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">1</span><span style="color:#815ba4">fn</span> <span style="color:#06b6ef">multiply</span><span style="color:#5bc4bf">&lt;</span><span style="color:#06b6ef">&#39;a</span><span style="color:#5bc4bf">&gt;</span>(mat_a: <span style="color:#815ba4">&amp;</span><span style="color:#06b6ef">&#39;a</span> [[<span style="color:#fec418">f32</span>]], mat_b: <span style="color:#815ba4">&amp;</span><span style="color:#06b6ef">&#39;a</span> [[<span style="color:#fec418">f32</span>]]) -&gt; <span style="color:#815ba4">&amp;</span><span style="color:#06b6ef">&#39;a</span> [[<span style="color:#fec418">f32</span>]] {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">2</span>    <span style="color:#776e71">// ...
+</span></code></pre></div></p>
 
 <p>Now, another problem is the <code>&amp;'a [[f32]]</code> style of declaring a two-dimensional array slice. An array slice is a pointer to a part of a statically sized array. The compiler has some trouble defining a type like that though, so we cannot use <code>.len()</code> on the variables later on. For comparison: We could without a problem call <code>.len()</code> on an array slice defined like <code>&amp;'a [f32]</code>.</p>
 
 <p>But let&rsquo;s ignore that problem for now. I don&rsquo;t really care for arbitrary array slices&hellip; What I actually want is to accept an array directly and pattern match on the deconstructed array size. The declaration for an array goes like this: <code>[T; N]</code> where <code>T</code> is the type of the elements of the array, and <code>N</code> is the size. What I&rsquo;d like to do is something more like this:</p>
 
 <p><div class="highlight-caption">If Only...</div>
-<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span><span style="color: #815ba4">fn</span><span style="color: #e7e9db"> multiply</span><span style="color: #5bc4bf">&lt;</span><span style="color: #e7e9db">I, J, K</span><span style="color: #5bc4bf">&gt;</span><span style="color: #e7e9db">(mat_a</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db"> [[</span><span style="color: #fec418">f32</span><span style="color: #e7e9db">; K]; I], mat_b</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db"> [[</span><span style="color: #fec418">f32</span><span style="color: #e7e9db">; J]; K]) </span><span style="color: #5bc4bf">-&gt;</span><span style="color: #e7e9db"> [[</span><span style="color: #fec418">f32</span><span style="color: #e7e9db">; J]; I] {</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2 </span><span style="color: #e7e9db">    </span><span style="color: #776e71">// ...</span>
-</pre></div>
-</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">1</span><span style="color:#815ba4">fn</span> <span style="color:#06b6ef">multiply</span><span style="color:#5bc4bf">&lt;</span>I, J, K<span style="color:#5bc4bf">&gt;</span>(mat_a: [[<span style="color:#fec418">f32</span>; K]; I], mat_b: [[<span style="color:#fec418">f32</span>; J]; K]) -&gt; [[<span style="color:#fec418">f32</span>; J]; I] {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">2</span>    <span style="color:#776e71">// ...
+</span></code></pre></div></p>
 
 <p>With this approach we could also drop all the <code>.len()</code> calls, since theoretically the sizes would all be known at compile time. E.g. the loop&rsquo;s arguments <code>dim_i</code> etc. could be filled with <code>I</code>, <code>J</code> and <code>K</code> instead, as if these were variables in a macro that will be replaced when it gets called.</p>
 
 <p>Speaking of which, to implement this with arbitrary array sizes I finally put the precision tools away and took the sledgehammer: <a href="https://doc.rust-lang.org/book/macros.html">Rust Macros</a>. To implement this multiplication I simply insert a sub-scope that does the whole thing for us in-line, roughly like so:</p>
 
 <p><div class="highlight-caption">Taking the Sledgehammer</div>
-<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 1 </span><span style="color: #e7e9db">macro_rules</span><span style="color: #5bc4bf">!</span><span style="color: #e7e9db"> multiply {</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 2 </span><span style="color: #e7e9db">    (</span><span style="color: #776e71">$mat_a</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db">ident</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db"> [</span><span style="color: #776e71">$dim_i</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db">expr, </span><span style="color: #776e71">$dim_k1</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db">expr], </span><span style="color: #776e71">$mat_b</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db">ident</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db"> [</span><span style="color: #776e71">$dim_k2</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db">expr, </span><span style="color: #776e71">$dim_j</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db">expr]) </span><span style="color: #5bc4bf">=&gt;</span><span style="color: #e7e9db"> {{</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 3 </span><span style="color: #e7e9db">        assert_eq</span><span style="color: #5bc4bf">!</span><span style="color: #e7e9db">(</span><span style="color: #776e71">$dim_k1</span><span style="color: #e7e9db">, </span><span style="color: #776e71">$dim_k2</span><span style="color: #e7e9db">);</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 4 </span><span style="color: #e7e9db">        </span><span style="color: #815ba4">let</span><span style="color: #e7e9db"> </span><span style="color: #815ba4">mut</span><span style="color: #e7e9db"> res </span><span style="color: #5bc4bf">=</span><span style="color: #e7e9db"> mat</span><span style="color: #5bc4bf">!</span><span style="color: #e7e9db">[</span><span style="color: #776e71">$dim_i</span><span style="color: #e7e9db">, </span><span style="color: #776e71">$dim_j</span><span style="color: #e7e9db">];</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 5 </span><span style="color: #e7e9db">        </span><span style="color: #815ba4">for</span><span style="color: #e7e9db"> i </span><span style="color: #815ba4">in</span><span style="color: #e7e9db"> </span><span style="color: #f99b15">0</span><span style="color: #e7e9db">..</span><span style="color: #776e71">$dim_i</span><span style="color: #e7e9db"> { </span><span style="color: #815ba4">for</span><span style="color: #e7e9db"> j </span><span style="color: #815ba4">in</span><span style="color: #e7e9db"> </span><span style="color: #f99b15">0</span><span style="color: #e7e9db">..</span><span style="color: #776e71">$dim_j</span><span style="color: #e7e9db"> { </span><span style="color: #815ba4">for</span><span style="color: #e7e9db"> k </span><span style="color: #815ba4">in</span><span style="color: #e7e9db"> </span><span style="color: #f99b15">0</span><span style="color: #e7e9db">..</span><span style="color: #776e71">$dim_k1</span><span style="color: #e7e9db"> {</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 6 </span><span style="color: #e7e9db">            res[i][j] </span><span style="color: #5bc4bf">+=</span><span style="color: #e7e9db"> </span><span style="color: #776e71">$mat_a</span><span style="color: #e7e9db">[i][k] </span><span style="color: #5bc4bf">*</span><span style="color: #e7e9db"> </span><span style="color: #776e71">$mat_b</span><span style="color: #e7e9db">[k][j];</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 7 </span><span style="color: #e7e9db">        }}}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 8 </span><span style="color: #e7e9db">        res</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px"> 9 </span><span style="color: #e7e9db">    }}</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">10 </span><span style="color: #e7e9db">}</span>
-</pre></div>
-</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 1</span>macro_rules<span style="color:#5bc4bf">!</span> multiply {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 2</span>    (<span style="color:#776e71">$mat_a</span>:<span style="color:#fec418">ident</span>: [<span style="color:#776e71">$dim_i</span>:<span style="color:#fec418">expr</span>, <span style="color:#776e71">$dim_k1</span>:<span style="color:#fec418">expr</span>], <span style="color:#776e71">$mat_b</span>:<span style="color:#fec418">ident</span>: [<span style="color:#776e71">$dim_k2</span>:<span style="color:#fec418">expr</span>, <span style="color:#776e71">$dim_j</span>:<span style="color:#fec418">expr</span>]) <span style="color:#5bc4bf">=&gt;</span> {{
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 3</span>        assert_eq<span style="color:#5bc4bf">!</span>(<span style="color:#776e71">$dim_k1</span>, <span style="color:#776e71">$dim_k2</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 4</span>        <span style="color:#815ba4">let</span> <span style="color:#815ba4">mut</span> res <span style="color:#5bc4bf">=</span> mat<span style="color:#5bc4bf">!</span>[<span style="color:#776e71">$dim_i</span>, <span style="color:#776e71">$dim_j</span>];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 5</span>        <span style="color:#815ba4">for</span> i <span style="color:#815ba4">in</span> <span style="color:#f99b15">0</span>..<span style="color:#776e71">$dim_i</span> { <span style="color:#815ba4">for</span> j <span style="color:#815ba4">in</span> <span style="color:#f99b15">0</span>..<span style="color:#776e71">$dim_j</span> { <span style="color:#815ba4">for</span> k <span style="color:#815ba4">in</span> <span style="color:#f99b15">0</span>..<span style="color:#776e71">$dim_k1</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 6</span>            res[i][j] <span style="color:#5bc4bf">+=</span> <span style="color:#776e71">$mat_a</span>[i][k] <span style="color:#5bc4bf">*</span> <span style="color:#776e71">$mat_b</span>[k][j];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 7</span>        }}}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 8</span>        res
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d"> 9</span>    }}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">10</span>}
+</code></pre></div></p>
 
 <p>That way, we still have to give the dimensions explicitly, but thats OK in my opinion. The macro can be invoked with a special syntax:</p>
 
 <p><div class="highlight-caption">Well, It Does the Job</div>
-<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1 </span><span style="color: #815ba4">let</span><span style="color: #e7e9db"> a </span><span style="color: #5bc4bf">=</span><span style="color: #e7e9db"> [[</span><span style="color: #f99b15">0.3</span><span style="color: #e7e9db">, </span><span style="color: #f99b15">1.2</span><span style="color: #e7e9db">], [</span><span style="color: #f99b15">3.2</span><span style="color: #e7e9db">, </span><span style="color: #f99b15">9.5</span><span style="color: #e7e9db">], [</span><span style="color: #f99b15">6.0</span><span style="color: #e7e9db">, </span><span style="color: #f99b15">0.8</span><span style="color: #e7e9db">]];</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2 </span><span style="color: #815ba4">let</span><span style="color: #e7e9db"> b </span><span style="color: #5bc4bf">=</span><span style="color: #e7e9db"> [[</span><span style="color: #f99b15">7.0</span><span style="color: #e7e9db">, </span><span style="color: #f99b15">3.1</span><span style="color: #e7e9db">], [</span><span style="color: #f99b15">4.3</span><span style="color: #e7e9db">, </span><span style="color: #f99b15">0.1</span><span style="color: #e7e9db">]];</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3 </span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4 </span><span style="color: #815ba4">let</span><span style="color: #e7e9db"> result </span><span style="color: #5bc4bf">=</span><span style="color: #e7e9db"> mul</span><span style="color: #5bc4bf">!</span><span style="color: #e7e9db">(a</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db"> [</span><span style="color: #f99b15">3</span><span style="color: #e7e9db">, </span><span style="color: #f99b15">2</span><span style="color: #e7e9db">], b</span><span style="color: #5bc4bf">:</span><span style="color: #e7e9db"> [</span><span style="color: #f99b15">2</span><span style="color: #e7e9db">, </span><span style="color: #f99b15">2</span><span style="color: #e7e9db">])</span>
-</pre></div>
-</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">1</span><span style="color:#815ba4">let</span> a <span style="color:#5bc4bf">=</span> [[<span style="color:#f99b15">0.3</span>, <span style="color:#f99b15">1.2</span>], [<span style="color:#f99b15">3.2</span>, <span style="color:#f99b15">9.5</span>], [<span style="color:#f99b15">6.0</span>, <span style="color:#f99b15">0.8</span>]];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">2</span><span style="color:#815ba4">let</span> b <span style="color:#5bc4bf">=</span> [[<span style="color:#f99b15">7.0</span>, <span style="color:#f99b15">3.1</span>], [<span style="color:#f99b15">4.3</span>, <span style="color:#f99b15">0.1</span>]];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">3</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#73746d">4</span><span style="color:#815ba4">let</span> result <span style="color:#5bc4bf">=</span> mul<span style="color:#5bc4bf">!</span>(a: [<span style="color:#f99b15">3</span>, <span style="color:#f99b15">2</span>], b: [<span style="color:#f99b15">2</span>, <span style="color:#f99b15">2</span>])
+</code></pre></div></p>
 
 <p>As always with macros: Don&rsquo;t use macros - they&rsquo;re like abstractions and we don&rsquo;t use abstractions. Well, only if we must. In this case we do, until Rust implements something like arbitrating over the array size.</p>
 
-<h3 id="conclusion:2460511c958b5af270a9f1e77d2dc1da">Conclusion</h3>
+<h3 id="conclusion">Conclusion</h3>
 
 <p>All in all, it&rsquo;s an interesting language. It has loads of concepts that I think are going in the right direction of control <em>AND</em> safety. After the tiny bits and pieces (nuts and bolts) that I saw of this, I think I&rsquo;ll keep it in mind for when a fast system-level language is needed and C is not an option.</p>
 
 <p>By the way, with the given example I didn&rsquo;t want to complain about the language. It was just to illustrate my own first steps with Rust, and how quickly I hit borders.</p>
 
-
       <br/><hr/><br/>
 
-      
-        <div>Now you can: Comment below & <a href="https://twitter.com/intent/tweet?url=http%3a%2f%2fmalumdiscordi.ae%2fposts%2f2016%2f01%2f22%2fthe-rusty-nuts-and-bolts%2f&text=The%20Rusty%20Nuts%20and%20Bolts&via=ephe_meral" target="_blank">Tweet this</a> or <a href="https://twitter.com/ephe_meral">follow me</a>!</div>
       
     </div>
 
@@ -184,7 +175,7 @@ All of this, by the way, is combined with an extensive type system and many feat
     
     var disqus_config = function () {
       this.shortname = "malumdiscordiae";
-      this.page.url = "http:\/\/malumdiscordi.ae\/posts\/2016\/01\/22\/the-rusty-nuts-and-bolts\/";  
+      this.page.url = "\/posts\/2016\/01\/22\/the-rusty-nuts-and-bolts\/";  
       this.page.identifier = "\/posts\/2016\/01\/22\/the-rusty-nuts-and-bolts\/"; 
     };
     (function() {  

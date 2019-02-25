@@ -8,9 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Johanna Appel&#39;s musings about the world, science &amp; technology, programming, languages, music, art, learning and absurdities.
 ">
-  <meta name="generator" content="Hugo 0.15" />
-  <link href="" rel="alternate" type="application/rss+xml" title="Seeds from the Apple of Discord" />
-  <link href="http://malumdiscordi.ae/css/main.css" rel="stylesheet">
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link href="//css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
   <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
@@ -22,19 +21,21 @@
 <header class="site-header">
   <div class="wrapper">
 
-    <a class="site-title" href="http://malumdiscordi.ae">Seeds from the Apple of Discord</a>
+    <a class="site-title" href="/">Seeds from the Apple of Discord</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon"><i class="fa fa-bars fa-lg"></i></a>
 
       <div class="trigger">
-        <a class="page-link" href="http://malumdiscordi.ae">Posts</a>
+        <a class="page-link" href="/">Posts</a>
 
         
         
-          <a class="page-link" href="http://malumdiscordi.ae/pages/about/">About</a>
+          <a class="page-link" href="/pages/about/">About</a>
         
-          <a class="page-link" href="http://malumdiscordi.ae/pages/projects/">Projects</a>
+          <a class="page-link" href="/page/">Pages</a>
+        
+          <a class="page-link" href="/pages/projects/">Projects</a>
         
 
         
@@ -42,7 +43,7 @@
           <a class="page-link" href="/tags">Tags</a>
         
 
-        <a class="page-link" href="http://malumdiscordi.ae/index.xml">Subscribe</a>
+        <a class="page-link" href="/index.xml">Subscribe</a>
 
       </div>
     </nav>
@@ -75,16 +76,14 @@
     </header>
 
     <div class="post-content" itemprop="articleBody">
-      
-
-<p>Ever heard of the Unix principle? There are several actually, but the most well-known is the concept of &ldquo;do one thing and do it well&rdquo;.</p>
+      <p>Ever heard of the Unix principle? There are several actually, but the most well-known is the concept of &ldquo;do one thing and do it well&rdquo;.</p>
 
 <p>This concept is something that, especially when it comes to programming, a lot of people would agree on. But why is this so seemingly universally true?<br/>
 If you look at the concept from a distance it&rsquo;s almost mathematical: Think of functions. Want a complex wave function? Take the parts that you want encoded and combine them. Complexity as it occurs in nature is (and we can say that with more and more confidence) something that arises from the combination of a few, simple constructs.</p>
 
 <p>Human made complexity, however, is usually going in the other direction: Complex systems, common in software engineering, are not composed of simple parts with some kind of higher-level algebra. No, usually, these systems just grew out of the fact that the engineering process required the engineers to add features on top of each other instead of combining existing ones.</p>
 
-<h3 id="an-engineer-s-perspective:d8240bf18787fe6fbbf52ec99785106f">An engineer&rsquo;s perspective</h3>
+<h3 id="an-engineer-s-perspective">An engineer&rsquo;s perspective</h3>
 
 <p>Let&rsquo;s face it: In software architecture (and I&rsquo;d argue in most other engineering disciplines) what we actually aim for is creating modular designs that are composed of re-usable components taking whatever shape. In reality though, changing requirements, tight deadlines, inexperienced system designers and inappropriate tools lead - very often - to error-prone, hard to maintain and generally unintelligible systems.</p>
 
@@ -92,7 +91,7 @@ If you look at the concept from a distance it&rsquo;s almost mathematical: Think
 
 <p>Simplicity is <em>hard</em> to achieve and complexity is created <em>easily</em> - simplicity is usually also (intersubjectively) more elegant and aesthetic.</p>
 
-<h3 id="unix-a-k-a-a-good-idea:d8240bf18787fe6fbbf52ec99785106f">Unix (a.k.a. a good idea)</h3>
+<h3 id="unix-a-k-a-a-good-idea">Unix (a.k.a. a good idea)</h3>
 
 <p><em>Note that in the following, whenever I am talking about a Unix system, I am actually referring to any kind of descendant from the original Unix or a unixoid system like Linux etc.</em></p>
 
@@ -106,13 +105,13 @@ If you look at the concept from a distance it&rsquo;s almost mathematical: Think
 
 <p>It might come as a surprise for some, but the tools that are shipped with a Unix system are specialised to work with text (or more generally, byte streams). The whole idea of e.g. <code>sed</code> and <code>awk</code> is to edit text that flows through these programs that act as filters and transformators. You create new tools by essentially placing existing ones in pipelines.</p>
 
-<h3 id="unix-as-a-programming-environment:d8240bf18787fe6fbbf52ec99785106f">Unix as a programming environment</h3>
+<h3 id="unix-as-a-programming-environment">Unix as a programming environment</h3>
 
 <p>How does the effort of learning and using these commands pay back? Maybe you don&rsquo;t want to develop your next big web project by pipelining Unix tools - this is understandable, since it might be more efficient and maintainable to use a general purpose programming language instead.</p>
 
 <p>But what I am talking about is not to use these tools to for production-level engineering. No, I am referring to how developers use the operating system to create these software products. We might specialize in a single programming language (which is <em>really</em> beneficial for the enterprise environment) and we learn to use our standard tool kit - for example IDEs - up to a point where using anything else becomes a hassle. If you achieve this point, you effectively pushed yourself to be a personified <a href="https://en.wikipedia.org/wiki/Law_of_the_instrument">golden hammer</a>.</p>
 
-<h3 id="text-is-the-developer-s-magic-wand:d8240bf18787fe6fbbf52ec99785106f">Text is the developer&rsquo;s magic wand</h3>
+<h3 id="text-is-the-developer-s-magic-wand">Text is the developer&rsquo;s magic wand</h3>
 
 <p>I recently discovered the <a href="http://acme.cat-v.org/">ACME</a> editor (created by - who would have guessed - the Unix creators). Apart from the way you are supposed to interface with it (a 3 button mouse basically) it&rsquo;s main idea is that every piece of text displayed by the editor is potentially executable. It is either interpreted directly as a command, or it is taken as input to a command, or ran through a pattern matching tool to be able to follow links and files etc.<br/>
 The concept basically enables you to make full use of your shell and your tools that come with it, directly in the editor, simply by clicking around.</p>
@@ -123,16 +122,13 @@ These are only basics, but it&rsquo;s more or less the interaction that any GUI 
 <p>This idea struck me as being so simple, yet so effective that I&rsquo;m now looking to incorporate it into my own workflow. I don&rsquo;t use ACME, since I&rsquo;m usually working from my laptop and using a mouse would be rather annoying (at least if you only have a touchpad with you), but I&rsquo;m trying to enable my <a href="https://neovim.io/">NeoVim</a> instance to be able to do these kind of things. The cool thing about this is that NeoVim already <strong>is</strong> highly text-based and has a simple way of interfacing with the shell, so that making use of it should not be a big problem.<br/>
 Additionally, the community that has formed around this editor seems to really appreciate the Unix philosophies, and keeps on adding small useful tools as plugins.</p>
 
-<h3 id="summing-up:d8240bf18787fe6fbbf52ec99785106f">Summing up&hellip;</h3>
+<h3 id="summing-up">Summing up&hellip;</h3>
 
 <p>Rid yourself of unnecessary abstractions and free your brain of all the loose ends it has to herd when working with complexity. And remember that you are what you eat: Overly complex programming languages and tools won&rsquo;t magically enable you to write elegant code. Question your believes if you think that the OS has no other purpose than to provide the basic requirements for your full-fledged IDE.<br/>
 <em>And please don&rsquo;t take my words as an advertisement for any specific piece of software.</em></p>
 
-
       <br/><hr/><br/>
 
-      
-        <div>Now you can: Comment below & <a href="https://twitter.com/intent/tweet?url=http%3a%2f%2fmalumdiscordi.ae%2fposts%2f2016%2f07%2f01%2fthe-idea-of-the-unix-programming-environment%2f&text=The%20Idea%20of%20the%20Unix%20Programming%20Environment&via=ephe_meral" target="_blank">Tweet this</a> or <a href="https://twitter.com/ephe_meral">follow me</a>!</div>
       
     </div>
 
@@ -142,7 +138,7 @@ Additionally, the community that has formed around this editor seems to really a
     
     var disqus_config = function () {
       this.shortname = "malumdiscordiae";
-      this.page.url = "http:\/\/malumdiscordi.ae\/posts\/2016\/07\/01\/the-idea-of-the-unix-programming-environment\/";  
+      this.page.url = "\/posts\/2016\/07\/01\/the-idea-of-the-unix-programming-environment\/";  
       this.page.identifier = "\/posts\/2016\/07\/01\/the-idea-of-the-unix-programming-environment\/"; 
     };
     (function() {  

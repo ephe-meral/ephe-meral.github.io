@@ -8,9 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Johanna Appel&#39;s musings about the world, science &amp; technology, programming, languages, music, art, learning and absurdities.
 ">
-  <meta name="generator" content="Hugo 0.15" />
-  <link href="" rel="alternate" type="application/rss+xml" title="Seeds from the Apple of Discord" />
-  <link href="http://malumdiscordi.ae/css/main.css" rel="stylesheet">
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link href="//css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
   <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
@@ -22,19 +21,21 @@
 <header class="site-header">
   <div class="wrapper">
 
-    <a class="site-title" href="http://malumdiscordi.ae">Seeds from the Apple of Discord</a>
+    <a class="site-title" href="/">Seeds from the Apple of Discord</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon"><i class="fa fa-bars fa-lg"></i></a>
 
       <div class="trigger">
-        <a class="page-link" href="http://malumdiscordi.ae">Posts</a>
+        <a class="page-link" href="/">Posts</a>
 
         
         
-          <a class="page-link" href="http://malumdiscordi.ae/pages/about/">About</a>
+          <a class="page-link" href="/pages/about/">About</a>
         
-          <a class="page-link" href="http://malumdiscordi.ae/pages/projects/">Projects</a>
+          <a class="page-link" href="/page/">Pages</a>
+        
+          <a class="page-link" href="/pages/projects/">Projects</a>
         
 
         
@@ -42,7 +43,7 @@
           <a class="page-link" href="/tags">Tags</a>
         
 
-        <a class="page-link" href="http://malumdiscordi.ae/index.xml">Subscribe</a>
+        <a class="page-link" href="/index.xml">Subscribe</a>
 
       </div>
     </nav>
@@ -81,13 +82,11 @@
     </header>
 
     <div class="post-content" itemprop="articleBody">
-      
-
-<p>Despite the misleading title of this - it could as well be a social engineering guide - I&rsquo;m going to introduce a free, libre and open-source software project that I&rsquo;m in charge of.</p>
+      <p>Despite the misleading title of this - it could as well be a social engineering guide - I&rsquo;m going to introduce a free, libre and open-source software project that I&rsquo;m in charge of.</p>
 
 <p>It&rsquo;s the first thing of this sort that I&rsquo;ll write about and also the first real post here. One might actually say that I&rsquo;ve gone through the lengths of creating this blog just to write about this specific project and related topics. (But I won&rsquo;t, promised)</p>
 
-<h3 id="so-what-are-we-talking-about:dcd2377f0c9732c2dd2950dcbd2cf62d">So what are we talking about?</h3>
+<h3 id="so-what-are-we-talking-about">So what are we talking about?</h3>
 
 <p><a href="https://github.com/entice/entice">&lsquo;to entice so.&rsquo;</a> (or just &lsquo;entice&rsquo; for short) is a client/server application aiming to provide an MMORPG sandbox of sorts.
 While this fact in itself might not be very interesting, the approach used and the technology involved actually are - at least in my humble opinion.</p>
@@ -96,11 +95,11 @@ While this fact in itself might not be very interesting, the approach used and t
 
 <p>The code covers both <a href="https://github.com/entice/client">client</a> and <a href="https://github.com/entice/web">server</a> side parts, even though this is not a complete game on its own. Actually, we&rsquo;re instrumenting an existing <em>*cough* commercial *cough*</em> client and try to follow the gameplay logic more or less. To be honest it&rsquo;s not very difficult to figure out which game I&rsquo;m talking about, but for me personally the whole point of this is less about creating a so-called private server and more about experimenting with MMORPG server designs.</p>
 
-<h3 id="project-structure:dcd2377f0c9732c2dd2950dcbd2cf62d">Project structure</h3>
+<h3 id="project-structure">Project structure</h3>
 
 <p>Splitting the project up in this instrumentation part on the client side and the server part with the gameplay logic, we gain an excellent and clean way of working on each independently. I&rsquo;ll go into more detail about this development model in a follow-up post later. For now, lets just say that it works out perfectly for our little team, since our collaborator&rsquo;s schedules differ a lot.</p>
 
-<h3 id="technology:dcd2377f0c9732c2dd2950dcbd2cf62d">Technology</h3>
+<h3 id="technology">Technology</h3>
 
 <p>Technology-wise, the client part is written in C/C++ and <a href="https://msdn.microsoft.com/en-us/vstudio/hh341490.aspx">C#</a> relying on standard .NET features, whereas the server is written in <a href="http://elixir-lang.org/">Elixir</a> using the <a href="http://www.phoenixframework.org/">Phoenix framework</a>. More about the reasons for the choice of these technology stacks later.</p>
 
@@ -108,11 +107,8 @@ While this fact in itself might not be very interesting, the approach used and t
 
 <p>To finish up this rather short intro, be aware that all we&rsquo;re talking about here is freely accessible to anyone, and improvements and discussion of the code is always welcome. Feel free to join us on <code>#gwlpr</code> in the <code>irc.rizon.net</code> IRC net, and create github issues, forks and pull-requests to help improve the project.</p>
 
-
       <br/><hr/><br/>
 
-      
-        <div>Now you can: Comment below & <a href="https://twitter.com/intent/tweet?url=http%3a%2f%2fmalumdiscordi.ae%2fposts%2f2016%2f01%2f06%2fintroducing-to-entice-so.%2f&text=Introducing%20%27to%20entice%20so.%27&via=ephe_meral" target="_blank">Tweet this</a> or <a href="https://twitter.com/ephe_meral">follow me</a>!</div>
       
     </div>
 
@@ -122,7 +118,7 @@ While this fact in itself might not be very interesting, the approach used and t
     
     var disqus_config = function () {
       this.shortname = "malumdiscordiae";
-      this.page.url = "http:\/\/malumdiscordi.ae\/posts\/2016\/01\/06\/introducing-to-entice-so.\/";  
+      this.page.url = "\/posts\/2016\/01\/06\/introducing-to-entice-so.\/";  
       this.page.identifier = "\/posts\/2016\/01\/06\/introducing-to-entice-so.\/"; 
     };
     (function() {  

@@ -2,54 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life on Seeds from the Apple of Discord</title>
-    <link>http://malumdiscordi.ae/tags/life/</link>
+    <link>/tags/life/</link>
     <description>Recent content in Life on Seeds from the Apple of Discord</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 21 Feb 2016 16:46:24 +0000</lastBuildDate>
-    <atom:link href="http://malumdiscordi.ae/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Considering Holistic Learning</title>
-      <link>http://malumdiscordi.ae/posts/2016/02/21/considering-holistic-learning/</link>
+      <link>/posts/2016/02/21/considering-holistic-learning/</link>
       <pubDate>Sun, 21 Feb 2016 16:46:24 +0000</pubDate>
       
-      <guid>http://malumdiscordi.ae/posts/2016/02/21/considering-holistic-learning/</guid>
-      <description>
-
-&lt;p&gt;Learning can be painful (remember school?) - But I think it should and need not be!&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m actually not sure if the term holistic learning was coined there, but I first came across it in an &lt;a href=&#34;https://www.scotthyoung.com/blog/2007/03/25/how-to-ace-your-finals-without-studying/&#34;&gt;article by Scott H. Young&lt;/a&gt;. He describes a mindset of constant learning, independent of the actual subject or topic, for the sake of making more and more connections between single pieces of information. According to him, knowledge is only &amp;lsquo;hard&amp;rsquo; to get, when you try to learn topics by heart without seeing their relation to other concepts - and thus, without understanding them.&lt;/p&gt;
-
-&lt;p&gt;So, in essence: Never stop to learn, because every day can and should be a school day! I find this idea fascinating, because most of my personal motivation and energy stems from exploring and understanding the world. So I actively started to look for ways of integrating personal education into my life - ways that are unobtrusive and don&amp;rsquo;t feel like actual school.&lt;/p&gt;
-
-&lt;h3 id=&#34;the-reality-check:a76faf23897e2fefd090c4feab77649c&#34;&gt;The reality check&lt;/h3&gt;
-
-&lt;p&gt;In practice I noticed that when I feel like I&amp;rsquo;m doing pastime things - watching series, reading books, listening to music etc. - I could just as well use the same time to learn. The motivation for these activities is usually to relax and free my mind from work etc. So I would normally not want to put an extra effort on top of that and fry my brain while studying.&lt;/p&gt;
-
-&lt;p&gt;The solution to this dilemma lies, in my opinion, in finding a way to combine both parts - i.e. making the pastime activity a pastime+learning activity. If I&amp;rsquo;m reading books I&amp;rsquo;m reading them in a language I want to practise. If I&amp;rsquo;m watching series I watch them in their original language - or replace them with documentaries, lectures and other video content with an emphasis on interesting information. (Lectures and talks can in fact be very entertaining, if you find a person who is eloquent and smart)&lt;br/&gt;
-I&amp;rsquo;m also trying to spice up my leisure time with a little bit of brain work that is very different from what I normally do, for example exercises in maths and physics. This works surprisingly well - I assume that the nature of these tasks is so different from my routines that it works perfectly as a distraction.&lt;/p&gt;
-
-&lt;p&gt;In the past I used to do the same thing with software projects - they were the hobby besides life at university. But ever since I started working with code in a commercial environment, I find it harder and harder to continue to hack on things in my free time. Which is sad, considering that open source projects can often afford approaches that are riskier and more experimental.&lt;/p&gt;
-
-&lt;h3 id=&#34;you-what-about-me:a76faf23897e2fefd090c4feab77649c&#34;&gt;You: &lt;em&gt;What about me?&lt;/em&gt;&lt;/h3&gt;
-
-&lt;p&gt;Me: &lt;em&gt;I don&amp;rsquo;t know you.&lt;/em&gt; - I don&amp;rsquo;t know if any of these things work out for anyone else but me. However, I think it&amp;rsquo;s the mindset thats more important than the action. It seems that so many people just stop being open about the world at some point in their life for various reasons. That&amp;rsquo;s very dangerous in a world that is changing more rapidly every day - for them and for others, so don&amp;rsquo;t be like them. Don&amp;rsquo;t assume you can live your life in 10 years like you can live your life now, cause it&amp;rsquo;s not going to happen. (Ask yourself / friends / parents / grand parents how they were living 10 years ago - did they know the internet existed?)&lt;/p&gt;
-
-&lt;p&gt;I guess the idea of learning has been diluted by so many negative aspects that it&amp;rsquo;s very uncommon to find people who have a strong motivation for it on their own. But there are certainly ways to embrace it and continue with self-education on an everyday basis with it not being a chore but a joy!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt;&lt;br/&gt;
-Maybe it makes sense to collect a few thought provoking pastime+learning concepts, so I&amp;rsquo;ll put them here whenever I happen to come across one.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://joindiaspora.com/&#34;&gt;Diaspora*&lt;/a&gt; - It&amp;rsquo;s the one social network where interesting discussion is not a wishful thinking.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://dotsies.org/&#34;&gt;dotsies&lt;/a&gt; - When was the last time you used a new alphabet?&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.duolingo.com&#34;&gt;duolingo&lt;/a&gt; - Learn a lot of languages, in an efficient, gamified and generally upgraded Michel-Thomas style.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Sci-Hub&#34;&gt;sci-hub&lt;/a&gt; - Wanna go scientific? Search for papers on google scholar and read them on sci-hub!&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://spritzinc.com/&#34;&gt;spritz&lt;/a&gt; - Reading at 500+ words per minute? No problem - just don&amp;rsquo;t move your eyes.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.ted.com/talks&#34;&gt;TED&lt;/a&gt; - Inspirational and informative talks whenever and wherever you need them.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>/posts/2016/02/21/considering-holistic-learning/</guid>
+      <description>&lt;p&gt;Learning can be painful (remember school?) - But I think it should and need not be!&lt;/p&gt;</description>
     </item>
     
   </channel>

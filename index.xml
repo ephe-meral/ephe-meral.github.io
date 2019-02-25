@@ -2,876 +2,107 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seeds from the Apple of Discord</title>
-    <link>http://malumdiscordi.ae/</link>
+    <link>/</link>
     <description>Recent content on Seeds from the Apple of Discord</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Sep 2017 14:55:24 +0100</lastBuildDate>
-    <atom:link href="http://malumdiscordi.ae/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>The Need for Evolution</title>
-      <link>http://malumdiscordi.ae/posts/2017/09/18/the-need-for-evolution/</link>
+      <link>/posts/2017/09/18/the-need-for-evolution/</link>
       <pubDate>Mon, 18 Sep 2017 14:55:24 +0100</pubDate>
       
-      <guid>http://malumdiscordi.ae/posts/2017/09/18/the-need-for-evolution/</guid>
-      <description>
-
-&lt;p&gt;Over time, machines might become more intelligent than humans. And that is our best-case scenario.&lt;/p&gt;
-
-&lt;p&gt;Lately a lot of people have begun taking this so-called &amp;lsquo;machine intelligence singularity&amp;rsquo; seriously.
-And that is mostly because we&amp;rsquo;re already able to solve many business related problems through automation techniques.
-Which means there is an intrinsic business value in machine intelligence.
-Which in turn means there is active research and a great effort to make smarter algorithms, better learning methods and more general AIs.&lt;/p&gt;
-
-&lt;p&gt;All this might or might not lead us to machines that are more intelligent than humans, and to many people that is a frightening thought.&lt;br/&gt;
-This article lays out some arguments of why this might actually happen, and takes a short look at why it might be - in fact - very beneficial for humanity as a whole.&lt;/p&gt;
-
-&lt;h3 id=&#34;about-the-human-brain:732028da26492f87958f4cd136a244df&#34;&gt;About the Human Brain&lt;/h3&gt;
-
-&lt;p&gt;(Many different) scientific communities are excited about the &lt;a href=&#34;https://www.humanbrainproject.eu/en/&#34;&gt;human brain project&lt;/a&gt;, essentially a detailed simulation of the brain.
-And indeed, our knowledge of the inner workings of this body part is very limited and discovering more about it will certainly have a great impact on future (machine learning) research.&lt;/p&gt;
-
-&lt;p&gt;But there are also voices arguing against this possible progress.
-Paraphrasing Anthony Bell: There might be fundamental structural problems that we will run into while trying to simulate biological brains on entirely different digital hardware. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:732028da26492f87958f4cd136a244df:lev&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:732028da26492f87958f4cd136a244df:lev&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;
-And that seems plausible given the fact that we still don&amp;rsquo;t really know on a continuous top-to-bottom scale how this biological network functions.&lt;/p&gt;
-
-&lt;p&gt;What these arguments usually do not take into consideration though, is that there is no known reason for intelligence to only occur in biological neural nets.
-In fact, we do not even have a standardized definition of intelligence and thus no metric that could be applied to existing &amp;ldquo;smart&amp;rdquo; algorithms in comparison to biological examples.&lt;/p&gt;
-
-&lt;p&gt;My guess here is though, that this kind of limitation does not exist. The probably is just too low. After all, the only form of life we know of is biological, and the form of intelligence that philosophy would usually categorize as such is based on centralized biological neural network, i.e. brains of some sort.&lt;/p&gt;
-
-&lt;p&gt;But what tells us that a brain is needed to exhibit intellect?&lt;/p&gt;
-
-&lt;h3 id=&#34;the-possibilities:732028da26492f87958f4cd136a244df&#34;&gt;The Possibilities&lt;/h3&gt;
-
-&lt;p&gt;Let&amp;rsquo;s assume that we (or a machine) will, at some point in the future, by research or by chance, create a technology capable of reasoning and autonomous problem solving - and maybe most importantly, consciousness.
-And for the sake of referencing, let&amp;rsquo;s call this technology general intelligence, or GI for short.&lt;br/&gt;
-Would we actually want that, and would it do us good?&lt;/p&gt;
-
-&lt;p&gt;To start this argument we should deconstruct the notion of &amp;lsquo;we&amp;rsquo;.
-We as humans are beings capable of reasoning about our environment, and we too experience a consciousness.
-If we separate these facts from the actual physical instantiation in terms of bodies and brains etc. (and of any non-scientific religious notions), we might end up being unable to distinguish between our intelligence and GI.&lt;br/&gt;
-This is what makes the &lt;a href=&#34;https://en.wikipedia.org/wiki/Turing_test&#34;&gt;Turing test&lt;/a&gt; particularly significant: It separates the actual &amp;lsquo;hardware&amp;rsquo; from the observer, who only gets to judge between human intellect and non-human intellect based on a textual dialogue.&lt;/p&gt;
-
-&lt;h4 id=&#34;online-worlds:732028da26492f87958f4cd136a244df&#34;&gt;Online Worlds&lt;/h4&gt;
-
-&lt;p&gt;While this deconstruction is theoretically useful, in reality, most humans are unable to psychologically separate their consciousness from their bodies.
-A digital existence just seems to outlandish to be possible.
-However, through gaming we have already begun to live parts of our lives separated from physical reality in digital worlds.
-This is not a fictional overstatement - see &lt;a href=&#34;https://en.wikipedia.org/wiki/Massively_multiplayer_online_role-playing_game&#34;&gt;MMORPGs&lt;/a&gt; for concrete examples.&lt;/p&gt;
-
-&lt;p&gt;The interaction with these game worlds is currently (2017) limited to keyboard and mouse input (or game controllers) and audio-visual feedback.
-However, by means of human-computer-interaction research, we are able to make these experiences more and more immersive.
-See current virtual-reality technology trends as a reference.&lt;/p&gt;
-
-&lt;p&gt;These worlds do not only contain humans players.
-There is usually also a build-in concept of non-player characters, that are controlled by algorithms.
-While the games strive to make these characters more and more indistinguishable from humans, there is a parallel development in place as well.&lt;/p&gt;
-
-&lt;p&gt;Since there is actual economic value in the in-game currencies - you can exchange them for &amp;lsquo;real-world&amp;rsquo; currencies - there is also economic value in algorithms that gather this kind of in-game money or valuables.
-Algorithms that play the game for you, and automatically harvest in-game resources.
-These are more commonly referred to as bots.&lt;br/&gt;
-Now, bots are bad for the in-game economy since they generally lead to inflation - just like printing money at home would.
-That is why the companies on one hand try hard to distinguish human players from bots (and ban the latter), and bot writers on the other hand try to make their algorithms behave as human-like as possible.
-They go as far as implementing chat features, completely unrelated to the actual gathering of in-game money.&lt;/p&gt;
-
-&lt;h4 id=&#34;the-real-world:732028da26492f87958f4cd136a244df&#34;&gt;The &amp;lsquo;Real World&amp;rsquo;&lt;/h4&gt;
-
-&lt;p&gt;Interestingly, in the online game worlds, these simulated characters are not only common, they are usually a major feature of a game.
-Some worlds simulate their characters in such detail, that you can keep following them around and observe them as they work, trade, walk around, chat with other NPCs, &amp;lsquo;relax&amp;rsquo; at home, sleep and so on.
-If the same thing would happen to you in reality - in terms of machines &amp;lsquo;trying to act human&amp;rsquo;, you would probably find that a rather disturbing notion.&lt;/p&gt;
-
-&lt;p&gt;It is also rather unlikely to happen, since &amp;lsquo;acting like a human&amp;rsquo; has no apparent value to the actual machine.
-My guess here is that the &amp;lsquo;intelligent&amp;rsquo; machines, at first, will have no physical representations at all.
-It will probably be an intellect that is restricted to digital environments.
-And those do not necessarily need to be game worlds.&lt;/p&gt;
-
-&lt;h4 id=&#34;an-actual-use-case-for-intelligence:732028da26492f87958f4cd136a244df&#34;&gt;An Actual Use-Case for Intelligence&lt;/h4&gt;
-
-&lt;p&gt;One of those restricted environments of particular interested is that of a von-Neumann machine.
-Currently, programming such a computer is regarded as an AI-hard task, in the sense that it is very hard to automate.
-A GI system though, among other things, should be able to construct algorithms - not only to extend its own capabilities and intellect, but also to extend its influence on its environment.
-The latter could e.g. be an ability to use a new online API, or to use a new piece of hardware and so on.&lt;/p&gt;
-
-&lt;p&gt;These (admittedly non-human) needs will not drive a development of such a GI at first.
-Actually more likely is the extrinsic factor of tech-businesses in need for cheap but skilled programmers.
-Or, better yet, software capable of turning intangible high-level ideas and concepts into concrete algorithms.&lt;/p&gt;
-
-&lt;p&gt;This is such a pressing need that programming languages tend to get ever more high-level, and underlying optimisation systems ever more sophisticated.
-Yet, we still have to actually write the code.
-Plus, abstractions come at the price of having to grasp them entirely to be able to use them, which is why programmers still benefit from understanding low-level languages and underlying hardware concepts.&lt;/p&gt;
-
-&lt;p&gt;Therefore, these approaches might not converge in a fully automated programming system.
-For that we will need to combine them with machine learning methodologies and specialized program synthesizers.&lt;/p&gt;
-
-&lt;h3 id=&#34;looking-farther-into-the-future:732028da26492f87958f4cd136a244df&#34;&gt;Looking Farther Into the Future&lt;/h3&gt;
-
-&lt;p&gt;The discussed kind of needs are already reasonable right now, in the sense that they are driven by current economic concerns.
-However, looking a few years ahead in time, there might be more criteria to be of interest.&lt;/p&gt;
-
-&lt;p&gt;Human life in general has a well known impact on the most immediate environment: The ecosystem of the earth.
-At the moment we struggle e.g. with climate related catastrophes that might threaten all of our lives, above all other societal aspects.
-And not only do we destroy our own livelihood, we also destroy that of other life-forms on this planet.&lt;/p&gt;
-
-&lt;p&gt;Solutions to these developments usually contain the notion of more sustainable use of natural resources, shifting towards a style of living that has less negative impact and so on.
-However, I argue that a possibility to shift towards a digital existence, ignoring the above mentioned fears of loosing a &amp;lsquo;real&amp;rsquo; physical body, will solve a major part of this problem as well.&lt;/p&gt;
-
-&lt;p&gt;A digital existence can be maintained based on the consumption of electricity, which is known to be providable by sustainable means. Even if we might not yet have developed the right technology to provide it entirely that way.&lt;/p&gt;
-
-&lt;p&gt;There are many, far reaching consequences of such societies, among them the possibility to travel extremely long distances in space.
-If intelligence can be encoded into a convenient digital format, which can be transmitted using electromagnetic waves (i.e. light), travelling at light speed suddenly becomes feasible.&lt;/p&gt;
-
-&lt;h3 id=&#34;the-nutshell:732028da26492f87958f4cd136a244df&#34;&gt;The Nutshell&lt;/h3&gt;
-
-&lt;p&gt;These thoughts are part of a more general and broad argument of why a machine intelligence singularity might happen and why that might be a future to welcome instead of reject.&lt;/p&gt;
-
-&lt;p&gt;However, the crucial point that I wanted to emphasise here is that there are concrete existing needs right now for machines with such capabilities.
-A machine that replaces a human, essentially frees that human to do more interesting work - work that is not as easily automatable.
-An economy driven by the want for more automation can therefor be an accelerator for human freedom, if we strive toward enabling that instead of clinging to old values.&lt;/p&gt;
-
-&lt;p&gt;In my own endeavors I would very much like to speed up the process of enabling such a society with all the known benefits.
-So, since I am a programmer and creating software is a task I understand very well, solving the automated programming issue is probably the best starting point for me to work on right now.&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:732028da26492f87958f4cd136a244df:lev&#34;&gt;Bell, Anthony J.: &amp;ldquo;Levels and loops: The future of artificial intelligence and neuroscience.&amp;rdquo; Philosophical Transactions of the Royal Society of London B: Biological Sciences 354.1392 (1999)
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:732028da26492f87958f4cd136a244df:lev&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <guid>/posts/2017/09/18/the-need-for-evolution/</guid>
+      <description>&lt;p&gt;Over time, machines might become more intelligent than humans. And that is our best-case scenario.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Idea of the Unix Programming Environment</title>
-      <link>http://malumdiscordi.ae/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</link>
+      <link>/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</link>
       <pubDate>Fri, 01 Jul 2016 14:55:24 +0100</pubDate>
       
-      <guid>http://malumdiscordi.ae/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</guid>
-      <description>
-
-&lt;p&gt;Ever heard of the Unix principle? There are several actually, but the most well-known is the concept of &amp;ldquo;do one thing and do it well&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;This concept is something that, especially when it comes to programming, a lot of people would agree on. But why is this so seemingly universally true?&lt;br/&gt;
-If you look at the concept from a distance it&amp;rsquo;s almost mathematical: Think of functions. Want a complex wave function? Take the parts that you want encoded and combine them. Complexity as it occurs in nature is (and we can say that with more and more confidence) something that arises from the combination of a few, simple constructs.&lt;/p&gt;
-
-&lt;p&gt;Human made complexity, however, is usually going in the other direction: Complex systems, common in software engineering, are not composed of simple parts with some kind of higher-level algebra. No, usually, these systems just grew out of the fact that the engineering process required the engineers to add features on top of each other instead of combining existing ones.&lt;/p&gt;
-
-&lt;h3 id=&#34;an-engineer-s-perspective:d8240bf18787fe6fbbf52ec99785106f&#34;&gt;An engineer&amp;rsquo;s perspective&lt;/h3&gt;
-
-&lt;p&gt;Let&amp;rsquo;s face it: In software architecture (and I&amp;rsquo;d argue in most other engineering disciplines) what we actually aim for is creating modular designs that are composed of re-usable components taking whatever shape. In reality though, changing requirements, tight deadlines, inexperienced system designers and inappropriate tools lead - very often - to error-prone, hard to maintain and generally unintelligible systems.&lt;/p&gt;
-
-&lt;p&gt;How do you recognize a highly reusable component? Make a thought experiment: If you would have to describe what the component does with a few, simple sentences, could you do so without referring to other parts of the system? Is the explanation self-contained and does it include a short, precise description of the interface of the component? You might notice that it&amp;rsquo;s tough to obtain these properties.&lt;/p&gt;
-
-&lt;p&gt;Simplicity is &lt;em&gt;hard&lt;/em&gt; to achieve and complexity is created &lt;em&gt;easily&lt;/em&gt; - simplicity is usually also (intersubjectively) more elegant and aesthetic.&lt;/p&gt;
-
-&lt;h3 id=&#34;unix-a-k-a-a-good-idea:d8240bf18787fe6fbbf52ec99785106f&#34;&gt;Unix (a.k.a. a good idea)&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;Note that in the following, whenever I am talking about a Unix system, I am actually referring to any kind of descendant from the original Unix or a unixoid system like Linux etc.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This elegance of simplicity is easily to be found in a Unix system. Where? In the most basic tools that it ships with. Ever heard of &lt;code&gt;sed&lt;/code&gt;? Or of &lt;code&gt;awk&lt;/code&gt;, &lt;code&gt;grep&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt; and so on and so forth. These tools are well known for their commitment to the idea of doing one thing and doing it well. The question for us as a user of a Unix system is now simply how to make use of them.&lt;/p&gt;
-
-&lt;p&gt;The view we often have of our operating system is that it&amp;rsquo;s merely something that provides the basics (which are assumed to already include a GUI and related tools). I have rarely seen people who really appreciate and make use of the whole infrastructure of their operating system and all the functionality that it comes with.&lt;/p&gt;
-
-&lt;p&gt;Why would you want to do that? After all, we are living in the 21st century - there are nice GUI IDEs filled with magic and automating away your brain almost entirely. Who on earth would ever want to go back to text-based programs? It seems not only counter-productive in nature, but also really damaging the evolution of graphical solutions.&lt;/p&gt;
-
-&lt;p&gt;Well, why then? The answer is almost trivial: Because we as software developers don&amp;rsquo;t produce nice graphics, we create and herd source code in precise and expressive plain-text. (To super progressive model-driven-development people who never actually touch text - of course this doesn&amp;rsquo;t concern you&amp;hellip;)&lt;/p&gt;
-
-&lt;p&gt;It might come as a surprise for some, but the tools that are shipped with a Unix system are specialised to work with text (or more generally, byte streams). The whole idea of e.g. &lt;code&gt;sed&lt;/code&gt; and &lt;code&gt;awk&lt;/code&gt; is to edit text that flows through these programs that act as filters and transformators. You create new tools by essentially placing existing ones in pipelines.&lt;/p&gt;
-
-&lt;h3 id=&#34;unix-as-a-programming-environment:d8240bf18787fe6fbbf52ec99785106f&#34;&gt;Unix as a programming environment&lt;/h3&gt;
-
-&lt;p&gt;How does the effort of learning and using these commands pay back? Maybe you don&amp;rsquo;t want to develop your next big web project by pipelining Unix tools - this is understandable, since it might be more efficient and maintainable to use a general purpose programming language instead.&lt;/p&gt;
-
-&lt;p&gt;But what I am talking about is not to use these tools to for production-level engineering. No, I am referring to how developers use the operating system to create these software products. We might specialize in a single programming language (which is &lt;em&gt;really&lt;/em&gt; beneficial for the enterprise environment) and we learn to use our standard tool kit - for example IDEs - up to a point where using anything else becomes a hassle. If you achieve this point, you effectively pushed yourself to be a personified &lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_the_instrument&#34;&gt;golden hammer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;text-is-the-developer-s-magic-wand:d8240bf18787fe6fbbf52ec99785106f&#34;&gt;Text is the developer&amp;rsquo;s magic wand&lt;/h3&gt;
-
-&lt;p&gt;I recently discovered the &lt;a href=&#34;http://acme.cat-v.org/&#34;&gt;ACME&lt;/a&gt; editor (created by - who would have guessed - the Unix creators). Apart from the way you are supposed to interface with it (a 3 button mouse basically) it&amp;rsquo;s main idea is that every piece of text displayed by the editor is potentially executable. It is either interpreted directly as a command, or it is taken as input to a command, or ran through a pattern matching tool to be able to follow links and files etc.&lt;br/&gt;
-The concept basically enables you to make full use of your shell and your tools that come with it, directly in the editor, simply by clicking around.&lt;/p&gt;
-
-&lt;p&gt;Take a file-system viewer for example: We already have &lt;code&gt;ls&lt;/code&gt; to display the files in the current working directory. To open folders and files, use a tool that can interpret strings as file or folder names, resolve them, and pipe it to another tool that either &lt;code&gt;cd &amp;amp;&amp;amp; ls&lt;/code&gt;&amp;rsquo;s or &lt;code&gt;cat&lt;/code&gt;&amp;rsquo;s what it gets into a new buffer.&lt;br/&gt;
-These are only basics, but it&amp;rsquo;s more or less the interaction that any GUI file-system viewer would give you, re-implemented using a few simple unix commands.&lt;/p&gt;
-
-&lt;p&gt;This idea struck me as being so simple, yet so effective that I&amp;rsquo;m now looking to incorporate it into my own workflow. I don&amp;rsquo;t use ACME, since I&amp;rsquo;m usually working from my laptop and using a mouse would be rather annoying (at least if you only have a touchpad with you), but I&amp;rsquo;m trying to enable my &lt;a href=&#34;https://neovim.io/&#34;&gt;NeoVim&lt;/a&gt; instance to be able to do these kind of things. The cool thing about this is that NeoVim already &lt;strong&gt;is&lt;/strong&gt; highly text-based and has a simple way of interfacing with the shell, so that making use of it should not be a big problem.&lt;br/&gt;
-Additionally, the community that has formed around this editor seems to really appreciate the Unix philosophies, and keeps on adding small useful tools as plugins.&lt;/p&gt;
-
-&lt;h3 id=&#34;summing-up:d8240bf18787fe6fbbf52ec99785106f&#34;&gt;Summing up&amp;hellip;&lt;/h3&gt;
-
-&lt;p&gt;Rid yourself of unnecessary abstractions and free your brain of all the loose ends it has to herd when working with complexity. And remember that you are what you eat: Overly complex programming languages and tools won&amp;rsquo;t magically enable you to write elegant code. Question your believes if you think that the OS has no other purpose than to provide the basic requirements for your full-fledged IDE.&lt;br/&gt;
-&lt;em&gt;And please don&amp;rsquo;t take my words as an advertisement for any specific piece of software.&lt;/em&gt;&lt;/p&gt;
-</description>
+      <guid>/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</guid>
+      <description>&lt;p&gt;Ever heard of the Unix principle? There are several actually, but the most well-known is the concept of &amp;ldquo;do one thing and do it well&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Considering Holistic Learning</title>
-      <link>http://malumdiscordi.ae/posts/2016/02/21/considering-holistic-learning/</link>
+      <link>/posts/2016/02/21/considering-holistic-learning/</link>
       <pubDate>Sun, 21 Feb 2016 16:46:24 +0000</pubDate>
       
-      <guid>http://malumdiscordi.ae/posts/2016/02/21/considering-holistic-learning/</guid>
-      <description>
-
-&lt;p&gt;Learning can be painful (remember school?) - But I think it should and need not be!&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m actually not sure if the term holistic learning was coined there, but I first came across it in an &lt;a href=&#34;https://www.scotthyoung.com/blog/2007/03/25/how-to-ace-your-finals-without-studying/&#34;&gt;article by Scott H. Young&lt;/a&gt;. He describes a mindset of constant learning, independent of the actual subject or topic, for the sake of making more and more connections between single pieces of information. According to him, knowledge is only &amp;lsquo;hard&amp;rsquo; to get, when you try to learn topics by heart without seeing their relation to other concepts - and thus, without understanding them.&lt;/p&gt;
-
-&lt;p&gt;So, in essence: Never stop to learn, because every day can and should be a school day! I find this idea fascinating, because most of my personal motivation and energy stems from exploring and understanding the world. So I actively started to look for ways of integrating personal education into my life - ways that are unobtrusive and don&amp;rsquo;t feel like actual school.&lt;/p&gt;
-
-&lt;h3 id=&#34;the-reality-check:a76faf23897e2fefd090c4feab77649c&#34;&gt;The reality check&lt;/h3&gt;
-
-&lt;p&gt;In practice I noticed that when I feel like I&amp;rsquo;m doing pastime things - watching series, reading books, listening to music etc. - I could just as well use the same time to learn. The motivation for these activities is usually to relax and free my mind from work etc. So I would normally not want to put an extra effort on top of that and fry my brain while studying.&lt;/p&gt;
-
-&lt;p&gt;The solution to this dilemma lies, in my opinion, in finding a way to combine both parts - i.e. making the pastime activity a pastime+learning activity. If I&amp;rsquo;m reading books I&amp;rsquo;m reading them in a language I want to practise. If I&amp;rsquo;m watching series I watch them in their original language - or replace them with documentaries, lectures and other video content with an emphasis on interesting information. (Lectures and talks can in fact be very entertaining, if you find a person who is eloquent and smart)&lt;br/&gt;
-I&amp;rsquo;m also trying to spice up my leisure time with a little bit of brain work that is very different from what I normally do, for example exercises in maths and physics. This works surprisingly well - I assume that the nature of these tasks is so different from my routines that it works perfectly as a distraction.&lt;/p&gt;
-
-&lt;p&gt;In the past I used to do the same thing with software projects - they were the hobby besides life at university. But ever since I started working with code in a commercial environment, I find it harder and harder to continue to hack on things in my free time. Which is sad, considering that open source projects can often afford approaches that are riskier and more experimental.&lt;/p&gt;
-
-&lt;h3 id=&#34;you-what-about-me:a76faf23897e2fefd090c4feab77649c&#34;&gt;You: &lt;em&gt;What about me?&lt;/em&gt;&lt;/h3&gt;
-
-&lt;p&gt;Me: &lt;em&gt;I don&amp;rsquo;t know you.&lt;/em&gt; - I don&amp;rsquo;t know if any of these things work out for anyone else but me. However, I think it&amp;rsquo;s the mindset thats more important than the action. It seems that so many people just stop being open about the world at some point in their life for various reasons. That&amp;rsquo;s very dangerous in a world that is changing more rapidly every day - for them and for others, so don&amp;rsquo;t be like them. Don&amp;rsquo;t assume you can live your life in 10 years like you can live your life now, cause it&amp;rsquo;s not going to happen. (Ask yourself / friends / parents / grand parents how they were living 10 years ago - did they know the internet existed?)&lt;/p&gt;
-
-&lt;p&gt;I guess the idea of learning has been diluted by so many negative aspects that it&amp;rsquo;s very uncommon to find people who have a strong motivation for it on their own. But there are certainly ways to embrace it and continue with self-education on an everyday basis with it not being a chore but a joy!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt;&lt;br/&gt;
-Maybe it makes sense to collect a few thought provoking pastime+learning concepts, so I&amp;rsquo;ll put them here whenever I happen to come across one.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://joindiaspora.com/&#34;&gt;Diaspora*&lt;/a&gt; - It&amp;rsquo;s the one social network where interesting discussion is not a wishful thinking.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://dotsies.org/&#34;&gt;dotsies&lt;/a&gt; - When was the last time you used a new alphabet?&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.duolingo.com&#34;&gt;duolingo&lt;/a&gt; - Learn a lot of languages, in an efficient, gamified and generally upgraded Michel-Thomas style.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Sci-Hub&#34;&gt;sci-hub&lt;/a&gt; - Wanna go scientific? Search for papers on google scholar and read them on sci-hub!&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://spritzinc.com/&#34;&gt;spritz&lt;/a&gt; - Reading at 500+ words per minute? No problem - just don&amp;rsquo;t move your eyes.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.ted.com/talks&#34;&gt;TED&lt;/a&gt; - Inspirational and informative talks whenever and wherever you need them.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>/posts/2016/02/21/considering-holistic-learning/</guid>
+      <description>&lt;p&gt;Learning can be painful (remember school?) - But I think it should and need not be!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Dependency Injection Considered ~~Harmful~~ Stupid - Part 2</title>
-      <link>http://malumdiscordi.ae/posts/2016/02/10/di-considered-stupid-pt2/</link>
+      <link>/posts/2016/02/10/di-considered-stupid-pt2/</link>
       <pubDate>Wed, 10 Feb 2016 05:56:34 +0000</pubDate>
       
-      <guid>http://malumdiscordi.ae/posts/2016/02/10/di-considered-stupid-pt2/</guid>
-      <description>&lt;p&gt;After messing around with dependency injection frameworks in the &lt;a href=&#34;http://malumdiscordi.ae/posts/2016/01/15/di-considered-stupid-pt1/&#34;&gt;first part&lt;/a&gt;, let&amp;rsquo;s see how we can take our LotR example and unclutter it by using data-oriented functional programming in &lt;a href=&#34;http://elixir-lang.org/&#34;&gt;Elixir&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;Remember Frodo from last time? I already mentioned that Frodo&amp;rsquo;s data can be merged with Sam&amp;rsquo;s because they basically do almost everything together - which means that when we use their data for calculations, we will most likely need both of them for meaningful results.&lt;br/&gt;
-But not only that, no, we also have duplicated data! It&amp;rsquo;s hidden (well, on purpose) in the AbstractHobbit superclass: The two of them have a certain value for hunger and for miles walked. Since they always march together, however, these two values will more or less stay the same - or at least we&amp;rsquo;d have to make sure to keep them in sync, so that Frodo for example doesn&amp;rsquo;t hunger more and walk less while Sam is already at the Mount Doom.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s revisit the data structure from last time:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;The Baggins/Gamgee Complex, Revisited&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;defmodule&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Companions&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;2 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;defstruct&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;(&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;3 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;         &lt;span style=&#34;color: #776e71&#34;&gt;# they hunger together&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;4 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;miles_walked&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;         &lt;span style=&#34;color: #776e71&#34;&gt;# they march together&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;5 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;ring&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt;         &lt;span style=&#34;color: #48b685&#34;&gt;:the_ring&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #776e71&#34;&gt;# ...hm... this should be stored somewhere else&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;6 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt;   &lt;span style=&#34;color: #f99b15&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt;       &lt;span style=&#34;color: #776e71&#34;&gt;# and they share their bread!&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;7 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note that this small elixir snippet tells the compiler to structurally check maps annotated with &lt;code&gt;Companions&lt;/code&gt;. It&amp;rsquo;s not very crucial for our logic later on, since we&amp;rsquo;ll treat input as any kind of map having defined certain keys. However, it illustrates nicely how to define named datastructures in Elixir. They are still a map - but define an additional &lt;code&gt;__struct__&lt;/code&gt; key that holds the atom of the module (&lt;code&gt;Companions&lt;/code&gt; in this case).&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, with object oriented thinking, while designing the methods for marching and eating etc., you would probably come up with some kind of functionality that is shared between the two Hobbit objects and put that in the AbstractHobbit class, and some kind of functionality that is very Frodo or Sam specific and pack that in their respective classes. You would also need to reason about the dependency between Frodo and Sam, and how provisions are distributed between them etc.&lt;br/&gt;
-By reducing the data we work with to a minimum, however, and by arranging it in a very simple datastructure, we can implement this logic in a rather straightforward way without ever having to think of inheritance, encapsulation etc.&lt;/p&gt;
-
-&lt;p&gt;But before we do that, let&amp;rsquo;s make very sure - down to a specification of sorts - that we know exactly what kind of functionality we need. As opposed to thinking in terms of objects and taking their point of view (i.e. what they can do, whom they can interact with, what kind of state they have etc.), we want to think like a computer, that is, in terms of data transformations (what do I have as an input, what do I need to produce as an output).&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;we want the Hobbits to reach mount doom by marching (e.g. let&amp;rsquo;s define the goal to be at 100 miles)
-
-&lt;ul&gt;
-&lt;li&gt;marching a mile will increase the hunger level, let&amp;rsquo;s say by 2 units, but&lt;/li&gt;
-&lt;li&gt;marching is only possible if the hunger level does not exceed a certain value, let&amp;rsquo;s say 100&lt;/li&gt;
-&lt;li&gt;if the hobbits are too hungry (see above) they die and cannot complete their mission &lt;em&gt;*BAM BAM BAM!*&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;the hunger level can be decreased by eating provisions, which should be measured in the same units as hunger
-
-&lt;ul&gt;
-&lt;li&gt;comsuming X provisions decreases the hunger by X&lt;/li&gt;
-&lt;li&gt;the hobbits cannot eat all of their provisions at once, let&amp;rsquo;s say the maximum is 2 units&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;in all the above points, common sense applies (i.e. hunger and provisions can not be negative etc.)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In &lt;a href=&#34;http://elixir-lang.org/&#34;&gt;Elixir&lt;/a&gt;, we can more or less take specifications like this and put it into code:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;&amp;#39;Specification-Driven-Programming&amp;#39; ?&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;defmodule&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Walking&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;# the hunger level should not exceed 100, otherwise fail!&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;walk(%{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger})&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;  &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;:error&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;Unable to walk! Dying of hunger - GAME OVER&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;# marching increases the hunger level&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;walk(%{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;miles_walked&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;miles}&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;creature)&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;:ok&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;%{creature&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;      &lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;      &lt;span style=&#34;color: #48b685&#34;&gt;miles_walked&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;miles&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;}}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;defmodule&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Feeding&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;# common sense and such&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;16 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;feed(%{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions}&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;creature)&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;17 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;or&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;creature&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;18 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;19 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;# consuming provisions decreases the hunger&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;20 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;feed(%{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions}&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;creature)&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;21 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;# we cannot eat more than 2 provisions at a time (if available and needed)&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;22 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;eaten&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;min(hunger)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;min(provisions)&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;23 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;%{creature&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;24 &lt;/span&gt;      &lt;span style=&#34;color: #48b685&#34;&gt;hunger&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;eaten,&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;25 &lt;/span&gt;      &lt;span style=&#34;color: #48b685&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;eaten}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;26 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;27 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Okay, let&amp;rsquo;s take a step back. So where is Sam? And, more importantly, where are Frodo, Gandalf and the rest?&lt;/p&gt;
-
-&lt;p&gt;Who cares? We now only require datasets that can store hunger and miles values for walking around - it doesn&amp;rsquo;t really matter whether they are associated with a Hobbit-like entity or something like an Orc.&lt;br/&gt;
-This means we just enabled Sauron&amp;rsquo;s army to march around, given enough provisions. We also decoupled walking from food consumption - if you&amp;rsquo;re modelling a magical being that feeds on the souls of its enemies, it can still use our walking logic, provided that it can actually hunger.&lt;/p&gt;
-
-&lt;p&gt;In a real application this can be used in many different ways. Consider a Hobbit situation:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;The Journey&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;defmodule&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Journey&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Feeding&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Walking&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes(%&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;Companions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{}&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companions),&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes({&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;:ok&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companions})&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes({&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;:ok&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;Companions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;miles_walked&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;miles}})&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;miles&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;Ring destroyed, all good! - GAME OVER&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes({&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;:ok&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;Companions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{}&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companions)&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;do&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;companions&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;    &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;consider_eating&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;    &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;walk&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;    &lt;span style=&#34;color: #5bc4bf&#34;&gt;|&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;16 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;17 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes({&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;:error&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;reason}),&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;reason&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;18 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;19 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;consider_eating(%&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;Companions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;20 &lt;/span&gt;      &lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hunger,&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;21 &lt;/span&gt;      &lt;span style=&#34;color: #48b685&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions}&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companions)&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;22 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;(hunger&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;feed(companions)&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;23 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;24 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;consider_eating(companions),&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companions&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;25 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;26 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;27 &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;# start the journey and wait for what happens...&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;28 &lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;Journey&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;time_passes(&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;29 &lt;/span&gt;  &lt;span style=&#34;color: #e7e9db&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;Companions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;30 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;hunger_level&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;31 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;miles_walked&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;32 &lt;/span&gt;    &lt;span style=&#34;color: #48b685&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;})&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;33 &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;# &amp;quot;Unable to walk! Dying of hunger - GAME OVER&amp;quot;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;34 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;35 &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;# ...guess how much provisions we need to provide&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;36 &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;# the Hobbits with to survive the journey...&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Alright, this concludes my little rant about dependency injection and object orientation. If you&amp;rsquo;d like to read more about the design approach used in this article, I&amp;rsquo;d recommend looking into entity-component-systems, which is covered in great detail and with loads of examples by Adam on &lt;a href=&#34;http://t-machine.org/index.php/category/entity-systems/&#34;&gt;his blog&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;And in case you are wondering what the entity-systems topic has to do with this post: What we created here is the beginning of a component (the datastructure) and two systems operating on that component (the modules for walking and feeding) - a Hobbit entity for example might consist of several such components, usually tied together only by the same entity ID.&lt;/p&gt;
-</description>
+      <guid>/posts/2016/02/10/di-considered-stupid-pt2/</guid>
+      <description>&lt;p&gt;After messing around with dependency injection frameworks in the &lt;a href=&#34;/posts/2016/01/15/di-considered-stupid-pt1/&#34;&gt;first part&lt;/a&gt;, let&amp;rsquo;s see how we can take our LotR example and unclutter it by using data-oriented functional programming in &lt;a href=&#34;http://elixir-lang.org/&#34;&gt;Elixir&lt;/a&gt;!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Rusty Nuts and Bolts</title>
-      <link>http://malumdiscordi.ae/posts/2016/01/22/the-rusty-nuts-and-bolts/</link>
+      <link>/posts/2016/01/22/the-rusty-nuts-and-bolts/</link>
       <pubDate>Fri, 22 Jan 2016 00:00:34 +0000</pubDate>
       
-      <guid>http://malumdiscordi.ae/posts/2016/01/22/the-rusty-nuts-and-bolts/</guid>
-      <description>
-
-&lt;p&gt;Lately I&amp;rsquo;ve been messing around with the &lt;a href=&#34;https://www.rust-lang.org/&#34;&gt;Rust&lt;/a&gt; programming language. Here&amp;rsquo;s to the why, how and what.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Some context first though:&lt;/strong&gt; I recently decided to refresh and build up my math skills, since the education at my former uni was rather practically oriented and also some time ago already. Additionally, I felt like I&amp;rsquo;m lacking some of the challenges of discovering and understanding new concepts, particularly the more abstract ones.&lt;br/&gt;
-It&amp;rsquo;s true that as a Scala developer I usually face new language or framework related hurdles on a daily basis, but thats a totally different level. It&amp;rsquo;s not as exciting to fix a bug compared to finally getting the hang of some category theory topic.&lt;/p&gt;
-
-&lt;p&gt;However, just reading and understanding maths books is actually a rather dull activity. The real magic happens when you&amp;rsquo;re able to apply this new knowledge onto some kind of example. Thats why I came up with the idea of simply trying to implement the concepts of my books as a small library - which is also a rather great opportunity to try out a new programming language!&lt;/p&gt;
-
-&lt;h3 id=&#34;the-use-case-for-rust:2460511c958b5af270a9f1e77d2dc1da&#34;&gt;The use case for Rust&lt;/h3&gt;
-
-&lt;p&gt;Rust claims to be a both system-level and memory-safe language. This means that you should have the ability to take full control of your hardware (you can even write operating systems) while still maintaining some principles that keep you from shooting yourself in the leg with memory related issues.&lt;/p&gt;
-
-&lt;p&gt;Why is this interesting? After all, you can have something very similar with managed C++ or the like.&lt;br/&gt;
-The difference is that Rust doesn&amp;rsquo;t rely on garbage collection. The language is designed in such a way that it takes the complexity of manual runtime memory management and embeds it into compile-time compiler-checked features. Essentially, it forces you to write code in a way that will prevent memory leaks, data races, accessing of freed resources and so on.&lt;/p&gt;
-
-&lt;p&gt;Now, &lt;em&gt;usually&lt;/em&gt; I&amp;rsquo;m very comfortable with garbage-collected languages. However, I &lt;em&gt;do&lt;/em&gt; know about the additional overhead and non-determinism caused by the GC. Systems like the latter are also one of the main reasons why software that needs to be of really high-performance is not written in e.g. Java. Wouldn&amp;rsquo;t it be great, then, to have a language that &lt;em&gt;enforces&lt;/em&gt; the same level of safety that a managed language has, but doesn&amp;rsquo;t come with the additional overhead of it at runtime?&lt;br/&gt;
-All of this, by the way, is combined with an extensive type system and many features you&amp;rsquo;d find in functional programming languages.&lt;/p&gt;
-
-&lt;h3 id=&#34;my-use-case:2460511c958b5af270a9f1e77d2dc1da&#34;&gt;My use case&lt;/h3&gt;
-
-&lt;p&gt;So, on I went with happily implementing some basic matrix operations in Rust for my &lt;a href=&#34;https://github.com/ephe-meral/halcyon&#34;&gt;brand new library&lt;/a&gt; (or &amp;lsquo;crate&amp;rsquo; in Rust parlance). And, immediately I got stuck fighting with the compiler&amp;hellip; partly because I was not obeying Rusts rules, and partly because I apparently hit a current language limit.&lt;/p&gt;
-
-&lt;p&gt;Consider the following implementation of matrix multiplication independent of the dimension:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;(Don&amp;#39;t) Try This At Home&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;fn&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; multiply(mat_a&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;[[&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;f32&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;]], mat_b&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;[[&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;f32&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;]]) &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;[[&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;f32&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;]] {&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;let&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; dim_i &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; mat_a.len();&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;let&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; dim_k &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; mat_b.len();&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;let&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; dim_j &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; mat_b[&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;].len();&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;let&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;mut&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; result &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [[&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0.0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;; dim_j]; dim_i]; &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;// nope. array sizes need to be const&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; i &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;in&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;..dim_i { &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; j &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;in&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;..dim_j { &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; k &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;in&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;..dim_k {&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;        result[i][j] &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;+=&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; mat_a[i][k] &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; mat_b[k][j];&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;    }}}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;result&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;This won&amp;rsquo;t compile. First of all, the function &amp;lsquo;borrows&amp;rsquo; two pointers to matrices and returns another one. Here, Rust can&amp;rsquo;t infer the time  that we need these references to be alive, which is part of the &lt;a href=&#34;https://doc.rust-lang.org/book/ownership.html&#34;&gt;ownership&lt;/a&gt; / &lt;a href=&#34;https://doc.rust-lang.org/book/lifetimes.html&#34;&gt;lifetime&lt;/a&gt; semantics. We can fix that by introducing an explicit lifetime variable:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;Fixing the Header&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;fn&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; multiply&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;&amp;#39;a&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;(mat_a&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;&amp;#39;a&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [[&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;f32&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;]], mat_b&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;&amp;#39;a&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [[&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;f32&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;]]) &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;&amp;#39;a&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [[&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;f32&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;]] {&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;2 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;// ...&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Now, another problem is the &lt;code&gt;&amp;amp;&#39;a [[f32]]&lt;/code&gt; style of declaring a two-dimensional array slice. An array slice is a pointer to a part of a statically sized array. The compiler has some trouble defining a type like that though, so we cannot use &lt;code&gt;.len()&lt;/code&gt; on the variables later on. For comparison: We could without a problem call &lt;code&gt;.len()&lt;/code&gt; on an array slice defined like &lt;code&gt;&amp;amp;&#39;a [f32]&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;But let&amp;rsquo;s ignore that problem for now. I don&amp;rsquo;t really care for arbitrary array slices&amp;hellip; What I actually want is to accept an array directly and pattern match on the deconstructed array size. The declaration for an array goes like this: &lt;code&gt;[T; N]&lt;/code&gt; where &lt;code&gt;T&lt;/code&gt; is the type of the elements of the array, and &lt;code&gt;N&lt;/code&gt; is the size. What I&amp;rsquo;d like to do is something more like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;If Only...&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;fn&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; multiply&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;I, J, K&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;(mat_a&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [[&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;f32&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;; K]; I], mat_b&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [[&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;f32&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;; J]; K]) &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [[&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;f32&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;; J]; I] {&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;2 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;// ...&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;With this approach we could also drop all the &lt;code&gt;.len()&lt;/code&gt; calls, since theoretically the sizes would all be known at compile time. E.g. the loop&amp;rsquo;s arguments &lt;code&gt;dim_i&lt;/code&gt; etc. could be filled with &lt;code&gt;I&lt;/code&gt;, &lt;code&gt;J&lt;/code&gt; and &lt;code&gt;K&lt;/code&gt; instead, as if these were variables in a macro that will be replaced when it gets called.&lt;/p&gt;
-
-&lt;p&gt;Speaking of which, to implement this with arbitrary array sizes I finally put the precision tools away and took the sledgehammer: &lt;a href=&#34;https://doc.rust-lang.org/book/macros.html&#34;&gt;Rust Macros&lt;/a&gt;. To implement this multiplication I simply insert a sub-scope that does the whole thing for us in-line, roughly like so:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;Taking the Sledgehammer&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;macro_rules&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; multiply {&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;    (&lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$mat_a&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;ident&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [&lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$dim_i&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;expr, &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$dim_k1&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;expr], &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$mat_b&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;ident&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [&lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$dim_k2&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;expr, &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$dim_j&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;expr]) &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; {{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;        assert_eq&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$dim_k1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$dim_k2&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;);&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;let&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;mut&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; res &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; mat&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$dim_i&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$dim_j&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;];&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; i &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;in&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;..&lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$dim_i&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; { &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; j &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;in&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;..&lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$dim_j&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; { &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; k &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;in&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;..&lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$dim_k1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; {&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;            res[i][j] &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;+=&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$mat_a&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;[i][k] &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;$mat_b&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;[k][j];&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;        }}}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;        res&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;    }}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;That way, we still have to give the dimensions explicitly, but thats OK in my opinion. The macro can be invoked with a special syntax:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;Well, It Does the Job&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;let&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; a &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [[&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0.3&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;1.2&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;], [&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;3.2&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;9.5&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;], [&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;6.0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0.8&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;]];&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;2 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;let&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; b &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [[&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;7.0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;3.1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;], [&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;4.3&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0.1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;]];&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;3 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;4 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;let&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; result &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; mul&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;(a&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;], b&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; [&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;As always with macros: Don&amp;rsquo;t use macros - they&amp;rsquo;re like abstractions and we don&amp;rsquo;t use abstractions. Well, only if we must. In this case we do, until Rust implements something like arbitrating over the array size.&lt;/p&gt;
-
-&lt;h3 id=&#34;conclusion:2460511c958b5af270a9f1e77d2dc1da&#34;&gt;Conclusion&lt;/h3&gt;
-
-&lt;p&gt;All in all, it&amp;rsquo;s an interesting language. It has loads of concepts that I think are going in the right direction of control &lt;em&gt;AND&lt;/em&gt; safety. After the tiny bits and pieces (nuts and bolts) that I saw of this, I think I&amp;rsquo;ll keep it in mind for when a fast system-level language is needed and C is not an option.&lt;/p&gt;
-
-&lt;p&gt;By the way, with the given example I didn&amp;rsquo;t want to complain about the language. It was just to illustrate my own first steps with Rust, and how quickly I hit borders.&lt;/p&gt;
-</description>
+      <guid>/posts/2016/01/22/the-rusty-nuts-and-bolts/</guid>
+      <description>&lt;p&gt;Lately I&amp;rsquo;ve been messing around with the &lt;a href=&#34;https://www.rust-lang.org/&#34;&gt;Rust&lt;/a&gt; programming language. Here&amp;rsquo;s to the why, how and what.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Dependency Injection Considered ~~Harmful~~ Stupid</title>
-      <link>http://malumdiscordi.ae/posts/2016/01/15/di-considered-stupid-pt1/</link>
+      <link>/posts/2016/01/15/di-considered-stupid-pt1/</link>
       <pubDate>Fri, 15 Jan 2016 10:56:34 +0000</pubDate>
       
-      <guid>http://malumdiscordi.ae/posts/2016/01/15/di-considered-stupid-pt1/</guid>
-      <description>
-
-&lt;p&gt;Ever used a dependency injection framework? Yes? In an object oriented language?&lt;/p&gt;
-
-&lt;p&gt;If it hadn&amp;rsquo;t been clear before: I dislike object-oriented programming.
-Its my personal opinion that OOP is an unnecessary overhead &lt;strong&gt;in most cases&lt;/strong&gt;. Yes, there might be some systems that benefit from it, but most of the time (see its usage in Java for example) it is exactly that: Abstraction with no benefit.&lt;/p&gt;
-
-&lt;p&gt;Now let&amp;rsquo;s make one thing clear. This opinion is not based on the fact that I haven&amp;rsquo;t spent much time with OOP or that I am simply better with other paradigms. I have worked several years with OOP and design patterns and clever hierarchies and composition and encapsulation and whatnot - to what effect? Boilerplate code that protects developers from other developers just so nothing in the brittle mess of a system breaks and brings it to fall.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Hm. I didn&amp;rsquo;t want to write about OOP actually&amp;hellip; let&amp;rsquo;s save that for another post.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The little introduction, however, was necessary to understand why dependency injection basically is nothing more than a little bit of air-freshener ontop of the unmaintainable pile of s**t that an object-oriented-design most probably produced.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;DISCLAIMER:&lt;/strong&gt; Forgive me for &lt;strong&gt;a)&lt;/strong&gt; using Java in this post and &lt;strong&gt;b)&lt;/strong&gt; for probably making syntactic mistakes. I use it here because it illustrates its own crappyness pretty nicely, and the mistakes might stem from me luckily not using it very often these days.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;the-idea-of-dependency-injection-di:bab3991f7983afcffc1227d0860c2df7&#34;&gt;The idea of dependency injection (DI)&lt;/h3&gt;
-
-&lt;p&gt;Suppose you have two objects, Frodo and Sam. &lt;em&gt;(For a real setup, suppose you have 5k classes and around 50k objects)&lt;/em&gt; Now, suppose object Frodo depends on object Sam for its initialization. &lt;em&gt;(Again, for a real setup, suppose one of those objects depends on 10 others that each depend on 10 others and so forth)&lt;/em&gt; The Frodo object carries the heavy burden of the Ring datastructure, so it needs a supporting companion to take care of the provisions for the long march. &lt;em&gt;(And again, for a real setup, add at least one Gollum dependency as well)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;What we want to focus on, is how Frodo would get introduced to Sam and the Ring.&lt;br/&gt;
-Let&amp;rsquo;s illustrate this unusefully trivial example with a bit of good old Java, and mix in some object-oriented design stuff to make it more obfuscated (and more real&amp;hellip;):&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;The Fellowship&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;abstract&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;AbstractHobbit&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Integer&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;hungerLevel&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Integer&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;milesWalked&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;// incomplete at this point. might define provision etc.&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Frodo&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;AbstractHobbit&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Ring&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;theRing&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;AbstractHobbit&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companion&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;Frodo&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;Ring&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;theRing&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;AbstractHobbit&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companion&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;    &lt;span style=&#34;color: #815ba4&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;theRing&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;theRing&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;    &lt;span style=&#34;color: #815ba4&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;companion&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;companion&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;16 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;17 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Sam&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;AbstractHobbit&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;18 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;// let&amp;#39;s give Sam a purpose too...&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;19 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Food&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;provisions&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;LembasBreadLoaf&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;();&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;20 &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note that I introduced AbstractHobbit, because keeping the code &lt;a href=&#34;https://en.wikipedia.org/wiki/Don&#39;t_repeat_yourself&#34;&gt;DRY&lt;/a&gt; like this is considered a &amp;lsquo;good practice&amp;rsquo; in Java&amp;hellip; and because it looks funny.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, in order to wire this up, all you need is an object that knows both Frodo and Sam:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;The Sorcerer&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Gandalf&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Hobbit&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;ringBearer&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;// for obvious reasons, a Gandalf object is&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;// a loner and doesn&amp;#39;t have dependencies!&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;Gandalf&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;Ring&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;theRing&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Ring&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;();&lt;/span&gt; &lt;span style=&#34;color: #776e71&#34;&gt;// actually stolen from Bilbo, but who cares&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// initializing Frodo and Sam *within* a Gandalf&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// might be a bit semantically weird,&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// but we do it for illustrative purposes&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;Sam&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;sam&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Sam&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;();&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;    &lt;span style=&#34;color: #815ba4&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;ringBearer&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Frodo&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;theRing&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;sam&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;);&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;This is what is commonly known as manual &amp;lsquo;constructor-based dependency injection&amp;rsquo;: Instead of letting Frodo create a Sam instance, we have another object that creates a Frodo and &amp;lsquo;injects&amp;rsquo; a Sam into it. &lt;em&gt;I just love this metaphor!&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Generally speaking, you could consider any call to a function and passing of parameters as &amp;lsquo;dependency injection&amp;rsquo; - the function depends on its parameters and doesn&amp;rsquo;t know about how they were created and by whom. This leads to the conclusion that actually, all purely functional programming languages &amp;lsquo;use dependency injection&amp;rsquo;, or, if you put it the other way round, using dependency injection extensively will make your object-oriented program a bit more functional in some sense. &lt;em&gt;Which is a good thing, IMHO&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The reason to use this principle or pattern instead of simply creating a Sam inside a Frodo is that the latter is now decoupled from the concrete instance of its companion - it could also be given an instance of a Pippin instead. This makes the Frodo easier to test as you can inject any kind of mocked AbstractHobbit, and it also makes the whole code base easier to maintain, as Frodo doesn&amp;rsquo;t need to be changed when Sam changes. (Though Gandalf might have to change in that case&amp;hellip;)&lt;/p&gt;
-
-&lt;h3 id=&#34;dependency-injection-frameworks:bab3991f7983afcffc1227d0860c2df7&#34;&gt;Dependency-injection frameworks&lt;/h3&gt;
-
-&lt;p&gt;Alright, so far so good. Now, let&amp;rsquo;s do the same thing with Sauron and let him initialize a List of 10000 Orcs with different features, armor, weapons and hierarchies&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;Sauron and the Orcs&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Orc&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Creature&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Armor&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;armor&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Weapon&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;weapon&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Creature&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;boss&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;Armor&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;armor&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Weapon&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;weapon&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Creature&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;boss&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;    &lt;span style=&#34;color: #815ba4&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;armor&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;armor&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;    &lt;span style=&#34;color: #815ba4&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;weapon&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;weapon&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;    &lt;span style=&#34;color: #815ba4&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;boss&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;boss&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;Sauron&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Creature&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;leader&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;List&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;orcs&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;ArrayList&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;();&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;16 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;17 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;createOrcs&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;18 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// the topmost orc in the hierarchy only reports to us!&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;19 &lt;/span&gt;    &lt;span style=&#34;color: #815ba4&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;leader&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;ChainArmor&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(),&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;WarHorn&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(),&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;);&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;20 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;21 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// let&amp;#39;s give it some minions to play with...&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;22 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;orcs&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;LeatherArmor&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(),&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;IronAxe&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(),&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;leader&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;));&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;23 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;orcs&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;ClothArmor&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(),&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;LongBow&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(),&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;leader&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;));&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;24 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// ...&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;25 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// TODO: continue till orc 10000, and don&amp;#39;t forget&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;26 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// to include some more sub-hierarchies! Divide et impera, HARR!&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;27 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;28 &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;As we see, it takes quite some lines of code to wire up all the Orcs by doing a manual dependency injection here - and don&amp;rsquo;f forget the Orcs that depend on them, and then the Orcs depend on &lt;em&gt;them&lt;/em&gt; and then&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;It takes so much code, in fact, that clever people came up with the Idea of abstracting it away by replacing that Sauron object with a somewhat omniscient registry of Orcs and other objects - in the following referred to as Tolkien (or dependency injection framework).&lt;/p&gt;
-
-&lt;p&gt;Each Orc object would then declare a list of stuff it needs, go to Tolkien, hand it that list, and get the actual &amp;lsquo;stuff&amp;rsquo; back.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s see how this can be done with the help of &lt;a href=&#34;https://github.com/google/guice&#34;&gt;Guice&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;So, all it takes to inject armor, weapon and boss into an Orc now is to place the &lt;code&gt;@Inject&lt;/code&gt; annotation above its constructor and off we go!&lt;/p&gt;
-
-&lt;p&gt;Oh wait, thats not true&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Yes, the DI framework can figure out some instance of Armor, Weapon and Boss. But no, it&amp;rsquo;s not guaranteed to be the instance that we want. What if the Orc object gets the wrong Armor? Or the wrong boss? The battle would be over before it began.&lt;/p&gt;
-
-&lt;p&gt;So, necessary configuration doesn&amp;rsquo;t magically go away by using DI frameworks!&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;The Tedium of Tolkien&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;TolkienModule&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;AbstractModule&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;@Override&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;  &lt;span style=&#34;color: #815ba4&#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color: #fec418&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;configure&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// this should be filled with bindings from classes&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// to more concrete sub-classes, instances, providers etc.&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// however, we have interdependencies between instances of&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// the same class (Orc) which requires some extra work...&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;// this provider method will get the Sauron object injected, how cool!&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;// (that is, if we bound it to type Creature and annotated it&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;  &lt;span style=&#34;color: #776e71&#34;&gt;// with the name &amp;quot;Sauron&amp;quot; in some other DI module)&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;@Provides&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;@Named(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;Boss&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;)&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;  &lt;span style=&#34;color: #e7e9db&#34;&gt;Creature&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;createBoss&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(@Named(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;Sauron&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Creature&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;sauron&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;boss&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;ChainArmor&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(),&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;WarHorn&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(),&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;sauron&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;);&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;16 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// looks like a cyclic dependency to me:&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;17 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;sauron&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;setLeader&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;boss&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;);&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;18 &lt;/span&gt;    &lt;span style=&#34;color: #815ba4&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;boss&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;19 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;20 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;21 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;@Provides&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;@Named(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;Soldiers&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;)&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;22 &lt;/span&gt;  &lt;span style=&#34;color: #e7e9db&#34;&gt;List&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;createSoldiers&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(@Named(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;Boss&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Creature&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;boss&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;23 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;List&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;orcs&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;ArrayList&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;();&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;24 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;orcs&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;LeatherArmor&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(),&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;IronAxe&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(),&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;boss&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;));&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;25 &lt;/span&gt;    &lt;span style=&#34;color: #e7e9db&#34;&gt;orcs&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;ClothArmor&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(),&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;LongBow&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;(),&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;boss&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;));&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;26 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// ...&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;27 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// erm. wait a second. we still declare all that stuff explicitly?&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;28 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// also, we only have one level of army hierarchy so far...&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;29 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// we could probably somehow make this work with nice tools like&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;30 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// Multibindings and AssistedInject and FactoryModuleBuilder&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;31 &lt;/span&gt;    &lt;span style=&#34;color: #776e71&#34;&gt;// but it gives me the chills only thinking about that!&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;32 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;33 &lt;/span&gt;    &lt;span style=&#34;color: #815ba4&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;orcs&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;34 &lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;35 &lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;I can&amp;rsquo;t guarantee that the code above works (it&amp;rsquo;s incomplete anyways). This specific scenario is generally hard to realize with DI frameworks, since their common use case is more the injection of singleton service-like objects.&lt;/p&gt;
-
-&lt;p&gt;What I tried to show, though, is that once you use this or that design pattern or have a more non-standard object dependency hierarchy, you quickly get into the same or worse trouble that you&amp;rsquo;d get into when injecting the dependencies manually.&lt;/p&gt;
-
-&lt;p&gt;Although it looks as if these two approaches have the potential to simplify the initialization of objects in complex dependency-trees, they still both introduce extra code that does all this messy wiring-up.&lt;/p&gt;
-
-&lt;p&gt;Why, though? What makes code-decoupling and dependency management so hard? Well, let&amp;rsquo;s see&amp;hellip;&lt;/p&gt;
-
-&lt;h3 id=&#34;the-root-of-the-evil-span-sqrt-1-span:bab3991f7983afcffc1227d0860c2df7&#34;&gt;The root of the evil &lt;span&gt;\(\sqrt{-1}\)&lt;/span&gt;&lt;/h3&gt;
-
-&lt;p&gt;In the Lord of the Rings, that would be Sauron, but in our case it is something else:&lt;br/&gt;
-It&amp;rsquo;s the deficits that come with using abstractions on top of abstractions to handle the complexity imposed by abstractions.&lt;/p&gt;
-
-&lt;p&gt;What have we done thus far? No logic. Just boilerplate code and declaring datastructures. We can just as well kick out the earlier, unclutter the code and strip it from its object-oriented parts. Revisit the classes and see what fields they have. I&amp;rsquo;ll throw in a bit of pseudo code here to make it clearer:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;The Lord of the Rings, Abridged&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;Hobbit&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 2 &lt;/span&gt;  &lt;span style=&#34;color: #f99b15&#34;&gt;hungerLevel&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Integer&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 3 &lt;/span&gt;  &lt;span style=&#34;color: #f99b15&#34;&gt;milesWalked&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Integer&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 4 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 5 &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;Frodo&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Hobbit with&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 6 &lt;/span&gt;  &lt;span style=&#34;color: #f99b15&#34;&gt;theRing&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Ring&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 7 &lt;/span&gt;  &lt;span style=&#34;color: #f99b15&#34;&gt;companion&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Hobbit&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 8 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt; 9 &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;Sam&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Hobbit with&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;10 &lt;/span&gt;  &lt;span style=&#34;color: #f99b15&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Food&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;11 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;12 &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;# Gandalf is just needed for DI in our example,&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;13 &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;# so we leave that out here - it doesnt contain any logic&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;14 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;15 &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;Orc&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Creature with&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;16 &lt;/span&gt;  &lt;span style=&#34;color: #f99b15&#34;&gt;armor&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Armor&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;17 &lt;/span&gt;  &lt;span style=&#34;color: #f99b15&#34;&gt;weapon&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Weapon&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;18 &lt;/span&gt;  &lt;span style=&#34;color: #f99b15&#34;&gt;boss&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Creature&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;19 &lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;20 &lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;# Sauron and Tolkien are left aside as well&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;For the following we want to consider &lt;code&gt;Ring&lt;/code&gt;, &lt;code&gt;Food&lt;/code&gt;, &lt;code&gt;Weapon&lt;/code&gt; and &lt;code&gt;Armor&lt;/code&gt; to just be more datastructure declarations. Think of them as the &amp;lsquo;stats&amp;rsquo; of a weapon or the amount of kalories in the food - it can be as simple as an integer sometimes!&lt;/p&gt;
-
-&lt;p&gt;These definitions are all we need for our calculations of the fighting orcs and marching companions who need provisions to stay alive on the way. The rest of the code from the beginning of this post does have no purpose other than filling these fields with data, in an environment where it is (seemingly) hard and complicated to do so. It does not even implement any of the logic of marching and fighting, just the abstract relationships between objects like Frodo and Sam.&lt;br/&gt;Actually, for our scenario, we might argue that it is not even important to know about the relationship of those two, and might just consider them as one unit like so:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;The Baggins/Gamgee Complex&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;1 &lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;Companions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;2 &lt;/span&gt;  &lt;span style=&#34;color: #f99b15&#34;&gt;hungerLevel&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Integer&lt;/span&gt; &lt;span style=&#34;color: #776e71&#34;&gt;# they hunger together&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;3 &lt;/span&gt;  &lt;span style=&#34;color: #f99b15&#34;&gt;milesWalked&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Integer&lt;/span&gt; &lt;span style=&#34;color: #776e71&#34;&gt;# they march together&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;4 &lt;/span&gt;  &lt;span style=&#34;color: #f99b15&#34;&gt;theRing&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Ring&lt;/span&gt;        &lt;span style=&#34;color: #776e71&#34;&gt;# ...hm...&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;5 &lt;/span&gt;  &lt;span style=&#34;color: #f99b15&#34;&gt;provisions&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;Food&lt;/span&gt;     &lt;span style=&#34;color: #776e71&#34;&gt;# and they share their bread!&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;p&gt;This might be counter intuitive. But as a developer we know the whole story. We can decide what kind of datastructure still obeys the semantics and makes implementing the business logic as simple as possible. By doing so, we can avoid complex dependencies right from the start, and filling these few fields with data initially is also not very difficult.&lt;br/&gt;
-Remember that this initial configuration (especially if we are dealing with something as diverse as the orc-army) is &lt;strong&gt;almost always&lt;/strong&gt; required and no tool can make it magically disappear.&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s a good thing! If you know what kind of data is fed into a program when it starts, you have a better chance of understanding the behaviour of it! If that data is split into pieces, mixed with logic and spread all over the object-tree though, constantly changing and producing states that are complex to trace and understand, then you easily end up in an unmaintainable mess of a project. Throwing a DI framework onto that might help in some cases, but why not making it less complex right from the start?&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note at this point that you can &lt;strong&gt;always&lt;/strong&gt; refactor code to contain &lt;strong&gt;either&lt;/strong&gt; logic &lt;strong&gt;or&lt;/strong&gt; datastructures, so defining something like the example above is not impossible under real conditions. The only reason why we didn&amp;rsquo;t do it right from the start is because OOP is all about mixing up data and logic.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;In a nutshell, if you&amp;rsquo;re using DI because you think it is crucial for a project to be maintainable in the long run, you&amp;rsquo;re probably not doing something harmful, but simply something unnecessary. That&amp;rsquo;s not because DI is intrinsically bad, but because the weird principles of OOP force you to use something like that to manage all the dependencies of your objects. In carefully designing the datastructures outside of the context of an object, it might, however, be possible to avoid all that. So why not using a simpler, more data-oriented approach instead?&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;For the OOP &amp;amp; DI lovers: If you find this post offensive, you probably suffer from a phenomenon known as the &amp;lsquo;&lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_the_instrument&#34;&gt;golden hammer&lt;/a&gt;&amp;rsquo;. Please take some time and think the arguments through. A classical program is never more than data-input -&amp;gt; computation -&amp;gt; data-output.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;And some famous last words: I&amp;rsquo;ll give an example of a useful data-oriented functional implementation of the situation described above in a follow-up post, promised! In the meantime, I recommend reading &lt;a href=&#34;http://gamesfromwithin.com/data-oriented-design&#34;&gt;Noel&amp;rsquo;s article&lt;/a&gt; about further aspects of data-oriented design, like performance gain - especially for games.&lt;/p&gt;
-
-&lt;p&gt;UPDATE:&lt;br/&gt;
-As promised, here&amp;rsquo;s the &lt;a href=&#34;http://malumdiscordi.ae/posts/2016/02/10/di-considered-stupid-pt2/&#34;&gt;follow-up post&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <guid>/posts/2016/01/15/di-considered-stupid-pt1/</guid>
+      <description>&lt;p&gt;Ever used a dependency injection framework? Yes? In an object oriented language?&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Introducing &#39;to entice so.&#39;</title>
-      <link>http://malumdiscordi.ae/posts/2016/01/06/introducing-to-entice-so./</link>
+      <link>/posts/2016/01/06/introducing-to-entice-so./</link>
       <pubDate>Wed, 06 Jan 2016 00:34:09 +0000</pubDate>
       
-      <guid>http://malumdiscordi.ae/posts/2016/01/06/introducing-to-entice-so./</guid>
-      <description>
-
-&lt;p&gt;Despite the misleading title of this - it could as well be a social engineering guide - I&amp;rsquo;m going to introduce a free, libre and open-source software project that I&amp;rsquo;m in charge of.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s the first thing of this sort that I&amp;rsquo;ll write about and also the first real post here. One might actually say that I&amp;rsquo;ve gone through the lengths of creating this blog just to write about this specific project and related topics. (But I won&amp;rsquo;t, promised)&lt;/p&gt;
-
-&lt;h3 id=&#34;so-what-are-we-talking-about:dcd2377f0c9732c2dd2950dcbd2cf62d&#34;&gt;So what are we talking about?&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/entice/entice&#34;&gt;&amp;lsquo;to entice so.&amp;rsquo;&lt;/a&gt; (or just &amp;lsquo;entice&amp;rsquo; for short) is a client/server application aiming to provide an MMORPG sandbox of sorts.
-While this fact in itself might not be very interesting, the approach used and the technology involved actually are - at least in my humble opinion.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ll split this topic up into several posts to highlight different aspects of the project, but let me at least give a little overview at this point.&lt;/p&gt;
-
-&lt;p&gt;The code covers both &lt;a href=&#34;https://github.com/entice/client&#34;&gt;client&lt;/a&gt; and &lt;a href=&#34;https://github.com/entice/web&#34;&gt;server&lt;/a&gt; side parts, even though this is not a complete game on its own. Actually, we&amp;rsquo;re instrumenting an existing &lt;em&gt;*cough* commercial *cough*&lt;/em&gt; client and try to follow the gameplay logic more or less. To be honest it&amp;rsquo;s not very difficult to figure out which game I&amp;rsquo;m talking about, but for me personally the whole point of this is less about creating a so-called private server and more about experimenting with MMORPG server designs.&lt;/p&gt;
-
-&lt;h3 id=&#34;project-structure:dcd2377f0c9732c2dd2950dcbd2cf62d&#34;&gt;Project structure&lt;/h3&gt;
-
-&lt;p&gt;Splitting the project up in this instrumentation part on the client side and the server part with the gameplay logic, we gain an excellent and clean way of working on each independently. I&amp;rsquo;ll go into more detail about this development model in a follow-up post later. For now, lets just say that it works out perfectly for our little team, since our collaborator&amp;rsquo;s schedules differ a lot.&lt;/p&gt;
-
-&lt;h3 id=&#34;technology:dcd2377f0c9732c2dd2950dcbd2cf62d&#34;&gt;Technology&lt;/h3&gt;
-
-&lt;p&gt;Technology-wise, the client part is written in C/C++ and &lt;a href=&#34;https://msdn.microsoft.com/en-us/vstudio/hh341490.aspx&#34;&gt;C#&lt;/a&gt; relying on standard .NET features, whereas the server is written in &lt;a href=&#34;http://elixir-lang.org/&#34;&gt;Elixir&lt;/a&gt; using the &lt;a href=&#34;http://www.phoenixframework.org/&#34;&gt;Phoenix framework&lt;/a&gt;. More about the reasons for the choice of these technology stacks later.&lt;/p&gt;
-
-&lt;p&gt;Also, since I&amp;rsquo;m most involved with the server side code, I&amp;rsquo;ll focus on those parts in the upcoming posts. If you want to learn more about the client side software design, you can either check out the code in our project &lt;a href=&#34;https://github.com/entice&#34;&gt;repos&lt;/a&gt;, or get in touch with the main dev of these parts.&lt;/p&gt;
-
-&lt;p&gt;To finish up this rather short intro, be aware that all we&amp;rsquo;re talking about here is freely accessible to anyone, and improvements and discussion of the code is always welcome. Feel free to join us on &lt;code&gt;#gwlpr&lt;/code&gt; in the &lt;code&gt;irc.rizon.net&lt;/code&gt; IRC net, and create github issues, forks and pull-requests to help improve the project.&lt;/p&gt;
-</description>
+      <guid>/posts/2016/01/06/introducing-to-entice-so./</guid>
+      <description>&lt;p&gt;Despite the misleading title of this - it could as well be a social engineering guide - I&amp;rsquo;m going to introduce a free, libre and open-source software project that I&amp;rsquo;m in charge of.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Instruction Leaflet</title>
-      <link>http://malumdiscordi.ae/posts/2015/12/28/instruction-leaflet/</link>
+      <link>/posts/2015/12/28/instruction-leaflet/</link>
       <pubDate>Mon, 28 Dec 2015 14:41:33 +0000</pubDate>
       
-      <guid>http://malumdiscordi.ae/posts/2015/12/28/instruction-leaflet/</guid>
-      <description>
-
-&lt;p&gt;What this blog is about, who I am, about the weather and the answer to the meaning of life.&lt;/p&gt;
-
-&lt;h3 id=&#34;so-you-re-here:12775062aa95f53d4ae64b8b5b9a7e91&#34;&gt;So you&amp;rsquo;re here.&lt;/h3&gt;
-
-&lt;p&gt;In absence of a better method of publishing thoughts for eternity (or however long GitHub might exist), I&amp;rsquo;ll use this website as a general brain and idea dump for everything and nothing.&lt;/p&gt;
-
-&lt;p&gt;So what you can and will find here, is stuff that I personally considered interesting, thought provoking, funny, smart or otherwise worthwhile posting - which probably involves techy and nerdy topics, as well as philosophical discussions, general scientific considerations, languages, music, arts, learning and absurdities.&lt;/p&gt;
-
-&lt;p&gt;Some things I definitively plan to write about: &lt;em&gt;Free, Libre and Open-Source Projects&lt;/em&gt;, &lt;em&gt;Operating Systems&lt;/em&gt; and the &lt;em&gt;Usage of Computers in General&lt;/em&gt;, &lt;em&gt;Programming Languages, -Paradigms and -Concepts&lt;/em&gt; (and how all that stuff relates to the industry), &lt;em&gt;Sentient Machines and the Future of Humanity&lt;/em&gt;, &lt;em&gt;Insights from a Modern&lt;/em&gt; (digital &amp;amp; non-digital) &lt;em&gt;Life&lt;/em&gt;, and &lt;em&gt;How to Get Along With People&lt;/em&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Check out existing tags to discover stuff!&lt;/p&gt;
-
-&lt;h3 id=&#34;alright-so-who-am-i:12775062aa95f53d4ae64b8b5b9a7e91&#34;&gt;Alright, so, who am I?&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;(This is not the meaning of life part yet, hang tight)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;I consider myself an all-time student of everything - naturally curious!&lt;/p&gt;
-
-&lt;p&gt;Well, more seriously, I spend most of my time either working on software projects - I&amp;rsquo;m an entrepreneur and freelance software-architect, nerd, functional-language evangelist, and web-backend expert.
-I also helped building &lt;a href=&#34;http://innoki.de&#34;&gt;INNOKI&lt;/a&gt; where we facilitate innovative and empathetic workmodes in big and small teams and enterprises. (As empty and buzz-wordy as it might sound, it actually works)&lt;/p&gt;
-
-&lt;p&gt;Apart from that, my other passion is everything science!
-I love learning and understanding, even if the world seems organized in ways that are hostile to doing that in full creative freedom.
-Fields of interest there reach from political, social, and educational over languages, design and music, to practically everything in natural sciences, maths, engineering and computer science.&lt;/p&gt;
-
-&lt;h3 id=&#34;and-what-about-the-weather-and-that-meaning-of-life-thingy:12775062aa95f53d4ae64b8b5b9a7e91&#34;&gt;And what about the weather and that meaning of life thingy?&lt;/h3&gt;
-
-&lt;p&gt;I also like rhetoric questions and weird humor.&lt;/p&gt;
-
-&lt;p&gt;~ Johanna&lt;/p&gt;
-</description>
+      <guid>/posts/2015/12/28/instruction-leaflet/</guid>
+      <description>&lt;p&gt;What this blog is about, who I am, about the weather and the answer to the meaning of life.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://malumdiscordi.ae/pages/about/</link>
+      <link>/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://malumdiscordi.ae/pages/about/</guid>
-      <description>&lt;h1 class=&#34;post-title&#34; itemprop=&#34;name headline&#34;&gt;About&lt;/h1&gt;
-
-&lt;p&gt;Will fill this with more content later. For now see the &lt;a href=&#34;http://malumdiscordi.ae/posts/2015/12/28/instruction-leaflet/&#34;&gt;Instruction Leaflet&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight-caption&#34;&gt;Why not?&lt;/div&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;1 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(num),&lt;/span&gt;                    &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(num,&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;2 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;res,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;_),&lt;/span&gt;              &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;res&lt;/span&gt;
-&lt;span style=&#34;background-color: #f0f0f0; padding: 0 5px 0 5px&#34;&gt;3 &lt;/span&gt;&lt;span style=&#34;color: #815ba4&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(n,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;res,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;nxt)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;do&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;fib(n&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;nxt,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;res&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;nxt)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
-</description>
+      <guid>/pages/about/</guid>
+      <description>About Will fill this with more content later. For now see the Instruction Leaflet
+Why not? 1def fib(num), do: fib(num, 0, 1) 2def fib(0, res, _), do: res 3def fib(n, res, nxt) when n &amp;gt; 0, do: fib(n-1, nxt, res + nxt)</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>http://malumdiscordi.ae/pages/projects/</link>
+      <link>/pages/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://malumdiscordi.ae/pages/projects/</guid>
-      <description>
+      <guid>/pages/projects/</guid>
+      <description>Projects These are some of the projects I am (or have been) working on. Less official ones and smaller experiments can also be found on my github page.
 
-&lt;h1 class=&#34;post-title&#34; itemprop=&#34;name headline&#34;&gt;Projects&lt;/h1&gt;
-
-&lt;p&gt;These are some of the projects I am (or have been) working on. Less official ones and smaller experiments can also be found on &lt;a href=&#34;https://github.com/ephe-meral&#34;&gt;my github page&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;entice-https-github-com-entice:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;a href=&#34;https://github.com/entice&#34;&gt;entice&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Full title: &amp;lsquo;to entice so.&amp;rsquo; - this fancy named project aims to create a framework for a distributed simulation of virtual worlds. Its primary use- and show-case is an MMORPG server, where it also delivers the client-side software.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://github.com/entice/entice&#34;&gt;entice/entice&lt;/a&gt; repo has more details.&lt;/p&gt;
-
-&lt;h5 id=&#34;languages-elixir-c-scala-technologies-erlang-otp-phoenix-framework-postresql-net:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;em&gt;Languages: Elixir, C#, Scala - Technologies: Erlang/OTP, Phoenix-Framework, PostreSQL, .NET&lt;/em&gt;&lt;/h5&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ex-sider-https-github-com-ephe-meral-ex-sider:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;a href=&#34;https://github.com/ephe-meral/ex_sider&#34;&gt;ex_sider&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;This project aims to map Redis datastructures onto the usual interfaces found in the Elixir standard library. Since Redis has sets, hashes, lists etc. we can simply take our commonly known language interface for these and exchange the backend with the Redis connection. (In practise there are some incompatibilities, but that is to be expected when you&amp;rsquo;re moving from simple in-mem data to a distributed key-value-store.&lt;/p&gt;
-
-&lt;h5 id=&#34;language-elixir-technologies-redis:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;em&gt;Language: Elixir - Technologies: Redis&lt;/em&gt;&lt;/h5&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;kiss-https-github-com-ephe-meral-kiss:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;a href=&#34;https://github.com/ephe-meral/kiss&#34;&gt;kiss&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;A HUGO theme based on Octopress that does the least you need for a simple blog (my own).&lt;/p&gt;
-
-&lt;h5 id=&#34;language-html-css-js-go-technologies-hugo-git-github:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;em&gt;Language: HTML, CSS, JS, GO - Technologies: Hugo, Git/GitHub&lt;/em&gt;&lt;/h5&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;mac-https-github-com-ephe-meral-mac:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;a href=&#34;https://github.com/ephe-meral/mac&#34;&gt;mac&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;A do-one-thing-and-do-it-well project: Parses a MAC-address-to-vendor listing and generates a static library that can be used to search for vendors based on given MACs. This is pure elixir and has no other dependency. You can also update the address listing yourself if need be.&lt;/p&gt;
-
-&lt;h5 id=&#34;language-elixir-technologies-wireshark:3c42bb4157bf51d85ae7ffc4e1685909&#34;&gt;&lt;em&gt;Language: Elixir - Technologies: Wireshark&lt;/em&gt;&lt;/h5&gt;
-</description>
+entice Full title: &amp;lsquo;to entice so.&amp;rsquo; - this fancy named project aims to create a framework for a distributed simulation of virtual worlds. Its primary use- and show-case is an MMORPG server, where it also delivers the client-side software.
+The entice/entice repo has more details.</description>
     </item>
     
   </channel>

@@ -1,58 +1,172 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://malumdiscordi.ae/</loc>
+    <loc>/posts/2017/09/18/the-need-for-evolution/</loc>
+    <lastmod>2017-09-18T14:55:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</loc>
+    <lastmod>2016-07-01T14:55:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2016/02/21/considering-holistic-learning/</loc>
+    <lastmod>2016-02-21T16:46:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2016/02/10/di-considered-stupid-pt2/</loc>
+    <lastmod>2016-02-10T05:56:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2016/01/22/the-rusty-nuts-and-bolts/</loc>
+    <lastmod>2016-01-22T00:00:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2016/01/15/di-considered-stupid-pt1/</loc>
+    <lastmod>2016-01-15T10:56:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2016/01/06/introducing-to-entice-so./</loc>
+    <lastmod>2016-01-06T00:34:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2015/12/28/instruction-leaflet/</loc>
+    <lastmod>2015-12-28T14:41:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/pages/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/dependency_injection/</loc>
+    <lastmod>2016-01-15T10:56:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/elixir/</loc>
+    <lastmod>2016-02-10T05:56:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/entity_systems/</loc>
+    <lastmod>2016-02-10T05:56:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/future/</loc>
     <lastmod>2017-09-18T14:55:24+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://malumdiscordi.ae/posts/2017/09/18/the-need-for-evolution/</loc>
-    <lastmod>2017-09-18T14:55:24+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://malumdiscordi.ae/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</loc>
-    <lastmod>2016-07-01T14:55:24+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://malumdiscordi.ae/posts/2016/02/21/considering-holistic-learning/</loc>
-    <lastmod>2016-02-21T16:46:24+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://malumdiscordi.ae/posts/2016/02/10/di-considered-stupid-pt2/</loc>
-    <lastmod>2016-02-10T05:56:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://malumdiscordi.ae/posts/2016/01/22/the-rusty-nuts-and-bolts/</loc>
-    <lastmod>2016-01-22T00:00:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://malumdiscordi.ae/posts/2016/01/15/di-considered-stupid-pt1/</loc>
-    <lastmod>2016-01-15T10:56:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://malumdiscordi.ae/posts/2016/01/06/introducing-to-entice-so./</loc>
-    <lastmod>2016-01-06T00:34:09+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://malumdiscordi.ae/posts/2015/12/28/instruction-leaflet/</loc>
+    <loc>/tags/instructions/</loc>
     <lastmod>2015-12-28T14:41:33+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://malumdiscordi.ae/pages/about/</loc>
+    <loc>/tags/java/</loc>
+    <lastmod>2016-01-15T10:56:34+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://malumdiscordi.ae/pages/projects/</loc>
+    <loc>/tags/learning/</loc>
+    <lastmod>2016-02-21T16:46:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/life/</loc>
+    <lastmod>2016-02-21T16:46:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/machine_intelligence/</loc>
+    <lastmod>2017-09-18T14:55:24+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mmorpg/</loc>
+    <lastmod>2016-01-06T00:34:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/open_source/</loc>
+    <lastmod>2016-01-06T00:34:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/philosophy/</loc>
+    <lastmod>2017-09-18T14:55:24+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2017-09-18T14:55:24+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/programming/</loc>
+    <lastmod>2016-07-01T14:55:24+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/pages/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/rant/</loc>
+    <lastmod>2016-01-15T10:56:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/rust/</loc>
+    <lastmod>2016-01-22T00:00:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2017-09-18T14:55:24+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2016-01-15T10:56:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/unix/</loc>
+    <lastmod>2016-07-01T14:55:24+01:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

@@ -2,46 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Open_source on Seeds from the Apple of Discord</title>
-    <link>http://malumdiscordi.ae/tags/open_source/</link>
+    <link>/tags/open_source/</link>
     <description>Recent content in Open_source on Seeds from the Apple of Discord</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 Jan 2016 00:34:09 +0000</lastBuildDate>
-    <atom:link href="http://malumdiscordi.ae/tags/open_source/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/tags/open_source/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Introducing &#39;to entice so.&#39;</title>
-      <link>http://malumdiscordi.ae/posts/2016/01/06/introducing-to-entice-so./</link>
+      <link>/posts/2016/01/06/introducing-to-entice-so./</link>
       <pubDate>Wed, 06 Jan 2016 00:34:09 +0000</pubDate>
       
-      <guid>http://malumdiscordi.ae/posts/2016/01/06/introducing-to-entice-so./</guid>
-      <description>
-
-&lt;p&gt;Despite the misleading title of this - it could as well be a social engineering guide - I&amp;rsquo;m going to introduce a free, libre and open-source software project that I&amp;rsquo;m in charge of.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s the first thing of this sort that I&amp;rsquo;ll write about and also the first real post here. One might actually say that I&amp;rsquo;ve gone through the lengths of creating this blog just to write about this specific project and related topics. (But I won&amp;rsquo;t, promised)&lt;/p&gt;
-
-&lt;h3 id=&#34;so-what-are-we-talking-about:dcd2377f0c9732c2dd2950dcbd2cf62d&#34;&gt;So what are we talking about?&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/entice/entice&#34;&gt;&amp;lsquo;to entice so.&amp;rsquo;&lt;/a&gt; (or just &amp;lsquo;entice&amp;rsquo; for short) is a client/server application aiming to provide an MMORPG sandbox of sorts.
-While this fact in itself might not be very interesting, the approach used and the technology involved actually are - at least in my humble opinion.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ll split this topic up into several posts to highlight different aspects of the project, but let me at least give a little overview at this point.&lt;/p&gt;
-
-&lt;p&gt;The code covers both &lt;a href=&#34;https://github.com/entice/client&#34;&gt;client&lt;/a&gt; and &lt;a href=&#34;https://github.com/entice/web&#34;&gt;server&lt;/a&gt; side parts, even though this is not a complete game on its own. Actually, we&amp;rsquo;re instrumenting an existing &lt;em&gt;*cough* commercial *cough*&lt;/em&gt; client and try to follow the gameplay logic more or less. To be honest it&amp;rsquo;s not very difficult to figure out which game I&amp;rsquo;m talking about, but for me personally the whole point of this is less about creating a so-called private server and more about experimenting with MMORPG server designs.&lt;/p&gt;
-
-&lt;h3 id=&#34;project-structure:dcd2377f0c9732c2dd2950dcbd2cf62d&#34;&gt;Project structure&lt;/h3&gt;
-
-&lt;p&gt;Splitting the project up in this instrumentation part on the client side and the server part with the gameplay logic, we gain an excellent and clean way of working on each independently. I&amp;rsquo;ll go into more detail about this development model in a follow-up post later. For now, lets just say that it works out perfectly for our little team, since our collaborator&amp;rsquo;s schedules differ a lot.&lt;/p&gt;
-
-&lt;h3 id=&#34;technology:dcd2377f0c9732c2dd2950dcbd2cf62d&#34;&gt;Technology&lt;/h3&gt;
-
-&lt;p&gt;Technology-wise, the client part is written in C/C++ and &lt;a href=&#34;https://msdn.microsoft.com/en-us/vstudio/hh341490.aspx&#34;&gt;C#&lt;/a&gt; relying on standard .NET features, whereas the server is written in &lt;a href=&#34;http://elixir-lang.org/&#34;&gt;Elixir&lt;/a&gt; using the &lt;a href=&#34;http://www.phoenixframework.org/&#34;&gt;Phoenix framework&lt;/a&gt;. More about the reasons for the choice of these technology stacks later.&lt;/p&gt;
-
-&lt;p&gt;Also, since I&amp;rsquo;m most involved with the server side code, I&amp;rsquo;ll focus on those parts in the upcoming posts. If you want to learn more about the client side software design, you can either check out the code in our project &lt;a href=&#34;https://github.com/entice&#34;&gt;repos&lt;/a&gt;, or get in touch with the main dev of these parts.&lt;/p&gt;
-
-&lt;p&gt;To finish up this rather short intro, be aware that all we&amp;rsquo;re talking about here is freely accessible to anyone, and improvements and discussion of the code is always welcome. Feel free to join us on &lt;code&gt;#gwlpr&lt;/code&gt; in the &lt;code&gt;irc.rizon.net&lt;/code&gt; IRC net, and create github issues, forks and pull-requests to help improve the project.&lt;/p&gt;
-</description>
+      <guid>/posts/2016/01/06/introducing-to-entice-so./</guid>
+      <description>&lt;p&gt;Despite the misleading title of this - it could as well be a social engineering guide - I&amp;rsquo;m going to introduce a free, libre and open-source software project that I&amp;rsquo;m in charge of.&lt;/p&gt;</description>
     </item>
     
   </channel>
