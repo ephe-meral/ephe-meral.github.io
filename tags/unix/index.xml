@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unix on Seeds from the Apple of Discord</title>
-    <link>/tags/unix/</link>
+    <link>//malumdiscordi.ae/tags/unix/</link>
     <description>Recent content in Unix on Seeds from the Apple of Discord</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Jul 2016 14:55:24 +0100</lastBuildDate>
     
-	<atom:link href="/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//malumdiscordi.ae/tags/unix/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Idea of the Unix Programming Environment</title>
-      <link>/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</link>
+      <link>//malumdiscordi.ae/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</link>
       <pubDate>Fri, 01 Jul 2016 14:55:24 +0100</pubDate>
       
-      <guid>/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</guid>
+      <guid>//malumdiscordi.ae/posts/2016/07/01/the-idea-of-the-unix-programming-environment/</guid>
       <description>&lt;p&gt;Ever heard of the Unix principle? There are several actually, but the most well-known is the concept of &amp;ldquo;do one thing and do it well&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     

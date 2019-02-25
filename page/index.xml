@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Seeds from the Apple of Discord</title>
-    <link>/page/</link>
+    <link>//malumdiscordi.ae/page/</link>
     <description>Recent content in Pages on Seeds from the Apple of Discord</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//malumdiscordi.ae/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>/pages/about/</link>
+      <link>//malumdiscordi.ae/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/pages/about/</guid>
+      <guid>//malumdiscordi.ae/pages/about/</guid>
       <description>About Will fill this with more content later. For now see the Instruction Leaflet
 Why not? 1def fib(num), do: fib(num, 0, 1) 2def fib(0, res, _), do: res 3def fib(n, res, nxt) when n &amp;gt; 0, do: fib(n-1, nxt, res + nxt)</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>/pages/projects/</link>
+      <link>//malumdiscordi.ae/pages/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/pages/projects/</guid>
+      <guid>//malumdiscordi.ae/pages/projects/</guid>
       <description>Projects These are some of the projects I am (or have been) working on. Less official ones and smaller experiments can also be found on my github page.
 
 entice Full title: &amp;lsquo;to entice so.&amp;rsquo; - this fancy named project aims to create a framework for a distributed simulation of virtual worlds. Its primary use- and show-case is an MMORPG server, where it also delivers the client-side software.
